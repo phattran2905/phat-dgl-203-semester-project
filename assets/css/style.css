@@ -1,0 +1,51 @@
+/* 
+    1. Global styles
+    2. Header
+    3. Description
+    4. Goal
+    5. Tech
+    6. Feature
+    7. Mockups
+    8. References
+*/
+
+/* ===== 1. Global styles ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Krub', sans-serif;
+}
+
+:root {
+    --red: #EE6352;
+    --dark-blue: #1B1F3B;
+    --light-blue: #5299D3;
+    --light-purple: #C874D9;
+    --light-gray: #EEF1EF;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'KoHo', sans-serif;
+}
+
+/* ===== 2. Header ===== */
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 1.2em;
+}
