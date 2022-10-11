@@ -1,12 +1,10 @@
 /* 
     1. Global styles
     2. Header
-    3. Description
-    4. Goal
-    5. Tech
-    6. Feature
-    7. Mockups
-    8. References
+    3. Tech
+    4. Feature
+    5. Mockups
+    6. References
 */
 
 /* ===== 1. Global styles ===== */
@@ -17,6 +15,7 @@
 
 body {
     font-family: 'Krub', sans-serif;
+    background-color: var(--light-gray);
 }
 
 :root {
@@ -36,6 +35,24 @@ h6 {
     font-family: 'KoHo', sans-serif;
 }
 
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 1.5em;
+}
+
+section h2 {
+    padding-left: 10px;
+    border-left: 5px solid var(--red);
+    color: var(--dark-blue);
+}
+
+section p {
+    padding: 0 2em;
+    line-height: 1.6;
+}
 /* ===== 2. Header ===== */
 
 header {
@@ -44,8 +61,33 @@ header {
 
 header h1 {
     text-transform: uppercase;
+    color: var(--red);
 }
 
 header p {
     font-size: 1.2em;
+}
+
+header p:last-child {
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+/* ===== 3. Tech ===== */
+#tech {
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-items {
+    width: 60%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 360px);
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
+
+.tech-items img {
+    max-width: 30%;
 }
