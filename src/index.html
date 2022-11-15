@@ -5,189 +5,243 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DGL 203 - Semester Project Proposal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=KoHo:wght@400;500;700&family=Krub:ital,wght@0,400;0,500;0,700;1,400&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <title>DGL203 Semester Project - Milestone 2</title>
 </head>
 
 <body>
-  <header>
-    <p>DGL 203 Fall 2022 - Semester Project Proposal</p>
-    <h1>Pokemon Land</h1>
-    <p>Phat Tran</p>
-  </header>
-  <main>
-    <section id="description">
-      <h2>Description</h2>
-      <p>
-        This project is a simple game about pokemon in which the player finds and catches pokemon. The idea of this game
-        is to explore the pokemon world. In particular, the player searches for available pokemon and decides whether to
-        catch them or fight to earn rewards. Depending on what kind of pokemon it is, the catch process requires a
-        different type of Pokeball. The rewards consist of various items that can help pokemon to increase their
-        strength and level. In addition, the pokemon evolves if they reach a specific level and increase their stats.
-      </p>
-    </section>
-    <section id="goal">
-      <h2>My goals</h2>
-      <p>
-        Since DGL 203 is an advanced CSS class, my goal for this project is to practice the CSS skill with <b>grid,
-          flexbox, and animation</b>. Moreover, I want to implement <b>Sass</b> to build this project.
-      </p>
-    </section>
-    <section id="tech">
-      <h2>Made with</h2>
-      <div class="tech-items">
-        <img src="../assets/images/logo-g0f2eebe45_640.png" alt="HTML5 logo">
-        <img src="../assets/images/logo-g11ad56f79_640.png" alt="CSS3 logo">
-        <img src="../assets/images/javascript-g1762fd3f0_640.png" alt="Javascript logo">
-        <img src="../assets/images/sass-1.svg" alt="Sass logo">
-      </div>
-    </section>
-    <section id="feature">
-      <h2>Feature</h2>
-      <!-- Pokemon -->
-      <div class="feature-items">
-        <div class="feature-card">
-          <h3>Pokemon</h3>
-          <div class="feature-description">
-            <p>
-              This is where the player keeps their pokemon. In this UI, the player can click to see the pokemon in
-              detail or scroll between the list. Each pokemon card displays its basic stats, such as experience, food,
-              strength, and level.
-            </p>
-          </div>
-        </div>
-        <div class="feature-wire-frame">
-          <h4>Wire frames</h4>
-          <div class="wire-frame-container">
-            <figure>
-              <img src="../mockups/Pokemon - index.png" alt="Feature pokemon index">
-              <figcaption>Pokemon list</figcaption>
-            </figure>
-            <figure>
-              <img src="../mockups/Pokemon - detail.png" alt="Feature pokemon detail">
-              <figcaption>Pokemon in details</figcaption>
-            </figure>
-            <figure>
-              <img src="../mockups/Pokemon - Feed.png" alt="Feature pokemon feed">
-              <figcaption>Feed Pokemon</figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
+  <h1>Semester Project – Milestone 2</h1>
+  <!-- Gameplay -->
+  <section>
+    <h2>Gameplay</h2>
+    <p>
+      This game explores the pokemon world, where players can nurture and compete with each other. Each player has a
+      collection of pokemon, and they will need different items to nurture them. By exploring the pokemon world, the
+      players can acquire many rewards such as experience points, boosting items, or new pokemon.
+    </p>
 
-      <!-- Storage -->
-      <div class="feature-items">
-        <div class="feature-card">
-          <h3>Storage</h3>
-          <div class="feature-description">
-            <p>
-              This is where the player manages their items, such as food and Pokeballs.
-            </p>
-          </div>
-        </div>
-        <div class="feature-wire-frame">
-          <h4>Wire frames</h4>
-          <div class="wire-frame-container">
-            <figure>
-              <img src="../mockups/Storage.png" alt="Feature pokemon index">
-              <figcaption>Storage</figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
+    <ul>
+      <li>
+        <b>Trainer</b>
+        <p>
+          A player is considered a trainer in this game and will receive rewards whenever they level up. Therefore, the
+          more levels, the more benefits they get.
+        </p>
+      </li>
+      <li>
+        <b>Pokemon</b>
+        <p>
+          They are the main objects in this game and play an important role in the trainer's exploration. Each pokemon
+          has many traits, such as strength, agility, magic, and defense. Every time they level up, these traits
+          increase and can be boosted by items.
+          Besides the traits above, pokemon also have skills and earn a new skill if they reach a specific level or
+          evolve.
+        </p>
+      </li>
+      <li>
+        <b>Items</b>
+        <p>
+          Pokeball is used to catch wild pokemon, and if it succeeds, the pokemon will belong to the thrower. Otherwise,
+          it will be gone, and the trainer will have to use another one.
+        </p>
+        <p>
+          Mystic items boost pokemon's traits in a certain amount of time. However, some rare items affect permanently.
+        </p>
+        <p>
+          Consumable items recharge the trainer and pokemon's stamina and have limited usage.
+        </p>
+      </li>
+      <li>
+        <b>Shop</b>
+        <p>
+          This shop sells game items such as Pokeball, Mystic, and Consumable items. In particular, it costs the trainer
+          gold to purchase those items. In addition, trainers can trade their items here and receive gold in return.
+        </p>
+      </li>
+      <li>
+        <b>Rewards</b>
+        <p>
+          When the trainer beats a wild pokemon, they will gain experience points for the pokemon and themself. In
+          addition, they also receive gold and a random item.
+        </p>
+      </li>
+      <li>
+        <b>Explore</b>
+        <p>
+          A trainer might find nearby wild pokemon while using this feature. Whenever a trainer finds a wild pokemon,
+          they can either beat them for rewards or choose to use Pokeball to catch them. If they lose, they will not
+          lose anything, including game resources such as health and mana points.
+        </p>
+      </li>
+      <li>
+        <b>Battle</b>
+        <p>
+          In a battle, pokemon take turns to cast their skills. The one who has a lower level will become the first one
+          to case their skills; however, it will cost mana points. In addition, the health bar will decrease after the
+          pokemon is hit. Whoever runs out of the health bar will lose the battle.
+        </p>
+      </li>
+    </ul>
+  </section>
 
-      <!-- Explore -->
-      <div class="feature-items">
-        <div class="feature-card">
-          <h3>Explore</h3>
-          <div class="feature-description">
-            <p>
-              This is where the player finds available pokemon nearby. After a pokemon is found, the player can either
-              throw a Pokeball to catch it or fight it to earn rewards.
-            </p>
-            <p>
-              <b>Catch</b>: The player can decide which Pokeball they will use. The catching process is considered a failure if
-              the thrown Pokeball is incompatible; otherwise, they caught successfully.
-            </p>
-            <p>
-              <b>Fight</b>: The player will choose a pokemon from their list to fight. Each attack will cost an amount of food.
-              In addition, the chosen pokemon will earn experience points if the player wins the battle.
-            </p>
-          </div>
-        </div>
-        <div class="feature-wire-frame">
-          <h4>Wire frames</h4>
-          <div class="wire-frame-container">
-            <figure>
-              <img src="../mockups/Explore - index.png" alt="Explore index">
-              <figcaption>Explore index</figcaption>
-            </figure>
-            <figure>
-              <img src="../mockups/Explore - searching.png" alt="Explore searching">
-              <figcaption>Searching for pokemon</figcaption>
-            </figure>
-            <figure>
-              <img src="../mockups/Explore - found.png" alt="Explore found">
-              <figcaption>Found a pokemon</figcaption>
-            </figure>
-            <figure>
-              <img src="../mockups/Explore - Choose pokeball.png" alt="Choose a pokeball">
-              <figcaption>Catch - Choose a Pokeball</figcaption>
-            </figure>
-            <figure>
-              <img src="../mockups/Explore - Successful catch.png" alt="Catch successfully">
-              <figcaption>Catch - Successful</figcaption>
-            </figure>
-            <figure>
-              <img src="../mockups/Explore - Failed catch.png" alt="Catch failed">
-              <figcaption>Catch - Failed</figcaption>
-            </figure>
-            <figure>
-              <img src="../mockups/Explore - Choose pokemon.png" alt="Explore choose pokemon">
-              <figcaption>Fight - Choose a Pokemon</figcaption>
-            </figure>
-            <figure>
-              <img src="../mockups/Explore - fighting.png" alt="Explore searching">
-              <figcaption>Fighting</figcaption>
-            </figure>
-            <figure>
-              <img src="../mockups/Explore - Won.png" alt="Explore won">
-              <figcaption>Fight - Won the battle</figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
+  <!-- Goals -->
+  <section>
+    <h2>Website Goals</h2>
+    <p>
+      I come up with this project to create a pokemon game where players can have a collection of different species of
+      pokemon. Moreover, they can nurture and train them to become stronger in the game to evolve and proceed to their
+      new transformation.
+    </p>
+    <p>
+      On the other hand, the gameplay is designed to play with a low frequency. In other words, players spend only about
+      1-2 hours on the game but continually each day. This strategy balances the valuation of pokemon collections
+      between players. If they want to go faster than usual, they will need to pay more to buy items in the game.
+    </p>
+  </section>
 
-    </section>
+  <section>
+    <h2>User Personas</h2>
+    <ol>
+      <li>
+        <a href="https://www.semrush.com/persona/share/kr24tO3iBGdDTFcOLrc7q4k3HhghcMf5QrYendc8Mpc/">Tomas Gottlieb</a>
+      </li>
+      <li>
+        <a href="https://www.semrush.com/persona/share/oFR-ZORRCYES4PuuYeDr6swhMdk0JGxl6SK2jsRCBbY/">
+          Delia Howe
+        </a>
+      </li>
+    </ol>
+  </section>
 
-    <section id="references">
-      <h2>References</h2>
+  <!-- Similar websites -->
+  <section>
+    <h2>Similar websites</h2>
+
+    <figure>
+      <figcaption>
+        <b>
+          Inspiration
+        </b>
+      </figcaption>
       <ul>
         <li>
-          <a href="https://www.pokemon.com/us/pokedex/beedrill">Pokemon Pokedex</a>
+          https://www.pokemon.com/us/pokedex/
         </li>
         <li>
-          <a href="https://pixabay.com/vi/illustrations/logo-html-html5-bi%e1%bb%83u-t%c6%b0%e1%bb%a3ng-2582748/">HTML5
-            Icon</a>
-        </li>
-        <li>
-          <a href="https://pixabay.com/vi/illustrations/logo-css-css3-bi%e1%bb%83u-t%c6%b0%e1%bb%a3ng-2582747/">CSS3
-            Icon</a>
-        </li>
-        <li>
-          <a href="https://pixabay.com/vi/vectors/javascript-js-logo-m%c3%a3-ngu%e1%bb%93n-736400/">Javascript JS</a>
-        </li>
-        <li>
-          <a href="https://worldvectorlogo.com/logo/sass-1">Sass Logo</a>
+          http://pokemon-revolution-online.net/
         </li>
       </ul>
-    </section>
-  </main>
+    </figure>
+
+    <figure>
+      <figcaption>
+        <b>
+          Competitors
+        </b>
+      </figcaption>
+      <ul>
+        <li>
+          https://pokemongolive.com/en/
+        </li>
+        <li>
+          https://pokeheroes.com/
+        </li>
+      </ul>
+    </figure>
+  </section>
+
+  <!-- Advantages -->
+  <section>
+    <h2>Advantages</h2>
+    <p>
+      Unlike other pokemon games, each trainer can only have one specific kind of pokemon. In other words, if they
+      already own a Pikachu, they can not catch another one in this game. In addition, game activities cost stamina
+      points, and they will be recharged after an amount of time. This strategy will limit the base time that a player
+      will spend. They must pay for more advantages if they want to exceed the limit.
+    </p>
+  </section>
+
+  <!-- KPI -->
+  <section>
+    <h2>Key Performance Indicators (KPIs)</h2>
+    <ul>
+      <li>
+        <b>New users:</b> The number of new users simulates brand awareness in the market. If it increases, the
+        marketing strategy works because more people know about this game.
+      </li>
+      <li>
+        <b>Active users:</b> The active users indicate how well the game performs and the players' satisfaction.
+      </li>
+      <li>
+        <b>Sales:</b> Since the game activities cost resources and restrain the game resources, players need to pay to
+        exceed the limited resources. This indicator is measured by players' money paid for diamonds.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Comments from classmates</h2>
+    <div>
+      <b>Brandon</b>
+      <blockquote>“The design looks very good; however, there needs to be a menu to navigate to other places during the
+        game activities.”</blockquote>
+    </div>
+    <div>
+      <b>Vienna</b>
+      <blockquote>
+        “It would be great to have a tutorial page that shows how the game works.”
+      </blockquote>
+    </div>
+
+    <div>
+      <b>Jason</b>
+      <blockquote>
+        “When exploring pokemon in the nearby area, it would be great if the game could find pokemon on a real-life map
+        like Pokemon GO.”
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Sitemap -->
+  <section>
+    <h2>Sitemap</h2>
+    <figure>
+      <img width="900px" src="../assets//images/semester-project-sitemap-Old.drawio.png" alt="Sitemap before improvement">
+      <figcaption>Sitemap before improvement</figcaption>
+    </figure>
+    <br>
+    <p>
+      In general, the site map contains most of the primary features. However, it lacks a trainer profile page and a page
+      for the pokemon's evolvement.
+    </p>
+  
+    <div>
+      <b>Improvement</b>
+      <p>
+        Thanks to comments from other classmates, I need to make some adjustments to improve the project. In particular, I
+        need to create a tutorial page that guides newcomers to play this game. In addition, I also need to add a menu to
+        navigate between pages.
+      </p>
+      <p>
+        On the other hand, I also came up with additional features that support the project to achieve the goals and the
+        listed KPIs. In particular, I will add a shop to the game so players can exceed the limited resources and do more
+        game activities. The shop sells two types of items: gold and diamond items. The player needs to purchase diamonds
+        with their money. Meanwhile, the player can sell their items to the shop to earn gold.
+      </p>
+      <figure>
+        <img width="900px" src="../assets//images/semester-project-sitemap-New.drawio.png"
+          alt="Sitemap before improvement">
+        <figcaption>Sitemap with improvement</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- SEO -->
+  <section>
+    <h2>SEO Keywords</h2>
+    <p>
+      Since this project narrowed down to a specific topic and is a game, I feel like "Pokemon" is the only keyword that can be used for SEO. On the other hand, if I name the game, it will start with the word "Pokemon" or include them in the name and use it as a keyword for SEO. However, as a game, most of the content will display graphics and content related to the gameplay. Therefore, this case is not suitable for putting keywords to satisfy SEO purposes.
+    </p>
+  </section>
 </body>
 
 </html>
