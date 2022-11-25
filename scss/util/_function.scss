@@ -1,0 +1,6 @@
+@use 'sass:math';
+
+// Divide pixel by 16 and return rems
+@function rem($pixel) {
+    @return math.div($pixel, 16) + rem;
+}
