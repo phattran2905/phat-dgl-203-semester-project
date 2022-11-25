@@ -50,6 +50,8 @@ a, a:active, a:visited {
   margin: auto;
   font-size: 5.25rem;
   text-align: center;
+  text-transform: capitalize;
+  color: #E5446D;
 }
 .flex-container header {
   padding: 2rem 3.375rem;

@@ -50,6 +50,8 @@ a, a:active, a:visited {
   margin: auto;
   font-size: 5.25rem;
   text-align: center;
+  text-transform: capitalize;
+  color: #E5446D;
 }
 .flex-container header {
   padding: 2rem 3.375rem;
@@ -94,6 +96,127 @@ a, a:active, a:visited {
   text-align: center;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+}
+.container h1 {
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+.container form {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.container .validation {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
 .login-form {
-  background: #E5446D;
+  width: 46rem;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+}
+.login-form__container {
+  padding: 3rem 4.5rem;
+  background: #393E7D;
+  border-radius: 2rem;
+}
+.login-form__input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.8rem;
+}
+.login-form__input-group:last-child {
+  flex-direction: row;
+  align-items: center;
+}
+.login-form__label {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.login-form__label:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.login-form__input[type=text], .login-form__input[type=password] {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  font-size: 1.3rem;
+  border: 2px solid transparent;
+}
+.login-form__input[type=text]:focus, .login-form__input[type=password]:focus {
+  outline: none;
+  border: 2px solid #E5446D;
+}
+.login-form__input[type=checkbox] {
+  margin: 0 1rem 0 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #E5446D;
+}
+.login-form__sign-up-link {
+  padding-inline: 0.5rem;
+  text-align: right;
+  font-size: 1.25rem;
+}
+.login-form__sign-up-link a {
+  color: #1B1B1E;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+.login-form__submit-btn {
+  border: none;
+  outline: none;
+  font-size: 1.75rem;
+  font-family: "Mali", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  padding: 1.1rem 3.5rem;
+  margin: 1rem auto;
+  background-color: #E5446D;
+  border-radius: 3rem;
+}
+
+.validation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 3.375rem;
+}
+.validation__img {
+  width: 250px;
+}
+.validation__error {
+  display: none;
+  padding: 1rem 2rem;
+  border: 2px solid #1B1B1E;
+  border-radius: 1rem;
+  margin: 0 auto 2rem auto;
+  align-self: center;
+  position: relative;
+}
+.validation__error::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 100%;
+  left: 70%;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #E5446D;
+}
+.validation__error__message {
+  font-size: 1.375rem;
+  font-weight: bold;
+  color: #E5446D;
+}
+.validation__error.show {
+  display: block;
 }/*# sourceMappingURL=login.css.map */

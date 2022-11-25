@@ -16,6 +16,8 @@
             margin: auto;
             font-size: 5.25rem;
             text-align: center;
+            text-transform: capitalize;
+            color: colors.$primary-color;
         }
 	}
 
@@ -67,7 +69,7 @@
 	footer {
 		padding: 1rem;
 		font-size: 0.9rem;
-		background: colors.$dark-color;
+		background: colors.$black;
 		color: #fff;
 		text-align: center;
 	}
