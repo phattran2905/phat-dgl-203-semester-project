@@ -2,24 +2,28 @@
 @forward "./layout";
 @forward "./form";
 @forward "./validation";
-@use "../globals/colors";
+@use "../globals" as g;
+@use "../util" as u;
 
 .instruction {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    width: 70%;
-    height: 60%;
-    border: 2px solid colors.$secondary-color;
+    @include u.breakpoint(xlarge) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        width: 70%;
+        height: 50%;
+        padding: 2rem;
+        margin: 1.5rem auto;
+    }
+    
+    border: 2px solid g.$secondary-color;
     border-radius: .5rem;
-    padding: 2rem;
-    margin:  0 auto;
 
     &__text {
         font-size: 1.4rem;
 
         &--bold {
             font-weight: bold;
-            color: colors.$secondary-color;
+            color: g.$secondary-color;
         }
     }
 
