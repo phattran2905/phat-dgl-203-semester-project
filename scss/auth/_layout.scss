@@ -1,0 +1,21 @@
+.container {
+	display: grid;
+    height: 100%;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 8fr;
+
+	h1 {
+		grid-column: 1 / 4;
+		grid-row: 1 / 2;
+	}
+
+	form {
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+	}
+
+	.validation {
+		grid-column: 3 / 4;
+		grid-row: 2 / 3;
+	}
+}

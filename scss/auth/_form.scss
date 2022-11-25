@@ -1,0 +1,77 @@
+@use "../globals/colors";
+@use "../util/font";
+
+.form {
+	width: 46rem;
+	margin: 1rem auto;
+	display: flex;
+	flex-direction: column;
+
+	&__container {
+		padding: 3rem 4.5rem;
+		background: colors.$secondary-color;
+		border-radius: 2rem;
+	}
+
+	&__input-group {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1.8rem;
+	}
+
+	&__label {
+		color: #fff;
+		font-size: 1.5rem;
+
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__input[type="text"],
+	&__input[type="password"] {
+		padding: 1rem 2rem;
+		border-radius: 2rem;
+		border: none;
+		font-size: 1.3rem;
+		border: 2px solid transparent;
+
+		&:focus {
+			outline: none;
+			border: 2px solid colors.$primary-color;
+		}
+	}
+
+	&__input[type="checkbox"] {
+		margin: 0 1rem 0 0;
+		width: 1.5rem;
+		height: 1.5rem;
+		background-color: colors.$primary-color;
+	}
+
+	&__ref-link {
+		padding-inline: 0.5rem;
+		text-align: right;
+		font-size: 1.25rem;
+
+		a {
+			color: colors.$black;
+			font-weight: bold;
+			font-style: italic;
+			text-decoration: underline;
+		}
+	}
+
+	&__submit-btn {
+		border: none;
+		outline: none;
+		font-size: 1.75rem;
+		font-family: font.$heading-font;
+		font-weight: bold;
+		color: #fff;
+		padding: 1.1rem 3.5rem;
+		margin: 1rem auto;
+		background-color: colors.$primary-color;
+		border-radius: 3rem;
+	}
+}

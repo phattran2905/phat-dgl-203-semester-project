@@ -219,7 +219,30 @@ a, a:active, a:visited {
   display: block;
 }
 
-.form__input-group:last-child {
-  flex-direction: row;
-  align-items: center;
-}/*# sourceMappingURL=login.css.map */
+.instruction {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 70%;
+  height: 60%;
+  border: 2px solid #393E7D;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 0 auto;
+}
+.instruction__text {
+  font-size: 1.4rem;
+}
+.instruction__text--bold {
+  font-weight: bold;
+  color: #393E7D;
+}
+.instruction__list {
+  padding: 0 2em;
+  list-style-type: square;
+}
+.instruction__list__item {
+  padding: 0.3rem;
+}
+.instruction__list__item:not(:last-child) {
+  margin-bottom: 0.4rem;
+}/*# sourceMappingURL=signup.css.map */

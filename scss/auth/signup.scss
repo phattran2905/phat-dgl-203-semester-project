@@ -1,0 +1,39 @@
+@forward "../style";
+@forward "./layout";
+@forward "./form";
+@forward "./validation";
+@use "../globals/colors";
+
+.instruction {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    width: 70%;
+    height: 60%;
+    border: 2px solid colors.$secondary-color;
+    border-radius: .5rem;
+    padding: 2rem;
+    margin:  0 auto;
+
+    &__text {
+        font-size: 1.4rem;
+
+        &--bold {
+            font-weight: bold;
+            color: colors.$secondary-color;
+        }
+    }
+
+    &__list {
+        padding: 0 2em;
+        list-style-type: square;
+
+        &__item {
+            padding: .3rem;
+
+            &:not(:last-child) {
+                margin-bottom: .4rem;
+
+            }
+        }
+    }
+}
