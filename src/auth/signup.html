@@ -16,18 +16,18 @@
 
 <body>
   <div class="flex-container">
-    <header>
-      <div class="logo">
+    <header class="navbar">
+      <div class="navbar__logo">
         <img src="../../dist/img/logo.png" alt="Pokemon Land Logo">
       </div>
 
-      <nav class="auth">
-        <ul class="auth__list">
-          <li class="auth__item">
-            <a href="./login.html" class="auth__link">Log In</a>
+      <nav class="navbar__auth-nav">
+        <ul class="navbar__auth-nav__list">
+          <li class="navbar__auth-nav__list__item">
+            <a href="./login.html" class="navbar__auth-nav__list__item__link">Log In</a>
           </li>
-          <li class="auth__item active">
-            <a href="./signup.html" class="auth__link">Sign Up</a>
+          <li class="navbar__auth-nav__list__item active">
+            <a href="./signup.html" class="navbar__auth-nav__list__item__link">Sign Up</a>
           </li>
         </ul>
       </nav>
@@ -40,9 +40,11 @@
         <!-- Instruction -->
         <div class="instruction">
           <p class="instruction__text">Your username is only valid when:</p>
-          <ul class="instruction__list"> 
-            <li class="instruction__list__item">It contains from <span class="instruction__text--bold">6</span> to <span class="instruction__text--bold">30</span> characters.</li>
-            <li class="instruction__list__item">It contains only <span class="instruction__text--bold">numbers and letters</span>.</li>
+          <ul class="instruction__list">
+            <li class="instruction__list__item">It contains from <span class="instruction__text--bold">6</span> to <span
+                class="instruction__text--bold">30</span> characters.</li>
+            <li class="instruction__list__item">It contains only <span class="instruction__text--bold">numbers and
+                letters</span>.</li>
           </ul>
         </div><!-- End Instruction -->
 
@@ -78,7 +80,8 @@
         </div><!-- End Validation -->
       </div>
 
-      <footer>&copy;2022 Pokémon Land. &copy;1995 - 2022 Nintendo/Creatures Inc./GAME FREAK inc. TM, &copy;Nintendo.</footer>
+      <footer>&copy;2022 Pokémon Land. &copy;1995 - 2022 Nintendo/Creatures Inc./GAME FREAK inc. TM, &copy;Nintendo.
+      </footer>
     </main>
   </div>
 </body>

@@ -53,33 +53,48 @@ a, a:active, a:visited {
   text-transform: capitalize;
   color: #E5446D;
 }
-.flex-container header {
+.flex-container .navbar {
   padding: 2rem 3.375rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.flex-container header .auth__list {
+.flex-container footer {
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: #1B1B1E;
+  color: #fff;
+  text-align: center;
+}
+
+.navbar__logo {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+.navbar__auth-nav__list {
   display: flex;
   flex-direction: row;
 }
-.flex-container header .auth__item {
+.navbar__auth-nav__list__item {
   width: 12.7rem;
   height: 4rem;
   border: 3px solid #393E7D;
   border-radius: 24px;
 }
-.flex-container header .auth__item:first-child {
+.navbar__auth-nav__list__item:hover {
+  background-color: #E5446D;
+}
+.navbar__auth-nav__list__item:first-child {
   margin-right: 1.2rem;
 }
-.flex-container header .auth__item.active {
+.navbar__auth-nav__list__item.active {
   background: #393E7D;
 }
-.flex-container header .auth__item.active .auth__link {
+.navbar__auth-nav__list__item.active .navbar__auth-nav__list__item__link {
   color: #fff;
 }
-.flex-container header .auth__link {
+.navbar__auth-nav__list__item__link {
   font-family: "Mali", sans-serif;
   text-align: center;
   font-size: 1.4rem;
@@ -88,12 +103,8 @@ a, a:active, a:visited {
   display: block;
   color: #393E7D;
 }
-.flex-container footer {
-  padding: 1rem;
-  font-size: 0.9rem;
-  background: #1B1B1E;
+.navbar__auth-nav__list__item__link:hover {
   color: #fff;
-  text-align: center;
 }
 
 .container {

@@ -1,5 +1,5 @@
-@use "../globals/colors";
-@use "../util/font";
+@use "../globals" as g;
+@use "../util" as u;
 
 .flex-container {
 	display: flex;
@@ -17,59 +17,22 @@
             font-size: 5.25rem;
             text-align: center;
             text-transform: capitalize;
-            color: colors.$primary-color;
+            color: g.$primary-color;
         }
 	}
 
-	header {
+	.navbar {
 		padding: 2rem 3.375rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-
-        .auth {
-            &__list {
-                display: flex;
-                flex-direction: row;
-            }
-
-            &__item {
-                width: 12.7rem;
-                height: 4rem;
-                border: 3px solid colors.$secondary-color;
-                border-radius: 24px;
-
-                &:first-child {
-                    margin-right: 1.2rem; 
-                }
-
-                &.active {
-                    background: colors.$secondary-color;
-
-                    .auth__link {
-                        color: #fff;
-                    }
-                }
-            }
-
-            &__link {
-                font-family: font.$heading-font;
-                text-align: center;
-                font-size: 1.4rem;
-                padding: .9rem 2rem;
-                font-weight: bold;
-                display: block;
-                color: colors.$secondary-color;
-            }
-
-        }
 	}
 
 	footer {
 		padding: 1rem;
 		font-size: 0.9rem;
-		background: colors.$black;
+		background: g.$black;
 		color: #fff;
 		text-align: center;
 	}
