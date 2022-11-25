@@ -1,0 +1,6 @@
+@forward '../style.scss';
+@use '../globals/colors';
+
+.login-form {
+    background: colors.$primary-color;
+}

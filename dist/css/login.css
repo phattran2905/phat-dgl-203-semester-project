@@ -1,7 +1,9 @@
-* {
+html {
   box-sizing: border-box;
+  font-size: 100%;
 }
 
+*,
 *::before,
 *::after {
   box-sizing: inherit;
@@ -11,7 +13,13 @@ body {
   font-family: "KoHo", sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -24,12 +32,6 @@ h6 {
   margin-top: 0;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 a, a:active, a:visited {
   text-decoration: none;
 }
@@ -39,27 +41,55 @@ a, a:active, a:visited {
   flex-direction: column;
   height: 100%;
 }
-
 .flex-container main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
-
 .flex-container header {
   padding: 2rem 3.375rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.flex-container header .auth__list {
+  display: flex;
+  flex-direction: row;
+}
+.flex-container header .auth__item {
+  width: 12.7rem;
+  height: 4rem;
+  border: 3px solid #393E7D;
+  border-radius: 24px;
+  padding: 0.9rem 2rem;
+}
+.flex-container header .auth__item:first-child {
+  margin-right: 1.2rem;
+}
+.flex-container header .auth__item.active {
   background: #393E7D;
 }
-
+.flex-container header .auth__item.active .auth__link {
+  color: #fff;
+}
+.flex-container header .auth__link {
+  font-family: "Mali", sans-serif;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: block;
+  color: #393E7D;
+}
 .flex-container footer {
   padding: 1rem;
   font-size: 0.9rem;
   background: #1B1B1E;
   color: #fff;
   text-align: center;
+}
+
+.login-form {
+  background: #E5446D;
 }/*# sourceMappingURL=login.css.map */
