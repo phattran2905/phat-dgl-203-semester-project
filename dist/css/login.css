@@ -1,9 +1,7 @@
-html {
+* {
   box-sizing: border-box;
-  font-size: 100%;
 }
 
-*,
 *::before,
 *::after {
   box-sizing: inherit;
@@ -13,13 +11,7 @@ body {
   font-family: "KoHo", sans-serif;
   margin: 0;
   padding: 0;
-  color: #fff;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  height: 100vh;
 }
 
 h1,
@@ -32,6 +24,12 @@ h6 {
   margin-top: 0;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 a, a:active, a:visited {
   text-decoration: none;
 }
@@ -41,23 +39,27 @@ a, a:active, a:visited {
   flex-direction: column;
   height: 100%;
 }
+
 .flex-container main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
+
 .flex-container header {
   padding: 2rem 3.375rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background: #393E7D;
 }
+
 .flex-container footer {
   padding: 1rem;
   font-size: 0.9rem;
   background: #1B1B1E;
   color: #fff;
   text-align: center;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=login.css.map */

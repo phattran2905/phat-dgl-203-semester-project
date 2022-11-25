@@ -1,6 +1,4 @@
-@import "colors";
-
-$lg-padding: 2rem 3.375rem;
+@use "../globals/colors";
 
 .flex-container {
 	display: flex;
@@ -15,18 +13,17 @@ $lg-padding: 2rem 3.375rem;
 	}
 
 	header {
-		padding: $lg-padding;
+		padding: 2rem 3.375rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		background: $secondary-color;
 	}
 
 	footer {
 		padding: 1rem;
 		font-size: 0.9rem;
-		background: $dark-color;
+		background: colors.$dark-color;
 		color: #fff;
 		text-align: center;
 	}
