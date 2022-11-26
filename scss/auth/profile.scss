@@ -46,7 +46,7 @@
 		grid-template-columns: 1fr 3fr;
 		grid-template-rows: auto;
 
-		&__info {
+		.profile__info {
 			grid-column: 1/2;
 			display: flex;
 			flex-direction: column;
@@ -155,6 +155,11 @@
 
 		&__fields {
 			grid-column: 2/3;
+            padding: 0 u.rem(94);
+
+            .form__input-group {
+
+            }
 		}
 	}
 }

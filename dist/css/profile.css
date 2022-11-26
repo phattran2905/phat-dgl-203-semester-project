@@ -198,13 +198,13 @@ a, a:active, a:visited {
   grid-template-columns: 1fr 3fr;
   grid-template-rows: auto;
 }
-.form__container__info {
+.form__container .profile__info {
   grid-column: 1/2;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.form__container__info__card {
+.form__container .profile__info__card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -215,55 +215,55 @@ a, a:active, a:visited {
   border-top-right-radius: 0.3125rem;
   background-color: #E5446D;
 }
-.form__container__info__card__img {
+.form__container .profile__info__card__img {
   padding: 3.875rem 4.5rem;
 }
-.form__container__info__card__img img {
+.form__container .profile__info__card__img img {
   width: 100%;
 }
-.form__container__info__card__level {
+.form__container .profile__info__card__level {
   padding: 0.75rem 1.25rem;
   border: 1px solid #1B1B1E;
   background-color: #fff;
   border-radius: 1.5625rem;
 }
-.form__container__info__card__level span, .form__container__info__card__level .form__container__info__coins i, .form__container__info__coins .form__container__info__card__level i {
+.form__container .profile__info__card__level span, .form__container .profile__info__card__level .profile__info__coins i, .form__container .profile__info__coins .profile__info__card__level i {
   font-size: 1.25rem;
   font-weight: bold;
   color: #E5446D;
 }
-.form__container__info__card__name {
+.form__container .profile__info__card__name {
   margin-top: 1.3125rem;
   background-color: #393E7D;
   border-bottom-left-radius: 1.5625rem;
   border-bottom-right-radius: 1.5625rem;
   width: 100%;
 }
-.form__container__info__card__name p {
+.form__container .profile__info__card__name p {
   text-align: center;
   color: #fff;
   font-weight: bold;
   font-size: 1.0625rem;
   margin: 0.875rem;
 }
-.form__container__info__experience {
+.form__container .profile__info__experience {
   margin: 0.75rem auto;
 }
-.form__container__info__experience p {
+.form__container .profile__info__experience p {
   font-size: 1.25rem;
   font-weight: bold;
 }
-.form__container__info__experience--current {
+.form__container .profile__info__experience--current {
   color: #E5446D;
 }
-.form__container__info__experience__bars {
+.form__container .profile__info__experience__bars {
   width: 100%;
   height: 0.625rem;
   border-radius: 1rem;
   background-color: #1B1B1E;
   position: relative;
 }
-.form__container__info__experience__bars::after {
+.form__container .profile__info__experience__bars::after {
   content: "";
   border-radius: 1rem;
   width: 50%;
@@ -273,22 +273,23 @@ a, a:active, a:visited {
   top: 0;
   left: 0;
 }
-.form__container__info__coins {
+.form__container .profile__info__coins {
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.form__container__info__coins span, .form__container__info__coins i {
+.form__container .profile__info__coins span, .form__container .profile__info__coins i {
   font-size: 1.625rem;
   font-weight: bold;
   color: #393E7D;
 }
-.form__container__info__coins i {
+.form__container .profile__info__coins i {
   margin-right: 0.5625rem;
   line-height: 1.625rem;
   color: #E5446D;
 }
 .form__container__fields {
   grid-column: 2/3;
+  padding: 0 5.875rem;
 }/*# sourceMappingURL=profile.css.map */
