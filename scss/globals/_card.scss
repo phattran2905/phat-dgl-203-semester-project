@@ -2,11 +2,11 @@
 @use './colors' as c;
 
 .card {
-    border-radius: u.rem(5) u.rem(5) u.rem(25) u.rem(25);
-    border: 2px solid c.$secondary-color;
 
     &__content {
         width: 100%;
+        border: 3px solid c.$secondary-color;
+        border-radius: u.rem(5) u.rem(5) 0 0;
         padding-top: u.rem(43);
         position: relative;
         display: flex;
@@ -17,6 +17,7 @@
     
 
     &__footer {
+        border: 2px solid c.$secondary-color;
         border-radius: 0 0 u.rem(25) u.rem(25);
         width: 100%;
         background-color: c.$secondary-color;

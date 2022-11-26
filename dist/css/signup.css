@@ -35,6 +35,33 @@ a, a:active, a:visited {
   text-decoration: none;
 }
 
+.card__content {
+  width: 100%;
+  border: 3px solid #393E7D;
+  border-radius: 0.3125rem 0.3125rem 0 0;
+  padding-top: 2.6875rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card__footer {
+  border: 2px solid #393E7D;
+  border-radius: 0 0 1.5625rem 1.5625rem;
+  width: 100%;
+  background-color: #393E7D;
+}
+.card__footer p {
+  font-family: "Mali", sans-serif;
+  font-weight: bold;
+  font-size: 1.0625rem;
+  padding: 0.9375rem 5.25rem;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+
 .flex-container {
   display: flex;
   flex-direction: column;

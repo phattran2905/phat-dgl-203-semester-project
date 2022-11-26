@@ -1,0 +1,18 @@
+@use '../globals' as g;
+@use '../util' as u;
+
+.container {
+    height: 100%;
+    
+    .pokemon {
+        height: auto;
+        @include u.breakpoint(xlarge) {
+            padding: u.rem(54);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            grid-gap: u.rem(150);
+        }
+    }
+
+}
