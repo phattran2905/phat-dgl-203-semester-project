@@ -48,13 +48,17 @@
 
 		&__info {
 			grid-column: 1/2;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 
 			&__card {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-                border: 1px solid g.$black;
-                border-radius: u.card-border-radius();
+				border: 1px solid g.$black;
+				@include g.card-border-bottom-radius;
+				@include g.card-border-top-radius;
 				background-color: g.$primary-color;
 
 				&__img {
@@ -67,31 +71,63 @@
 
 				&__level {
 					padding: u.rem(12) u.rem(20);
-                    border: 1px solid g.$black;
+					border: 1px solid g.$black;
 					background-color: #fff;
 					border-radius: u.rem(25);
 
-                    span {
-                        font-size: u.rem(20);
-                        font-weight: bold;
-                        color: g.$primary-color;
-                    }
+					span {
+						font-size: u.rem(20);
+						font-weight: bold;
+						color: g.$primary-color;
+					}
 				}
 
-                &__name {
-                    margin-top: u.rem(21);
-                    background-color: g.$secondary-color;
-                    border-radius: u.card-border-radius();
-                    width: 100%;
+				&__name {
+					margin-top: u.rem(21);
+					background-color: g.$secondary-color;
+					@include g.card-border-bottom-radius;
+					width: 100%;
 
-                    p {
-                        text-align: center;
-                        color: #fff;
-                        font-weight: bold;
-                        font-size: u.rem(17);
-                        margin: u.rem(14);
+					p {
+						text-align: center;
+						color: #fff;
+						font-weight: bold;
+						font-size: u.rem(17);
+						margin: u.rem(14);
+					}
+				}
+			}
+
+			&__experience {
+				margin: u.rem(12) auto;
+
+				p {
+					font-size: u.rem(20);
+					font-weight: bold;
+				}
+
+				&--current {
+					color: g.$primary-color;
+				}
+
+				&__bars {
+					width: 100%;
+					height: u.rem(10);
+					border-radius: 1rem;
+					background-color: g.$black;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        border-radius: 1rem;
+                        width: 50%;
+                        height: 100%;
+                        background-color: g.$success-color;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
                     }
-                }
+				}
 			}
 		}
 
