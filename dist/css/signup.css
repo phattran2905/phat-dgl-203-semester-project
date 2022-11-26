@@ -194,7 +194,7 @@ a, a:active, a:visited {
 .form__input-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.75rem;
 }
 .form__label {
   color: #fff;
@@ -205,10 +205,10 @@ a, a:active, a:visited {
 }
 .form__input[type=text], .form__input[type=password] {
   padding: 1rem 2rem;
-  border-radius: 2rem;
   border: none;
   font-size: 1.3rem;
   border: 2px solid transparent;
+  border-radius: 2rem;
 }
 .form__input[type=text]:focus, .form__input[type=password]:focus {
   outline: none;

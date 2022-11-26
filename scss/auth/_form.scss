@@ -14,9 +14,8 @@
 	}
 
 	&__input-group {
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 1.8rem;
+        @include g.input-group;
+        
 	}
 
 	&__label {
@@ -30,23 +29,12 @@
 
 	&__input[type="text"],
 	&__input[type="password"] {
-		padding: 1rem 2rem;
-		border-radius: 2rem;
-		border: none;
-		font-size: 1.3rem;
-		border: 2px solid transparent;
-
-		&:focus {
-			outline: none;
-			border: 2px solid g.$primary-color;
-		}
+        @include g.text-input;
+        border-radius: 2rem;
 	}
 
 	&__input[type="checkbox"] {
-		margin: 0 1rem 0 0;
-		width: 1.5rem;
-		height: 1.5rem;
-		background-color: g.$primary-color;
+        @include g.checkbox-input;
 	}
 
 	&__ref-link {
@@ -81,3 +69,4 @@
         }
 	}
 }
+
