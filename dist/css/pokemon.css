@@ -255,7 +255,7 @@ a, a:active, a:visited {
   color: #E5446D;
 }
 .modal__content {
-  padding: 0 4.5625rem;
+  padding: 1.25rem 4.5625rem;
   background-color: #fff;
   border: 3px solid #393E7D;
   border-radius: 0 0 1.5625rem 1.5625rem;
@@ -267,7 +267,7 @@ a, a:active, a:visited {
   align-items: center;
 }
 .modal__content .pokemon-stats__experience {
-  margin-top: 0.9375rem;
+  margin-top: 0.625rem;
   padding: 0.9375rem;
   border: 1px solid #393E7D;
   border-radius: 0.625rem;
@@ -301,6 +301,34 @@ a, a:active, a:visited {
   top: 0;
   background-color: #2E933C;
   border-radius: 5px;
+}
+.modal__content .pokemon-stats__group-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0.625rem;
+}
+.modal__content .pokemon-stats__group-button__button {
+  display: block;
+  padding: 0.3125rem 1.25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #3F88C5;
+  color: #fff;
+  border: 3px solid transparent;
+  border-radius: 1.875rem;
+  text-align: center;
+}
+.modal__content .pokemon-stats__group-button__button.disabled {
+  cursor: not-allowed;
+  margin-top: 0.3125rem;
+  background-color: #707070;
+}
+.modal__content .pokemon-stats__group-button__button:hover:not(.modal__content .pokemon-stats__group-button__button.disabled) {
+  border-color: #393E7D;
+  background-color: #fff;
+  color: #393E7D;
 }
 .modal__content .pokemon-info {
   padding: 3.125rem 5.3125rem;
