@@ -329,4 +329,35 @@ a, a:active, a:visited {
 }
 .form__container__fields .form__input-group .form__error.show {
   display: block;
+}
+.form__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.form__footer .form__logout-btn, .form__footer .form__submit-btn {
+  padding: 0.75rem 4.5rem;
+  font-size: 1.5rem;
+  background-color: #fff;
+  border: 2px solid #393E7D;
+  color: #393E7D;
+  font-weight: bold;
+  border-radius: 4.5rem;
+}
+.form__footer .form__logout-btn:hover, .form__footer .form__submit-btn:hover {
+  border-color: #E5446D;
+  color: #E5446D;
+  transition: 0.4s ease-in-out;
+}
+.form__footer .form__submit-btn {
+  background-color: #393E7D;
+  color: #fff;
+  margin-left: 0.9375rem;
+  cursor: pointer;
+}
+.form__footer .form__submit-btn:hover {
+  background-color: #3F88C5;
+  border: 2px solid #393E7D;
+  color: #fff;
 }/*# sourceMappingURL=profile.css.map */

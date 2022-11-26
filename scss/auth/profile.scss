@@ -176,4 +176,41 @@
             }
 		}
 	}
+
+    &__footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        .form__logout-btn {
+            padding: u.rem(12) u.rem(72);
+            font-size: u.rem(24); 
+            background-color: #fff;
+            border: 2px solid g.$secondary-color;
+            color: g.$secondary-color;
+            font-weight: bold;
+            border-radius: u.rem(72);
+
+            &:hover {
+                border-color: g.$primary-color;
+                color: g.$primary-color;
+                transition: 0.4s ease-in-out;
+            }
+        }
+
+        .form__submit-btn {
+            @extend .form__logout-btn;
+            background-color: g.$secondary-color;
+            color: #fff;
+            margin-left: u.rem(15);
+            cursor: pointer;
+
+            &:hover {
+                background-color: g.$light-blue;
+                border: 2px solid g.$secondary-color;
+                color: #fff;
+            }
+        }
+    }
 }
