@@ -327,9 +327,8 @@
 					align-items: center;
 					border: 3px solid g.$secondary-color;
 					border-radius: u.rem(15);
-					cursor: pointer;
 
-					&:hover {
+					&:hover, &.selected {
 						border-color: g.$primary-color;
 					}
 
@@ -350,15 +349,16 @@
 							color: #fff;
 							display: none;
 						}
-
-						&.active {
-							background-color: g.$success-color;
-
-							i {
-								display: block;
-							}
-						}
 					}
+
+                    &.selected .items-list__item__select-box{
+                        background-color: g.$success-color;
+                        border-color: g.$success-color;
+
+                        i {
+                            display: block;
+                        }
+                    }
 
 					&__img-holder {
 						padding: u.rem(30);
@@ -444,6 +444,7 @@
 
 
             &__footer {
+                grid-column: 1 / 3;
                 display: flex;
                 justify-content: flex-end;
                 margin-top: u.rem(20);
