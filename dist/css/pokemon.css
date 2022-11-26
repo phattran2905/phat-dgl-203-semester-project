@@ -218,7 +218,7 @@ a, a:active, a:visited {
   display: none;
   flex-direction: column;
   align-items: center;
-  padding-top: 15%;
+  padding-top: 10%;
 }
 .modal.show {
   display: flex;
@@ -245,17 +245,38 @@ a, a:active, a:visited {
 .modal__header h3 {
   color: #fff;
   margin-bottom: 0;
+  font-size: 1.5rem;
 }
-.modal__header__close-btn {
-  margin-left: 0;
+.modal__header__close-btn, .modal__header__back-btn {
   color: #fff;
   font-size: 1.625rem;
 }
-.modal__header__close-btn:hover {
+.modal__header__close-btn:hover, .modal__header__back-btn:hover {
   color: #E5446D;
 }
+.modal__header__titles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.modal__header__titles__link {
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "Mali", sans-serif;
+  padding: 0.875rem 3.375rem;
+}
+.modal__header__titles__link:hover {
+  background-color: #E5446D;
+  transition: 0.4s ease-in-out;
+}
+.modal__header__titles__item.active .modal__header__titles__link {
+  background-color: #E5446D;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
 .modal__content {
-  padding: 1.25rem 4.5625rem;
+  padding: 1.875rem 4.5625rem;
   background-color: #fff;
   border: 3px solid #393E7D;
   border-radius: 0 0 1.5625rem 1.5625rem;
@@ -264,7 +285,6 @@ a, a:active, a:visited {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr;
-  align-items: center;
 }
 .modal__content .pokemon-stats__experience {
   margin-top: 0.625rem;
@@ -302,6 +322,20 @@ a, a:active, a:visited {
   background-color: #2E933C;
   border-radius: 5px;
 }
+.modal__content .pokemon-stats__experience__bars.with-expected::after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #2E933C;
+  border-radius: 5px;
+  width: 20%;
+  left: 48%;
+  background-color: #E5446D;
+  border-radius: 0 5px 5px 0;
+}
 .modal__content .pokemon-stats__group-button {
   display: flex;
   flex-direction: column;
@@ -320,9 +354,14 @@ a, a:active, a:visited {
   border-radius: 1.875rem;
   text-align: center;
 }
+.modal__content .pokemon-stats__group-button__button.active {
+  background-color: #E5446D;
+}
+.modal__content .pokemon-stats__group-button__button:first-child {
+  margin-bottom: 0.625rem;
+}
 .modal__content .pokemon-stats__group-button__button.disabled {
   cursor: not-allowed;
-  margin-top: 0.3125rem;
   background-color: #707070;
 }
 .modal__content .pokemon-stats__group-button__button:hover:not(.modal__content .pokemon-stats__group-button__button.disabled) {
@@ -416,6 +455,137 @@ a, a:active, a:visited {
 .modal__content .pokemon-info__evolutions__item__levels {
   font-size: 1.25rem;
   margin-top: 0.3125rem;
+}
+.modal__content .item-container {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 2.8125rem;
+}
+.modal__content .item-container.show {
+  display: flex;
+}
+.modal__content .item-container .items-list {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1.875rem 0;
+}
+.modal__content .item-container .items-list__item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 3px solid #393E7D;
+  border-radius: 0.9375rem;
+  cursor: pointer;
+}
+.modal__content .item-container .items-list__item:hover {
+  border-color: #E5446D;
+}
+.modal__content .item-container .items-list__item__select-box {
+  position: absolute;
+  top: calc(-1 * 0.625rem);
+  right: calc(-1 * 0.625rem);
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border: 3px solid #2E933C;
+  border-radius: 1.25rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__content .item-container .items-list__item__select-box i {
+  color: #fff;
+  display: none;
+}
+.modal__content .item-container .items-list__item__select-box.active {
+  background-color: #2E933C;
+}
+.modal__content .item-container .items-list__item__select-box.active i {
+  display: block;
+}
+.modal__content .item-container .items-list__item__img-holder {
+  padding: 1.875rem;
+}
+.modal__content .item-container .items-list__item__img-holder img {
+  width: 7.5rem;
+}
+.modal__content .item-container .items-list__item__details {
+  padding: 1.4375rem;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 0.9375rem 0;
+  width: 100%;
+}
+.modal__content .item-container .items-list__item__details p {
+  margin: 0;
+}
+.modal__content .item-container .items-list__item__details__name {
+  font-family: "Mali", sans-serif;
+  color: #E5446D;
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+.modal__content .item-container .items-list__item__details__affect {
+  font-size: 1.5625rem;
+}
+.modal__content .item-container .items-list__item__details__affect span {
+  color: #2E933C;
+  font-weight: bold;
+}
+.modal__content .item-container .items-list__item__details__amount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal__content .item-container .items-list__item__details__amount label {
+  font-size: 1.5625rem;
+}
+.modal__content .item-container .items-list__item__details__amount__input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 0 1.25rem;
+}
+.modal__content .item-container .items-list__item__details__amount__input > * {
+  display: inline-block;
+}
+.modal__content .item-container .items-list__item__details__amount__input__increase, .modal__content .item-container .items-list__item__details__amount__input__decrease {
+  border: 1px solid #1B1B1E;
+  padding: 0.3125rem;
+}
+.modal__content .item-container .items-list__item__details__amount__input__max {
+  color: #3F88C5;
+  font-size: 1.5625rem;
+  font-weight: 700;
+}
+.modal__content .item-container .items-list__item__details__amount__input input[type=number] {
+  width: 5rem;
+  border: 3px solid #393E7D;
+  border-radius: 0.3125rem;
+  padding: 0.3125rem;
+  font-size: 1.5625rem;
+  text-align: center;
+}
+.modal__content .item-container .items-list__button {
+  display: flex;
+  justify-content: flex-end;
+}
+.modal__content .item-container .items-list__button--submit {
+  background-color: #E5446D;
+  padding: 0.9375rem 5rem;
+  font-size: 1.5rem;
+  border-radius: 2.625rem;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Mali", sans-serif;
+}
+.modal__content .item-container .items-list__button--submit:hover {
+  background-color: #3F88C5;
+  transition: 0.4s ease-in-out;
 }
 
 .amount {
