@@ -370,11 +370,11 @@ a, a:active, a:visited {
     width: 14.6875em;
   }
 }
-.card.hovorable:hover {
+.card.hoverable:hover {
   cursor: pointer;
 }
-.card.hovorable:hover .card__content,
-.card.hovorable:hover .card__footer {
+.card.hoverable:hover .card__content,
+.card.hoverable:hover .card__footer {
   border-color: #E5446D;
   transition: 0.4s ease-in-out;
   box-shadow: 0.3125rem 0.625rem rgba(229, 68, 109, 0.1);
