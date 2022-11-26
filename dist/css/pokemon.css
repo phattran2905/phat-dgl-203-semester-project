@@ -460,7 +460,7 @@ a, a:active, a:visited {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 2.8125rem;
+  margin-left: 3.4375rem;
 }
 .modal__content .item-container.show {
   display: flex;
@@ -469,6 +469,10 @@ a, a:active, a:visited {
   display: flex;
   flex-direction: column;
   grid-gap: 1.875rem 0;
+  padding: 1.25rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 50vh;
 }
 .modal__content .item-container .items-list__item {
   position: relative;
@@ -488,7 +492,7 @@ a, a:active, a:visited {
   right: calc(-1 * 0.625rem);
   width: 1.5625rem;
   height: 1.5625rem;
-  border: 3px solid #2E933C;
+  border: 3px solid #393E7D;
   border-radius: 1.25rem;
   background-color: #fff;
   display: flex;
@@ -570,11 +574,14 @@ a, a:active, a:visited {
   font-size: 1.5625rem;
   text-align: center;
 }
-.modal__content .item-container .items-list__button {
+.modal__content .item-container__footer {
   display: flex;
   justify-content: flex-end;
+  margin-top: 1.25rem;
 }
-.modal__content .item-container .items-list__button--submit {
+.modal__content .item-container__footer__button--submit {
+  outline: none;
+  border: none;
   background-color: #E5446D;
   padding: 0.9375rem 5rem;
   font-size: 1.5rem;
@@ -583,7 +590,7 @@ a, a:active, a:visited {
   font-weight: bold;
   font-family: "Mali", sans-serif;
 }
-.modal__content .item-container .items-list__button--submit:hover {
+.modal__content .item-container__footer__button--submit:hover {
   background-color: #3F88C5;
   transition: 0.4s ease-in-out;
 }
