@@ -1,4 +1,4 @@
-@use '../util';
+@use '../util' as u;
 
 h1,
 h2,
@@ -6,7 +6,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: util.$heading-font;
+	font-family: u.$heading-font;
     margin-top: 0;
 }
 

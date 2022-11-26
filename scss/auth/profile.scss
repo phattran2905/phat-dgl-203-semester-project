@@ -158,7 +158,21 @@
             padding: 0 u.rem(94);
 
             .form__input-group {
+                @include g.input-group;
 
+                .form__label {
+                    @include g.form-label;
+                }
+
+                .form__input[type=text],
+                .form__input[type=email] {
+                    @include g.text-input(g.$secondary-color);
+                    border-radius: u.rem(10);
+                }
+
+                .form__error {
+                    @include g.form-error;
+                }
             }
 		}
 	}
