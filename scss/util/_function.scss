@@ -4,3 +4,12 @@
 @function rem($pixel) {
     @return math.div($pixel, 16) + rem;
 }
+
+// Divide pixel by 16 and return ems
+@function em($pixel) {
+    @return math.div($pixel, 16) + em;
+}
+
+@function card-border-radius() {
+    @return rem(5) rem(5) rem(25) rem(25);
+}

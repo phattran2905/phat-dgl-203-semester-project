@@ -103,11 +103,12 @@ a, a:active, a:visited {
 }
 .navbar__nav__list {
   display: flex;
+  align-items: center;
 }
 .navbar__nav__list__item {
   width: 12.7rem;
   height: 4rem;
-  border-radius: 24px;
+  border-radius: 2rem;
   text-align: center;
   background-color: #fff;
   border: 3px solid transparent;
