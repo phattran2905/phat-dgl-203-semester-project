@@ -1,0 +1,172 @@
+@use "../globals" as g;
+@use "../util" as u;
+
+.modal {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.7);
+	visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15%;
+
+	&.show {
+		visibility: visible;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@include u.breakpoint(xlarge) {
+			width: u.em(1162);
+		}
+	}
+
+    &__header {
+        background-color: g.$secondary-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: u.rem(20) u.rem(30);
+
+        h3 {
+            color: #fff;
+            margin-bottom: 0;
+        }
+
+        &__close-btn {
+            margin-left: 0;
+            color: #fff;
+            font-size: u.rem(26);
+
+            &:hover {
+                color: g.$primary-color;
+            }
+        }
+    }
+
+    &__content {
+        padding: 0 u.rem(73);
+        background-color: #fff;
+        border: 3px solid g.$secondary-color;
+        border-radius: 0 0 u.rem(25) u.rem(25);
+
+        &__card {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 1fr;
+            align-items: center;
+        }
+
+        .pokemon-info {
+            padding: u.rem(50) u.rem(85);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: u.rem(25) 0;
+
+            h5 {
+                font-family: u.$heading-font;
+                font-size: u.rem(30);
+                font-weight: bold;
+                margin-bottom: u.rem(20);
+            }
+
+            &__row {
+                display: flex;
+                flex-direction: row;
+            }
+
+            &__row:nth-child(1) {
+                grid-column: 1 / 4;
+                justify-content: space-between;
+
+                span {
+                    display: block;
+                    text-align: center;
+                    color: g.$primary-color;
+                    font-weight: bold;
+                    font-size: u.rem(26);
+                }
+            }
+            
+            &__row:nth-child(2) {
+                grid-column: 1 / 4;
+                justify-content: space-between;
+
+                .pokemon-info__type div{
+                    background-color: g.$secondary-color;
+                    padding: u.rem(9) u.rem(34);
+
+                    span {
+                        color: #fff;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            &__caught-by {
+                margin-left: 0;
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+
+                    li:not(:last-child) {
+                        margin-right: u.rem(25);
+                    }
+                }
+            }
+
+            &__row:nth-child(3) {
+                grid-column: 1 / 4;
+                display: flex;
+                flex-direction: column;
+            }
+
+            &__evolutions {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                &__item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    &__name {
+                        font-family: u.$heading-font;
+                        font-weight: bold;
+                        font-size: u.rem(23);
+                        text-transform: capitalize;
+                        color: g.$primary-color;
+                        margin-top: u.rem(10);
+                    }
+
+                    &__img {
+                        border: 3px solid g.$secondary-color;
+                        border-radius: 50%;
+                        padding: u.rem(15);
+
+                        img {
+                            width: u.em(90);
+                            height: u.em(79);
+                        }
+                    }
+
+                    &__levels {
+                        font-size: u.rem(20);
+                        margin-top: u.rem(5);
+                    }
+                    
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 @forward "../style";
 @forward "./layout";
+@forward "./modal";
 @use "../globals" as g;
 @use "../util" as u;
 
@@ -21,7 +22,7 @@
         width: u.em(235);
     }
 
-    &:hover {
+    &.hovorable:hover {
         cursor: pointer;
         .card__content,
         .card__footer {
@@ -86,7 +87,5 @@
             color: g.$primary-color; 
             font-size: u.rem(25);
         }
-
-
     }
 }
