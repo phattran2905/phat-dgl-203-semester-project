@@ -129,6 +129,28 @@
                     }
 				}
 			}
+
+            &__coins {
+                padding: 1rem;
+                $font-size: u.rem(26);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                span {
+                    font-size: $font-size;
+                    font-weight: bold;
+                    color: g.$secondary-color;
+                }
+
+                i {
+                    @extend span;
+                    margin-right: u.rem(9);
+                    line-height: $font-size;
+                    color: g.$primary-color;
+                }
+
+            }
 		}
 
 		&__fields {

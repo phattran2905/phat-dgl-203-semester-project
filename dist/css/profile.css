@@ -227,7 +227,7 @@ a, a:active, a:visited {
   background-color: #fff;
   border-radius: 1.5625rem;
 }
-.form__container__info__card__level span {
+.form__container__info__card__level span, .form__container__info__card__level .form__container__info__coins i, .form__container__info__coins .form__container__info__card__level i {
   font-size: 1.25rem;
   font-weight: bold;
   color: #E5446D;
@@ -272,6 +272,22 @@ a, a:active, a:visited {
   position: absolute;
   top: 0;
   left: 0;
+}
+.form__container__info__coins {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form__container__info__coins span, .form__container__info__coins i {
+  font-size: 1.625rem;
+  font-weight: bold;
+  color: #393E7D;
+}
+.form__container__info__coins i {
+  margin-right: 0.5625rem;
+  line-height: 1.625rem;
+  color: #E5446D;
 }
 .form__container__fields {
   grid-column: 2/3;
