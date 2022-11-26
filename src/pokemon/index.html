@@ -313,7 +313,7 @@
     </main>
 
     <!-- Modal -->
-    <div id="modal" class="modal">
+    <div id="modal" class="modal show">
       <div class="modal__container">
         <div class="modal__header">
           <h3>Information</h3>
@@ -324,28 +324,40 @@
 
         <div class="modal__content">
           <div class="modal__content__card">
-            <!-- Card -->
-            <div class="card">
-              <div class="card__content">
-                <div class="card__level">
-                  <span>Lv.16</span>
+            <div class="pokemon-stats">
+              <!-- Card -->
+              <div class="pokemon-stats__card card">
+                <div class="card__content">
+                  <div class="card__level">
+                    <span>Lv.16</span>
+                  </div>
+  
+                  <div class="card__pokemon_img">
+                    <img src="../../dist/img/pikachu.svg" alt="Pikachu">
+                  </div>
+  
+                  <div class="card__power">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Power:</span>
+                    <span>10,000</span>
+                  </div>
                 </div>
+  
+                <div class="card__footer">
+                  <p>Pikachu</p>
+                </div>
+              </div><!-- End Card-->
 
-                <div class="card__pokemon_img">
-                  <img src="../../dist/img/pikachu.svg" alt="Pikachu">
-                </div>
-
-                <div class="card__power">
-                  <i class="fa-solid fa-bolt"></i>
-                  <span>Power:</span>
-                  <span>10,000</span>
-                </div>
+              <div class="pokemon-stats__experience">
+                <p>EXP: <span>1,500</span>/3,000</p>
+                <div class="pokemon-stats__experience__bars"></div>
               </div>
 
-              <div class="card__footer">
-                <p>Pikachu</p>
+              <div class="pokemon-stats__group-button">
+                <a class="pokemon-stats__group-button__button" href="./feeding.html">Feed</a>
+                <a class="pokemon-stats__group-button__button" href="./evolvement.html">Evolve</a>
               </div>
-            </div><!-- End Card-->
+            </div>
 
             <!-- Pokemon Info -->
             <div class="pokemon-info">

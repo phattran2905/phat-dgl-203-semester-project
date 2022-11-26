@@ -215,12 +215,13 @@ a, a:active, a:visited {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
   visibility: hidden;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   padding-top: 15%;
 }
 .modal.show {
+  display: flex;
   visibility: visible;
 }
 .modal__container {
@@ -264,6 +265,42 @@ a, a:active, a:visited {
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr;
   align-items: center;
+}
+.modal__content .pokemon-stats__experience {
+  margin-top: 0.9375rem;
+  padding: 0.9375rem;
+  border: 1px solid #393E7D;
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal__content .pokemon-stats__experience p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin: 0 0 0.625rem 0;
+}
+.modal__content .pokemon-stats__experience p span {
+  color: #E5446D;
+}
+.modal__content .pokemon-stats__experience__bars {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #1B1B1E;
+  position: relative;
+}
+.modal__content .pokemon-stats__experience__bars::before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #2E933C;
+  border-radius: 5px;
 }
 .modal__content .pokemon-info {
   padding: 3.125rem 5.3125rem;
