@@ -79,7 +79,7 @@ a, a:active, a:visited {
   color: #E5446D;
 }
 .flex-container main .container {
-  margin-bottom: 5.625rem;
+  margin-bottom: 6.25rem;
 }
 .flex-container footer {
   position: fixed;
@@ -193,6 +193,7 @@ a, a:active, a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  grid-row-gap: 0.9375rem;
 }
 .container .pokemon {
   height: auto;
