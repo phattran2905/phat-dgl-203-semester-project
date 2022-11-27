@@ -221,4 +221,86 @@ a, a:active, a:visited {
 .hero__deco-img--right {
   right: 0;
   left: auto;
+}
+
+.tutorial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.tutorial h2 {
+  padding: 1.5625rem;
+  font-size: 2.875rem;
+  color: #fff;
+  text-align: center;
+  background-color: #393E7D;
+  border-bottom: 10px solid #3F88C5;
+}
+.tutorial__description {
+  text-align: center;
+  align-self: center;
+  font-size: 1.5625rem;
+  margin: 0 0 1.25rem 0;
+  padding: 0 1.25rem;
+}
+
+.guide {
+  margin: 2rem;
+  background-color: #393E7D;
+}
+.guide p {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.guide__explore {
+  position: relative;
+  padding: 2.5rem 3.75rem;
+  margin: 1.875rem 1.875rem 3.75rem 1.875rem;
+}
+.guide__explore .title {
+  position: absolute;
+  top: calc(-1 * 3.75rem);
+  left: calc(-1 * 2.5rem);
+  background-color: #E5446D;
+  color: #fff;
+  padding: 0.875rem 2.4375rem;
+  font-size: 1.875rem;
+  border-left: 10px solid #393E7D;
+  border-top-right-radius: 2.0625rem;
+  border-bottom-right-radius: 2.0625rem;
+}
+.guide__items {
+  position: relative;
+  padding: 2.5rem 3.75rem;
+  margin: 1.875rem 1.875rem 3.75rem 1.875rem;
+}
+.guide__items .title {
+  position: absolute;
+  top: calc(-1 * 3.75rem);
+  left: calc(-1 * 2.5rem);
+  background-color: #E5446D;
+  color: #fff;
+  padding: 0.875rem 2.4375rem;
+  font-size: 1.875rem;
+  border-left: 10px solid #393E7D;
+  border-top-right-radius: 2.0625rem;
+  border-bottom-right-radius: 2.0625rem;
+}
+.guide__shop {
+  position: relative;
+  padding: 2.5rem 3.75rem;
+  margin: 1.875rem 1.875rem 3.75rem 1.875rem;
+}
+.guide__shop .title {
+  position: absolute;
+  top: calc(-1 * 3.75rem);
+  left: calc(-1 * 2.5rem);
+  background-color: #E5446D;
+  color: #fff;
+  padding: 0.875rem 2.4375rem;
+  font-size: 1.875rem;
+  border-left: 10px solid #393E7D;
+  border-top-right-radius: 2.0625rem;
+  border-bottom-right-radius: 2.0625rem;
 }/*# sourceMappingURL=home.css.map */
