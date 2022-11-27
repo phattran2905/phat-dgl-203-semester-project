@@ -1,0 +1,222 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "KoHo", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Mali", sans-serif;
+  margin-top: 0;
+}
+
+a, a:active, a:visited {
+  text-decoration: none;
+}
+
+.card__content {
+  width: 100%;
+  border: 4px solid #393E7D;
+  border-radius: 0.3125rem 0.3125rem 0 0;
+  padding-top: 2.6875rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card__footer {
+  border: 2px solid #393E7D;
+  border-radius: 0 0 1.5625rem 1.5625rem;
+  width: 100%;
+  background-color: #393E7D;
+}
+.card__footer p {
+  font-family: "Mali", sans-serif;
+  font-weight: bold;
+  font-size: 1.0625rem;
+  padding: 0.9375rem 5.25rem;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-row-gap: 0.9375rem;
+}
+.container .items {
+  height: auto;
+}
+@media (min-width: 118.75em) {
+  .container .items {
+    padding: 3.375rem 3.375rem 0 3.375rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-gap: 6.25rem 9.375rem;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.flex-container main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.flex-container main h1 {
+  margin: auto;
+  font-size: 5.25rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: #E5446D;
+}
+.flex-container main .container {
+  margin-bottom: 6.25rem;
+}
+.flex-container footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: #1B1B1E;
+  color: #fff;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 118.75em) {
+  .navbar {
+    padding: 2rem 3.375rem;
+  }
+}
+.navbar__logo {
+  width: 4.5rem;
+  height: 4.5rem;
+  display: none;
+}
+.navbar__logo img {
+  width: 100%;
+}
+.navbar.auth .navbar__nav {
+  width: auto;
+}
+.navbar.auth .navbar__logo {
+  display: block;
+}
+.navbar.auth .navbar__nav__list__item {
+  border: 3px solid #393E7D;
+}
+.navbar.auth .navbar__nav__list__item.active {
+  background: #393E7D;
+}
+.navbar.auth .navbar__nav__list__item.active > .navbar__nav__list__item__link {
+  color: #fff;
+}
+.navbar:not(.navbar.auth) {
+  background-color: #393E7D;
+}
+.navbar__nav {
+  width: 100%;
+}
+.navbar__nav__list {
+  display: flex;
+  align-items: center;
+}
+.navbar__nav__list__item {
+  width: 12.7rem;
+  height: 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  background-color: #fff;
+  border: 3px solid transparent;
+}
+.navbar__nav__list__item:hover {
+  border-color: #E5446D;
+}
+.navbar__nav__list__item:hover .navbar__nav__list__item__link {
+  color: #E5446D;
+}
+.navbar__nav__list__item:not(:last-child) {
+  margin-right: 1.2rem;
+}
+.navbar__nav__list__item:last-child {
+  margin-left: auto;
+}
+.navbar__nav__list__item.active {
+  background-color: #E5446D;
+}
+.navbar__nav__list__item.active .navbar__nav__list__item__link {
+  color: #fff;
+}
+.navbar__nav__list__item.profile {
+  width: 3.6875rem;
+  height: 3.6875rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__nav__list__item.profile i {
+  font-size: 1.875rem;
+  line-height: 3.75rem;
+}
+.navbar__nav__list__item__link {
+  font-family: "Mali", sans-serif;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 0.9rem 2rem;
+  font-weight: bold;
+  display: block;
+  color: #393E7D;
+}
+.navbar__nav__list__item__link:hover {
+  color: #393E7D;
+  transition: 0.3s ease-out;
+}
+
+.amount {
+  display: inline-block;
+  margin: auto;
+}
+.amount span {
+  border: 3px solid #393E7D;
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.9375rem;
+  font-size: 1.4375rem;
+  font-weight: bold;
+}/*# sourceMappingURL=inventory.css.map */
