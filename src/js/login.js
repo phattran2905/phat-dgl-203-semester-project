@@ -1,9 +1,4 @@
 const loginForm = document.getElementById("login-form");
-const jwtToken = localStorage.getItem('pkm-jwt');
-
-function redirectToProfile() {
-    window.location.replace("http://localhost:5500/src/auth/profile.html");
-}
 
 loginForm.addEventListener("submit", async (e) => {
 	e.preventDefault();
@@ -23,16 +18,18 @@ loginForm.addEventListener("submit", async (e) => {
 
 		const content = await rawResponse.json();
 
-        if (content.message == "OK" && content.token) {
-            localStorage.setItem("pkm-jwt", JSON.stringify({token: content.token}))
-        }
+		if (content.message == "OK" && content.token) {
+			localStorage.setItem("pkm-jwt", JSON.stringify({ token: content.token }));
+		}
 
-        redirectToProfile();
+		redirectToProfile();
 	} catch (error) {
 		console.log(error);
 	}
 });
 
-if (jwtToken) {
-    redirectToProfile();
+function main() {
+	console.log(window.location.href)
 }
+
+main();
