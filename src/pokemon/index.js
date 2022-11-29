@@ -1,23 +1,10 @@
-const modals = document.querySelectorAll(".modal");
-const closeModalButtons = document.querySelectorAll(".modal__header__close-btn");
 const backToPokemonModalButton = document.getElementById("back-to-pokemon-modal-btn");
 const pokemonCards = document.querySelectorAll(".card.hoverable");
 const pokemonModal = document.getElementById("pokemon-modal");
 
-// Close all modals
-function closeAllModals() {
-    modals.forEach(modal => {
-        modal.classList.remove("show");
-    })
-}
-
 backToPokemonModalButton.addEventListener('click', e => {
     closeAllModals();
     pokemonModal.classList.add("show");
-})
-
-closeModalButtons.forEach(button => {
-    button.addEventListener("click", closeAllModals);
 })
 
 // Open Pokemon Modal

@@ -5,3 +5,17 @@ const CLIENT_ROUTES = [{
     signupPage: `${CLIENT_ORIGIN_URL}/auth/signup.html`,
     profilePage: `${CLIENT_ORIGIN_URL}/auth/profile.html`
 }]
+
+// ===== Handle Modals =====\
+const modals = document.querySelectorAll(".modal");
+const closeModalButtons = document.querySelectorAll(".modal__header__close-btn");
+// Close all modals
+function closeAllModals() {
+    modals.forEach(modal => {
+        modal.classList.remove("show");
+    })
+}
+
+closeModalButtons.forEach(button => {
+    button.addEventListener("click", closeAllModals);
+})
