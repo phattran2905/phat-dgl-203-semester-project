@@ -842,17 +842,17 @@
       </div><!-- End Modal Container -->
     </div><!-- End Consumable Modal -->
 
-    <!-- Use Items Modal -->
-    <div id="pokemon-list-modal" class="modal show">
+    <!-- Use Mystic Items Modal -->
+    <div id="use-mystic-item-modal" class="modal show">
       <form action="#!" method="get">
         <!-- Modal Container -->
         <div class="modal__container">
           <!-- Modal Header -->
           <div class="modal__header">
-            <a id="back-to-pokemon-modal-btn" href="#" class="modal__header__back-btn">
+            <a id="back-to-mystic-modal-btn" href="#" class="modal__header__back-btn">
               <i class="fa-solid fa-arrow-left"></i>
             </a>
-            <h3>Pokemon</h3>
+            <h2>Pokemon</h2>
             <a href="#" class="modal__header__close-btn">
               <i class="fa-solid fa-xmark"></i>
             </a>
@@ -860,40 +860,32 @@
 
           <!-- Modal Content -->
           <div class="modal__content">
-            <div class="modal__content__card">
-              <!-- Pokemon Stats -->
-              <div class="pokemon-stats">
-                <!-- Card -->
-                <div class="pokemon-stats__card card">
-                  <div class="card__content">
-                    <div class="card__level">
-                      <span>Lv.16</span>
-                    </div>
-
-                    <div class="card__pokemon_img">
-                      <img src="../../dist/img/pikachu.svg" alt="Pikachu">
-                    </div>
-
-                    <div class="card__power">
-                      <i class="fa-solid fa-bolt"></i>
-                      <span>Power:</span>
-                      <span>10,000</span>
-                    </div>
+            <div class="left-col">
+              <!-- Card-->
+              <div class="left-col__card card">
+                <div class="card__content">
+                  <div class="card__item-img">
+                    <img src="../../dist/img/apple.png" alt="Apple">
                   </div>
-
-                  <div class="card__footer">
-                    <p>Pikachu</p>
+  
+                  <div class="card__item-amount">
+                    <p>Amount: <span>100</span></p>
                   </div>
-                </div><!-- End Card-->
-
-                <div class="pokemon-stats__experience">
-                  <p>EXP: <span>1,500</span>/3,000</p>
-                  <div class="pokemon-stats__experience__bars with-expected"></div>
                 </div>
-              </div><!-- End Pokemon Stats -->
+  
+                <div class="card__footer">
+                  <p>Apple</p>
+                </div>
+              </div><!-- End Card-->
+  
+              <!-- Card  -->
+              <div class="left-col__amount">
+                <p>Amount: <span>5</span></p>
+              </div>
+            </div>
 
               <!-- Pokemon -->
-              <div id="pokemon" class="item-container show">
+              <div id="pokemon-list" class="item-container show">
                 <!-- List -->
                 <div class="items-list">
                   <!-- Item -->
@@ -902,19 +894,11 @@
                       <i class="fa-solid fa-check"></i>
                     </div>
                     <div class="items-list__item__img-holder">
-                      <img src="../../dist/img/apple.png" alt="Apple">
+                      <img src="../../dist/img/pikachu.svg" alt="Pikachu">
                     </div>
                     <div class="items-list__item__details">
-                      <p class="items-list__item__details__name">Apple</p>
-                      <p class="items-list__item__details__affect">EXP: <span>+100</span></p>
-                      <div class="items-list__item__details__amount">
-                        <label for="apple-amount">Amount:</label>
-                        <div class="items-list__item__details__amount__input">
-                          <input type="number" class="item-amount" name="apple-amount" id="apple-amount" min="0"
-                            value="0">
-                          <span class="items-list__item__details__amount__input__max">/ 26</span>
-                        </div>
-                      </div>
+                      <p class="items-list__item__details__name">Pikachu</p>
+                      <p class="items-list__item__details__affect">EXP: <span>1,600</span>/3,000 <span>(+100)</span></p>
                     </div>
                   </div><!-- End Item -->
 
@@ -928,21 +912,21 @@
                     </div>
                     <div class="items-list__item__details">
                       <p class="items-list__item__details__name">Burger</p>
-                      <p class="items-list__item__details__affect">EXP: <span>+100</span></p>
-                      <div class="items-list__item__details__amount">
-                        <label for="burger-amount">Amount:</label>
-                        <div class="items-list__item__details__amount__input">
-                          <input type="number" class="item-amount" name="burger-amount" id="burger-amount" min="0"
-                            value="0">
-                          <span class="items-list__item__details__amount__input__max">/ 26</span>
-                        </div>
-                      </div>
+                      <p class="items-list__item__details__affect">Power: <span>11,000</span> <span>(+100)</span></p>
                     </div>
                   </div><!-- End Item -->
                 </div><!-- End List -->
               </div><!-- End Pokemon -->
 
               <div class="item-container__footer">
+                <div class="items-list__item__details__amount">
+                  <label for="apple-amount">Amount:</label>
+                  <div class="items-list__item__details__amount__input">
+                    <input type="number" class="item-amount" name="apple-amount" id="apple-amount" min="0"
+                      value="0">
+                    <span class="items-list__item__details__amount__input__max">/ 26</span>
+                  </div>
+                </div>
                 <button type="submit" class="item-container__footer__button--submit">Use</button>
               </div>
             </div>
