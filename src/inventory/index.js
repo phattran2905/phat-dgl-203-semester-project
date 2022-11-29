@@ -6,10 +6,14 @@ const pokeballTab = document.getElementById("pokeball-items");
 const mysticTab = document.getElementById("mystic-items");
 const consumableTab = document.getElementById("consumable-items");
 // Cards
-const pokeballCards = document.querySelectorAll(".pokeball-item");
+const pokeballCards = document.querySelectorAll(".hoverable.pokeball-item");
+const mysticCards = document.querySelectorAll(".hoverable.mystic-item");
+const consumableCards = document.querySelectorAll(".hoverable.consumable-item");
 
 // Modal
 const pokeballModal =document.getElementById("pokeball-modal");
+const mysticItemModal =document.getElementById("mystic-item-modal");
+const consumableItemModal =document.getElementById("consumable-item-modal");
 
 function closeAllTabs() {
 	pokeballTab.classList.remove("show");
@@ -40,11 +44,17 @@ function main() {
 		e.target.parentNode.classList.add("active");
 	});
 
-	// Cards
+	// Modal
 	// Open Pokeball Modal
 	pokeballCards.forEach((element) => {
 		element.addEventListener("click", (e) => {
 			pokeballModal.classList.add("show");
+		});
+	});
+	// Open Pokeball Modal
+	mysticCards.forEach((element) => {
+		element.addEventListener("click", (e) => {
+			mysticItemModal.classList.add("show");
 		});
 	});
 }

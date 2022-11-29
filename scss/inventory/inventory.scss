@@ -150,18 +150,44 @@
 	}
 
 	.right-col {
-        &__description {
-            grid-column: span 3;
-
-            h2 {
-                font-size: u.rem(30);
-            }
-
-            p {
-                line-height: u.rem(28);
-                font-size: u.rem(18);
-            }
+        h3 {
+            font-size: u.rem(30);
+            margin-bottom: u.rem(18);
         }
-        
+
+        p {
+            line-height: u.rem(28);
+            font-size: u.rem(18);
+            text-align: justify;
+        }
+
+		&__content {
+			grid-column: span 3;
+
+            .right-col__affect {
+                margin-top: u.rem(50);
+
+                p {
+                    padding: 0 u.rem(30);
+                    font-weight: bold;
+
+                        
+                    i {
+                        color: #fff;
+                        padding: u.rem(8);
+                        border-radius: 50%;
+                        background-color: g.$success-color;
+                        font-weight: bold;
+                        margin-right: u.rem(3);
+                    }
+
+                    span {
+                        color: g.$primary-color;
+                        font-size: u.rem(24);
+                        margin-left: u.rem(10);
+                    }
+                }
+            }
+		}
 	}
 }

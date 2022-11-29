@@ -104,7 +104,7 @@ a, a:active, a:visited {
   align-items: center;
   padding: 1.25rem 1.875rem;
 }
-.modal__header h3 {
+.modal__header h2 {
   color: #fff;
   margin-bottom: 0;
   font-size: 1.5rem;
@@ -670,13 +670,35 @@ a, a:active, a:visited {
 .modal .left-col__amount p span {
   color: #E5446D;
 }
-.modal .right-col__description {
-  grid-column: span 3;
-}
-.modal .right-col__description h2 {
+.modal .right-col h3 {
   font-size: 1.875rem;
+  margin-bottom: 1.125rem;
 }
-.modal .right-col__description p {
+.modal .right-col p {
   line-height: 1.75rem;
   font-size: 1.125rem;
+  text-align: justify;
+}
+.modal .right-col__content {
+  grid-column: span 3;
+}
+.modal .right-col__content .right-col__affect {
+  margin-top: 3.125rem;
+}
+.modal .right-col__content .right-col__affect p {
+  padding: 0 1.875rem;
+  font-weight: bold;
+}
+.modal .right-col__content .right-col__affect p i {
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #2E933C;
+  font-weight: bold;
+  margin-right: 0.1875rem;
+}
+.modal .right-col__content .right-col__affect p span {
+  color: #E5446D;
+  font-size: 1.5rem;
+  margin-left: 0.625rem;
 }/*# sourceMappingURL=inventory.css.map */
