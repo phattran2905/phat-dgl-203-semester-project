@@ -30,4 +30,14 @@
             color: #fff;
         }
     }
+
+    &.hoverable:hover {
+        cursor: pointer;
+        .card__content,
+        .card__footer {
+            border-color: c.$primary-color;
+            transition: 0.4s ease-in-out;
+            box-shadow: u.rem(5) u.rem(10) rgba($color: c.$primary-color, $alpha: .1);
+        }
+    }
 }

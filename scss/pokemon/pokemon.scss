@@ -22,16 +22,6 @@
         width: u.em(235);
     }
 
-    &.hoverable:hover {
-        cursor: pointer;
-        .card__content,
-        .card__footer {
-            border-color: g.$primary-color;
-            transition: 0.4s ease-in-out;
-            box-shadow: u.rem(5) u.rem(10) rgba($color: g.$primary-color, $alpha: .1);
-        }
-    }
-
     &__level {
         position: absolute;
         top: calc(-1 * u.rem(13));

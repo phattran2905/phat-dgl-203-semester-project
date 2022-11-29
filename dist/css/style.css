@@ -61,6 +61,15 @@ a, a:active, a:visited {
   text-align: center;
   color: #fff;
 }
+.card.hoverable:hover {
+  cursor: pointer;
+}
+.card.hoverable:hover .card__content,
+.card.hoverable:hover .card__footer {
+  border-color: #E5446D;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0.3125rem 0.625rem rgba(229, 68, 109, 0.1);
+}
 
 .flex-container {
   display: flex;

@@ -1,17 +1,98 @@
-@forward './layout';
+@forward "./layout";
 @forward "../style";
 @use "../globals" as g;
 @use "../util" as u;
 
-.amount {
-    display: inline-block;
-    margin: auto;
+.tabs {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	border: 3px solid g.$secondary-color;
+	border-top-right-radius: u.rem(26);
+	border-bottom-right-radius: u.rem(26);
+	border-bottom-left-radius: u.rem(26);
 
-    span {
-        border: 3px solid g.$secondary-color;
-        border-radius: u.rem(8);
-        padding: u.rem(10) u.rem(15);
-        font-size: u.rem(23);
-        font-weight: bold;
-    }
+	&__header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-end;
+		padding: 0 u.rem(32) 0 0;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		&__item.active &__link {
+			background-color: g.$secondary-color;
+		}
+		&__item:not(&__item.active) &__link:hover {
+			border-bottom-color: g.$primary-color;
+		}
+
+		&__link {
+			display: block;
+			padding: u.rem(15) u.rem(80);
+			color: #fff;
+			font-weight: bold;
+			font-size: u.rem(24);
+			background-color: g.$light-blue;
+			border-bottom: 5px solid transparent;
+		}
+	}
+
+	&__content {
+		padding: u.rem(65) u.rem(52);
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		grid-gap: u.rem(100);
+	}
+}
+
+.card {
+	&__item-amount {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: u.rem(10);
+
+        p {
+            text-align: center;
+        }
+
+		span {
+            display: block;
+			font-weight: bold;
+			color: g.$success-color;
+			font-size: u.rem(21);
+		}
+	}
+}
+
+.amount {
+	display: inline-block;
+
+	p {
+		border: 2px solid g.$secondary-color;
+		border-radius: u.rem(8);
+		padding: u.rem(6) u.rem(22);
+		font-size: u.rem(24);
+		font-weight: bold;
+		color: g.$secondary-color;
+		margin: 0;
+	}
+
+	&--current {
+		color: g.$primary-color;
+	}
 }
