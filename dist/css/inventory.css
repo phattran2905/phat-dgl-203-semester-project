@@ -248,11 +248,14 @@ a, a:active, a:visited {
   flex-direction: row;
 }
 .tabs__items {
-  display: flex;
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   grid-gap: 6.25rem;
+}
+.tabs__items.show {
+  display: flex;
 }
 
 .card__item-amount {
