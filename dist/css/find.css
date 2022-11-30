@@ -589,7 +589,7 @@ a, a:active, a:visited {
   align-items: center;
   margin-top: 2rem;
 }
-.group-btn__button__catch-btn {
+.group-btn__button__outline-btn {
   background-color: #393E7D;
   font-family: "Mali", sans-serif;
   color: #fff;
@@ -598,74 +598,41 @@ a, a:active, a:visited {
   font-size: 1.4rem;
   padding: 1rem 3.375rem;
   border-radius: 2.125rem;
-  margin-right: 1rem;
   border: 4px solid #393E7D;
+  background-color: #fff;
+  color: #393E7D;
 }
-.group-btn__button__catch-btn:hover {
+.group-btn__button__outline-btn:not(:last-child) {
+  margin-right: 1rem;
+}
+.group-btn__button__outline-btn:hover {
   background-color: #fff;
   color: #393E7D;
   border: 4px solid #E5446D;
   transition: 0.3s ease-in-out;
 }
-.group-btn__button__battle-btn {
-  background-color: #393E7D;
-  font-family: "Mali", sans-serif;
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.4rem;
-  padding: 1rem 3.375rem;
-  border-radius: 2.125rem;
-  margin-right: 1rem;
-  border: 4px solid #393E7D;
-}
-.group-btn__button__battle-btn:hover {
-  background-color: #fff;
-  color: #393E7D;
-  border: 4px solid #E5446D;
-  transition: 0.3s ease-in-out;
-}
-.group-btn__button__skip-btn, .group-btn__button__back-btn {
-  background-color: #393E7D;
-  font-family: "Mali", sans-serif;
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.4rem;
-  padding: 1rem 3.375rem;
-  border-radius: 2.125rem;
-  margin-right: 1rem;
-  border: 4px solid #393E7D;
-  background-color: #fff;
-  color: #393E7D;
-}
-.group-btn__button__skip-btn:hover, .group-btn__button__back-btn:hover {
-  background-color: #fff;
-  color: #393E7D;
-  border: 4px solid #E5446D;
-  transition: 0.3s ease-in-out;
-}
-.group-btn__button__use-pokeball-btn {
-  background-color: #393E7D;
-  font-family: "Mali", sans-serif;
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.4rem;
-  padding: 1rem 3.375rem;
-  border-radius: 2.125rem;
-  margin-right: 1rem;
-  border: 4px solid #393E7D;
-  margin-right: 0;
-}
-.group-btn__button__use-pokeball-btn:hover {
-  background-color: #fff;
-  color: #393E7D;
-  border: 4px solid #E5446D;
-  transition: 0.3s ease-in-out;
-}
-.group-btn__button__back-btn {
+.group-btn__button__outline-btn.self-align-left {
   margin-right: auto;
+}
+.group-btn__button__primary-btn {
+  background-color: #393E7D;
+  font-family: "Mali", sans-serif;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 1rem 3.375rem;
+  border-radius: 2.125rem;
+  border: 4px solid #393E7D;
+}
+.group-btn__button__primary-btn:not(:last-child) {
+  margin-right: 1rem;
+}
+.group-btn__button__primary-btn:hover {
+  background-color: #fff;
+  color: #393E7D;
+  border: 4px solid #E5446D;
+  transition: 0.3s ease-in-out;
 }
 
 html {
@@ -1424,6 +1391,10 @@ a, a:active, a:visited {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr;
+}
+
+.modal__content .pokemon-stats {
+  padding-top: 1.25rem;
 }
 
 .modal__content .pokemon-stats__experience {

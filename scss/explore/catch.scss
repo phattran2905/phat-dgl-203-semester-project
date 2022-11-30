@@ -6,6 +6,11 @@
 
 .catch {
     margin: u.rem(46);
+    display: none;
+
+    &.show {
+        display: block;
+    }
 
     &__content {
         padding-top: u.rem(82);

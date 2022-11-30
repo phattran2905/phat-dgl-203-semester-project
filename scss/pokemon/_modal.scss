@@ -98,6 +98,8 @@
 
 		// Pokemon card
 		.pokemon-stats {
+            padding-top: u.rem(20);
+            
 			&__experience {
 				margin-top: u.rem(10);
 				padding: u.rem(15);

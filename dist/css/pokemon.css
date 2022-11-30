@@ -648,6 +648,9 @@ a, a:active, a:visited {
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr;
 }
+.modal__content .pokemon-stats {
+  padding-top: 1.25rem;
+}
 .modal__content .pokemon-stats__experience {
   margin-top: 0.625rem;
   padding: 0.9375rem;

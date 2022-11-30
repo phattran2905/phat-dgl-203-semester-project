@@ -50,8 +50,11 @@
         font-size: 1.4rem;
         padding: u.rem(16) u.rem(54);
         border-radius: u.rem(34);
-        margin-right: u.rem(16);
         border: 4px solid g.$secondary-color;
+
+        &:not(:last-child) {
+            margin-right: u.rem(16);
+        }
     
         &:hover {
             background-color: #fff;
@@ -62,29 +65,20 @@
     }
     
 	&__button {
-		&__catch-btn {
-			@include footer-button();
-		}
-
-		&__battle-btn {
-			@include footer-button();
-		}
-
-		&__skip-btn,
-		&__back-btn {
+        &__outline-btn {
 			@include footer-button();
 			background-color: #fff;
 			color: g.$secondary-color;
-		}
 
-		&__use-pokeball-btn {
+            &.self-align-left {
+                margin-right: auto;
+            }
+        }
+
+        &__primary-btn {
 			@include footer-button();
-            margin-right: 0;
-		}
+        }
 
-		&__back-btn {
-			margin-right: auto;
-		}
 	}
 }
 
