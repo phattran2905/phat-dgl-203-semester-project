@@ -248,6 +248,12 @@
 			}
 		}
 
+
+        // Full width
+        &--full {
+           grid-column: 1 / -1;
+        }
+
 		// Items
 		.item-container {
 			display: none;

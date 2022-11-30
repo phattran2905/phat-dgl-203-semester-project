@@ -849,7 +849,7 @@
             <a id="back-to-mystic-modal-btn" href="#" class="modal__header__back-btn">
               <i class="fa-solid fa-arrow-left"></i>
             </a>
-            <h2>Pokemon</h2>
+            <h2>Choose a Pokemon</h2>
             <a href="#" class="modal__header__close-btn">
               <i class="fa-solid fa-xmark"></i>
             </a>
@@ -857,97 +857,76 @@
 
           <!-- Modal Content -->
           <div class="modal__content">
-            <!-- Left col -->
-            <div class="left-col">
-              <!-- Card-->
-              <div class="left-col__card card">
-                <div class="card__content">
-                  <div class="card__item-img">
-                    <img src="../../dist/img/fire-medal.png" alt="Pikachu">
-                  </div>
-                </div>
+            <div class="modal__content--full">
+              <!-- Pokemon -->
+              <div id="pokemon-list" class="item-container show">
+                <!-- List -->
+                <div class="items-list">
+                  <!-- Item -->
+                  <button id="pokemon-pikachu" class="items-list__item">
+                    <div class="items-list__item__select-box">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="items-list__item__img-holder">
+                      <img src="../../dist/img/pikachu.svg" alt="Pikachu">
+                    </div>
+                    <div class="items-list__item__details">
+                      <p class="items-list__item__details__name">Pikachu</p>
+                      <p class="items-list__item__details__affect">EXP: <span class="expected-value">1,600</span>/3,000
+                        <span class="additional-value">(+100)</span>
+                      </p>
+                    </div>
+                  </button><!-- End Item -->
+                  <!-- Item -->
+                  <button id="pokemon-pichu" class="items-list__item">
+                    <div class="items-list__item__select-box">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="items-list__item__img-holder">
+                      <img src="../../dist/img/pichu.svg" alt="Pikachu">
+                    </div>
+                    <div class="items-list__item__details">
+                      <p class="items-list__item__details__name">Pichu</p>
+                      <p class="items-list__item__details__affect">EXP: <span class="expected-value">1,600</span>/3,000
+                        <span class="additional-value">(+100)</span>
+                      </p>
+                    </div>
+                  </button><!-- End Item -->
+                  <!-- Item -->
+                  <button id="item-raichu" class="items-list__item">
+                    <div class="items-list__item__select-box">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="items-list__item__img-holder">
+                      <img src="../../dist/img/raichu.svg" alt="Raichu">
+                    </div>
+                    <div class="items-list__item__details">
+                      <p class="items-list__item__details__name">Raichu</p>
+                      <p class="items-list__item__details__affect">EXP: <span class="expected-value">1,600</span>/3,000
+                        <span class="additional-value show">(+100)</span>
+                      </p>
+                    </div>
+                  </button><!-- End Item -->
+                </div><!-- End List -->
 
-                <div class="card__footer">
-                  <p>Fire Medal</p>
-                </div>
-              </div><!-- End Card-->
+                <!-- Use amount -->
+                <div class="item-container__amount">
+                  <label for="select-pikachu">Amount</label>
+                  <div class="item-container__amount__input">
+                    <input type="number" class="item-amount" name="select-pikachu" id="mystic-select-pikachu" min="0"
+                      value="1">
+                    <span class="item-container__amount__max">/ 5</span>
+                    <span class="item-container__amount__item-img">
+                      <img src="../../dist/img/fire-medal.png" alt="Fire Medal">
+                    </span>
+                  </div>
+                </div><!-- End Use amount -->
+              </div><!-- End Pokemon -->
 
-              <!-- Card  -->
-              <div class="left-col__amount">
-                <p>Amount <span>5</span></p>
-              </div>
-
-              <div class="left-col__group-button">
-                <a id="open-use-mystic-item-modal-btn" class="left-col__group-button__button" href="#">Use Items</a>
-                <a class="left-col__group-button__button" href="../shop/gold-items.html">Buy</a>
-              </div>
-            </div><!-- Left col -->
-
-            <!-- Pokemon -->
-            <div id="pokemon-list" class="item-container show">
-              <!-- List -->
-              <div class="items-list">
-                <!-- Item -->
-                <button id="pokemon-pikachu" class="items-list__item">
-                  <div class="items-list__item__select-box">
-                    <i class="fa-solid fa-check"></i>
-                  </div>
-                  <div class="items-list__item__img-holder">
-                    <img src="../../dist/img/pikachu.svg" alt="Pikachu">
-                  </div>
-                  <div class="items-list__item__details">
-                    <p class="items-list__item__details__name">Pikachu</p>
-                    <p class="items-list__item__details__affect">EXP: <span class="expected-value">1,600</span>/3,000
-                      <span class="additional-value">(+100)</span>
-                    </p>
-                  </div>
-                </button><!-- End Item -->
-                <!-- Item -->
-                <button id="pokemon-pichu" class="items-list__item">
-                  <div class="items-list__item__select-box">
-                    <i class="fa-solid fa-check"></i>
-                  </div>
-                  <div class="items-list__item__img-holder">
-                    <img src="../../dist/img/pichu.svg" alt="Pikachu">
-                  </div>
-                  <div class="items-list__item__details">
-                    <p class="items-list__item__details__name">Pichu</p>
-                    <p class="items-list__item__details__affect">EXP: <span class="expected-value">1,600</span>/3,000
-                      <span class="additional-value">(+100)</span>
-                    </p>
-                  </div>
-                </button><!-- End Item -->
-                <!-- Item -->
-                <button id="item-raichu" class="items-list__item">
-                  <div class="items-list__item__select-box">
-                    <i class="fa-solid fa-check"></i>
-                  </div>
-                  <div class="items-list__item__img-holder">
-                    <img src="../../dist/img/raichu.svg" alt="Raichu">
-                  </div>
-                  <div class="items-list__item__details">
-                    <p class="items-list__item__details__name">Raichu</p>
-                    <p class="items-list__item__details__affect">EXP: <span class="expected-value">1,600</span>/3,000
-                      <span class="additional-value show">(+100)</span>
-                    </p>
-                  </div>
-                </button><!-- End Item -->
-              </div><!-- End List -->
-
-              <!-- Use amount -->
-              <div class="item-container__amount">
-                <label for="select-pikachu">Amount</label>
-                <div class="item-container__amount__input">
-                  <input type="number" class="item-amount" name="select-pikachu" id="mystic-select-pikachu" min="0"
-                    value="1">
-                  <span>/ 5</span>
-                </div>
-              </div><!-- End Use amount -->
-            </div><!-- End Pokemon -->
-
-            <div class="item-container__footer">
-              <button type="submit" class="item-container__footer__button--submit">Use</button>
-            </div><!-- End Footer -->
+              <div class="item-container__footer">
+                <button type="submit" class="item-container__footer__button--submit">Use</button>
+              </div><!-- End Footer -->
+            </div>
           </div>
         </div><!-- End Modal Content -->
     </div><!-- End Modal Container -->

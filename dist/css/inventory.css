@@ -269,6 +269,9 @@ a, a:active, a:visited {
   font-size: 1.25rem;
   margin-top: 0.3125rem;
 }
+.modal__content--full {
+  grid-column: 1/-1;
+}
 .modal__content .item-container {
   display: none;
   flex-direction: column;
@@ -729,6 +732,17 @@ a, a:active, a:visited {
   font-size: 1.25rem;
   font-weight: bold;
 }
+.item-container__amount__max {
+  margin-left: 0.9375rem;
+  color: #1B1B1E;
+  font-size: 1.5625rem;
+  font-weight: 700;
+}
+.item-container__amount__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .item-container__amount__input input[type=number] {
   width: 6.25rem;
   border: 3px solid #393E7D;
@@ -737,9 +751,13 @@ a, a:active, a:visited {
   font-size: 1.3125rem;
   text-align: center;
 }
-.item-container__amount__input span {
-  margin-left: 0.9375rem;
-  color: #1B1B1E;
-  font-size: 1.5625rem;
-  font-weight: 700;
+.item-container__amount__item-img {
+  display: inline-block;
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-left: 1.25rem;
+  justify-self: center;
+}
+.item-container__amount__item-img img {
+  width: 100%;
 }/*# sourceMappingURL=inventory.css.map */
