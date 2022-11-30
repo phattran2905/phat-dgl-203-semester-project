@@ -1,23 +1,8 @@
 @use "../globals" as g;
 @use "../util" as u;
 @forward "../style";
+@forward "./";
 @import "../pokemon/pokemon";
-
-.loading {
-	display: none;
-	justify-content: center;
-	align-items: center;
-	grid-gap: u.rem(10);
-    margin: u.rem(16) 0;
-
-	&.show {
-		display: flex;
-	}
-
-	img {
-		width: u.rem(30);
-	}
-}
 
 .find {
 	padding: u.rem(32);
@@ -103,69 +88,5 @@
 			margin-top: u.rem(80);
 			position: relative;
 		}
-
-		&__status {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			position: absolute;
-			top: calc(-1 * u.rem(60));
-			left: calc(-1 * u.rem(50));
-
-			&__desc {
-				display: block;
-				position: absolute;
-				color: #fff;
-				font-weight: bold;
-				font-size: u.rem(20);
-			}
-		}
-	}
-
-	&__footer {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		margin-top: u.rem(32);
-	}
-
-	@mixin footer-button {
-		background-color: g.$secondary-color;
-		font-family: u.$heading-font;
-		color: #fff;
-		text-align: center;
-		font-weight: bold;
-		font-size: 1.4rem;
-		padding: u.rem(16) u.rem(54);
-		border-radius: u.rem(34);
-		margin-right: u.rem(16);
-		border: 4px solid g.$secondary-color;
-
-		&:hover {
-			background-color: #fff;
-			color: g.$secondary-color;
-			border: 4px solid g.$primary-color;
-			transition: 0.3s ease-in-out;
-		}
-	}
-
-	&__catch-btn {
-		@include footer-button();
-	}
-
-	&__battle-btn {
-		@include footer-button();
-	}
-
-	&__skip-btn,
-	&__back-btn {
-		@include footer-button();
-		background-color: #fff;
-		color: g.$secondary-color;
-	}
-
-	&__back-btn {
-		margin-right: auto;
 	}
 }

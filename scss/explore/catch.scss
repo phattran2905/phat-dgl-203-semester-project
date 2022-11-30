@@ -1,0 +1,37 @@
+@use "../globals" as g;
+@use "../util" as u;
+@forward "../style";
+@forward "./";
+@import "../pokemon/pokemon";
+
+.catch {
+    margin: u.rem(46);
+
+    &__content {
+        padding-top: u.rem(82);
+    }
+
+    &__pokeball-list {
+        grid-column: 2 / -1;
+        grid-row: 1;
+    }
+
+    .items-list__item__details{
+        margin-left: u.rem(20);
+        align-items: flex-start;
+
+        &__quantity {
+            font-size: u.rem(23);
+    
+            span {
+                font-weight: bold;
+                color: g.$secondary-color;
+                margin-left: u.rem(10);
+            }
+        }
+    }
+}
+
+.item-container__footer__button--submit {
+    cursor: pointer;
+}

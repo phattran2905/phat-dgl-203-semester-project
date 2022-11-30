@@ -1836,72 +1836,29 @@ a, a:active, a:visited {
   font-size: 1.5625rem;
 }
 
-.find {
-  padding: 2rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: none;
+.catch {
+  margin: 2.875rem;
 }
-.find.show {
-  display: flex;
+.catch__content {
+  padding-top: 5.125rem;
 }
-.find__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+.catch__pokeball-list {
+  grid-column: 2/-1;
+  grid-row: 1;
 }
-.find .unknown-pokemon {
-  margin: 2rem;
-  width: 25vw;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(57, 62, 125, 0.2);
-  border-radius: 100%;
+.catch .items-list__item__details {
+  margin-left: 1.25rem;
+  align-items: flex-start;
 }
-.find .unknown-pokemon__search__img {
-  display: none;
-}
-.find .unknown-pokemon__search__img.show {
-  display: block;
-}
-.find__footer {
-  margin-top: 2rem;
-}
-.find__footer__button {
-  padding: 1rem 3.75rem;
-  background-color: #E5446D;
-  color: #fff;
-  font-weight: bold;
+.catch .items-list__item__details__quantity {
   font-size: 1.4375rem;
-  border-radius: 4rem;
 }
-.find__footer__button:hover {
-  background-color: #393E7D;
-  transition: 0.4s ease-in-out;
-}
-.find__footer__button.disabled {
-  background-color: #707070;
+.catch .items-list__item__details__quantity span {
+  font-weight: bold;
+  color: #393E7D;
+  margin-left: 0.625rem;
 }
 
-.found {
-  display: none;
-  margin: 4rem;
-}
-.found.show {
-  display: block;
-}
-.found__content {
-  justify-content: center;
-}
-.found__info {
-  margin-left: 2rem;
-}
-.found__card__content {
-  margin-top: 5rem;
-  position: relative;
-}/*# sourceMappingURL=find.css.map */
+.item-container__footer__button--submit {
+  cursor: pointer;
+}/*# sourceMappingURL=catch.css.map */
