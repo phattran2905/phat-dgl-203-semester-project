@@ -46,6 +46,9 @@ a, a:active, a:visited {
   justify-content: center;
   align-items: center;
 }
+.card__level {
+  font-weight: bold;
+}
 .card__footer {
   border: 2px solid #393E7D;
   border-radius: 0 0 1.5625rem 1.5625rem;
@@ -683,6 +686,10 @@ a, a:active, a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.card__level {
+  font-weight: bold;
 }
 
 .card__footer {
@@ -1888,14 +1895,11 @@ a, a:active, a:visited {
   display: block;
 }
 .found__content {
-  justify-content: center;
-  padding-top: 0;
-  padding-bottom: 0;
+  align-items: center;
 }
 .found__info {
   margin-left: 2rem;
 }
 .found__card__content {
-  margin-top: 5rem;
   position: relative;
 }/*# sourceMappingURL=find.css.map */

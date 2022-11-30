@@ -13,8 +13,8 @@
     }
 
     &__content{
-        padding-top: u.rem(62);
-        padding-bottom: u.rem(62);
+        padding-top: u.rem(52);
+        padding-bottom: u.rem(52);
     }
 
     &__pokeball-list {
@@ -40,4 +40,17 @@
 
 .item-container__footer__button--submit {
     cursor: pointer;
+}
+
+.result {
+    display: none;
+    margin: u.rem(64);
+
+    &.show {
+        display: block;
+    }
+
+    &__content {
+        align-items: center;
+    }
 }

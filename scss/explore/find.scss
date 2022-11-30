@@ -75,9 +75,7 @@
 	}
 
 	&__content {
-		justify-content: center;
-        padding-top: 0;
-        padding-bottom: 0;
+        align-items: center;
 	}
 
 	&__info {
@@ -86,7 +84,6 @@
 
 	&__card {
 		&__content {
-			margin-top: u.rem(80);
 			position: relative;
 		}
 	}

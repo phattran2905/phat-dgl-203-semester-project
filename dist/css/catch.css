@@ -46,6 +46,9 @@ a, a:active, a:visited {
   justify-content: center;
   align-items: center;
 }
+.card__level {
+  font-weight: bold;
+}
 .card__footer {
   border: 2px solid #393E7D;
   border-radius: 0 0 1.5625rem 1.5625rem;
@@ -683,6 +686,10 @@ a, a:active, a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.card__level {
+  font-weight: bold;
 }
 
 .card__footer {
@@ -1837,8 +1844,8 @@ a, a:active, a:visited {
   display: block;
 }
 .catch__content {
-  padding-top: 3.875rem;
-  padding-bottom: 3.875rem;
+  padding-top: 3.25rem;
+  padding-bottom: 3.25rem;
 }
 .catch__pokeball-list {
   grid-column: 2/-1;
@@ -1859,4 +1866,15 @@ a, a:active, a:visited {
 
 .item-container__footer__button--submit {
   cursor: pointer;
+}
+
+.result {
+  display: none;
+  margin: 4rem;
+}
+.result.show {
+  display: block;
+}
+.result__content {
+  align-items: center;
 }/*# sourceMappingURL=catch.css.map */

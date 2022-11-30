@@ -46,6 +46,9 @@ a, a:active, a:visited {
   justify-content: center;
   align-items: center;
 }
+.card__level {
+  font-weight: bold;
+}
 .card__footer {
   border: 2px solid #393E7D;
   border-radius: 0 0 1.5625rem 1.5625rem;
