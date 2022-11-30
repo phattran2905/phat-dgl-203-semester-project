@@ -138,7 +138,7 @@ a, a:active, a:visited {
   border-right: 3px solid #fff;
 }
 .modal__content {
-  padding: 1.875rem 4.5625rem;
+  padding: 1.25rem 4.5625rem;
   background-color: #fff;
   border: 3px solid #393E7D;
   border-radius: 0 0 1.5625rem 1.5625rem;
@@ -268,6 +268,7 @@ a, a:active, a:visited {
 .modal__content .right-col__evolutions__item__levels {
   font-size: 1.25rem;
   margin-top: 0.3125rem;
+  font-weight: bold;
 }
 .modal__content--full {
   grid-column: 1/-1;
@@ -790,7 +791,7 @@ a, a:active, a:visited {
 }
 
 .modal__content {
-  padding: 1.875rem 4.5625rem;
+  padding: 1.25rem 4.5625rem;
   background-color: #fff;
   border: 3px solid #393E7D;
   border-radius: 0 0 1.5625rem 1.5625rem;
@@ -945,6 +946,7 @@ a, a:active, a:visited {
 .modal__content .right-col__evolutions__item__levels {
   font-size: 1.25rem;
   margin-top: 0.3125rem;
+  font-weight: bold;
 }
 
 .modal__content--full {
@@ -1381,7 +1383,7 @@ a, a:active, a:visited {
 }
 
 .modal__content {
-  padding: 1.875rem 4.5625rem;
+  padding: 1.25rem 4.5625rem;
   background-color: #fff;
   border: 3px solid #393E7D;
   border-radius: 0 0 1.5625rem 1.5625rem;
@@ -1597,6 +1599,7 @@ a, a:active, a:visited {
 .modal__content .pokemon-info__evolutions__item__levels {
   font-size: 1.25rem;
   margin-top: 0.3125rem;
+  font-weight: bold;
 }
 
 .modal__content .item-container {
@@ -1886,6 +1889,8 @@ a, a:active, a:visited {
 }
 .found__content {
   justify-content: center;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .found__info {
   margin-left: 2rem;

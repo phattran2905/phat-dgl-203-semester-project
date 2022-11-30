@@ -12,8 +12,9 @@
         display: block;
     }
 
-    &__content {
-        padding-top: u.rem(82);
+    &__content{
+        padding-top: u.rem(62);
+        padding-bottom: u.rem(62);
     }
 
     &__pokeball-list {
