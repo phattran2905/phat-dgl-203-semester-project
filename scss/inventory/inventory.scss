@@ -96,8 +96,8 @@
 		justify-content: center;
 
 		@include u.breakpoint(xlarge) {
-			width: u.em(165);
-			height: u.em(208);
+			width: u.em(120);
+			height: u.em(158);
 		}
 
 		img {
@@ -126,6 +126,10 @@
 
 .modal {
 	.left-col {
+        &__footer p {
+            padding: 0;
+        }
+
 		&__amount {
 			margin: u.rem(10);
 			padding: u.rem(15);
@@ -140,7 +144,8 @@
 				text-align: center;
 				font-weight: bold;
 				font-size: u.rem(20);
-				margin: 0 0 u.rem(10) 0;
+				margin: 0;
+                
 
 				span {
 					color: g.$primary-color;

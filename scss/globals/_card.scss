@@ -6,12 +6,13 @@
         width: 100%;
         border: 4px solid c.$secondary-color;
         border-radius: u.rem(5) u.rem(5) 0 0;
-        padding-top: u.rem(43);
+        padding: u.rem(52) u.rem(52) u.rem(20) u.rem(52);
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
     }
 
     &__footer {

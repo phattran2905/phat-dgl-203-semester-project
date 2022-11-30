@@ -10,6 +10,7 @@
 	display: none;
 	flex-direction: column;
 	align-items: center;
+    padding-top: 8%;
 
 
 	&.show {
@@ -22,7 +23,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-        margin-top: 10%;
 
 		@include u.breakpoint(xlarge) {
 			width: u.em(1162);

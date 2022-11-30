@@ -6,7 +6,7 @@ const CLIENT_ROUTES = [{
     profilePage: `${CLIENT_ORIGIN_URL}/auth/profile.html`
 }]
 
-// ===== Handle Modals =====\
+// ===== Handle Modals =====
 const modals = document.querySelectorAll(".modal");
 const closeModalButtons = document.querySelectorAll(".modal__header__close-btn");
 // Close all modals

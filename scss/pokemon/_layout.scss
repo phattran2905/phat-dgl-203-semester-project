@@ -9,7 +9,8 @@
     grid-row-gap: u.rem(15);
 
     .pokemon {
-        height: auto;
+        margin-bottom: u.rem(52);
+
         @include u.breakpoint(xlarge) {
             padding: u.rem(54) u.rem(54) 0 u.rem(54) ;
             display: flex;
