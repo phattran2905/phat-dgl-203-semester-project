@@ -1870,12 +1870,11 @@ a, a:active, a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
 }
 .find .unknown-pokemon {
   margin: 2rem;
-  width: 25vw;
-  height: 30vh;
+  width: 25em;
+  height: 21.875em;
   display: flex;
   justify-content: center;
   align-items: center;

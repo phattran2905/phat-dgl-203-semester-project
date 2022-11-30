@@ -20,13 +20,12 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: u.rem(32);
 	}
 
 	.unknown-pokemon {
 		margin: u.rem(32);
-		width: 25vw;
-		height: 30vh;
+		width: u.em(400);
+		height: u.em(350);
 		display: flex;
 		justify-content: center;
 		align-items: center;
