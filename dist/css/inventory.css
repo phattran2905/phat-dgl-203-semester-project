@@ -351,6 +351,12 @@ a, a:active, a:visited {
 .modal__content .item-container .items-list__item__details__affect {
   font-size: 1.5625rem;
 }
+.modal__content .item-container .items-list__item__details__affect span.max-value {
+  margin: 0 0.625rem;
+  font-weight: bold;
+  color: #1B1B1E;
+  font-weight: bold;
+}
 .modal__content .item-container .items-list__item__details__affect span.expected-value {
   margin: 0 0.625rem;
   font-weight: bold;
@@ -750,6 +756,8 @@ a, a:active, a:visited {
   padding: 0.3125rem;
   font-size: 1.3125rem;
   text-align: center;
+  font-weight: bold;
+  color: #393E7D;
 }
 .item-container__amount__item-img {
   display: inline-block;

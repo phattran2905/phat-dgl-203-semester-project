@@ -352,6 +352,12 @@
 								font-weight: bold;
                             }
 
+                            span.max-value {
+                                @include marginXAndBold;
+                                color: c.$black;
+                                font-weight: bold;
+                            }
+
                             span.expected-value {
                                 @include marginXAndBold;
                                 color: c.$light-blue;
