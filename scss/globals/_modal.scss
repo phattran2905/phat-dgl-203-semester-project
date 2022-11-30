@@ -93,7 +93,7 @@
 		border: 3px solid c.$secondary-color;
 		border-radius: 0 0 u.rem(25) u.rem(25);
         display: grid;
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 1.5fr 4fr;
         grid-template-rows: 1fr;
 
 		// Pokemon card
@@ -275,6 +275,7 @@
 					display: flex;
 					flex-direction: row;
 					align-items: center;
+                    outline: none;
 					border: 3px solid c.$secondary-color;
 					border-radius: u.rem(15);
 
@@ -339,9 +340,26 @@
 						&__affect {
 							font-size: u.rem(25);
 
-							span {
-								color: c.$success-color;
+                            // Margin horizontally and bold font
+                            @mixin marginXAndBold {
+                                margin: 0 u.rem(5);
 								font-weight: bold;
+                            }
+
+                            span.expected-value {
+                                @include marginXAndBold;
+                                color: c.$light-blue;
+                            }
+
+							span.additional-value {
+                                @include marginXAndBold;
+								color: c.$success-color;
+                                display: none;
+
+                                &.show {
+                                    margin: u.rem(10) 0;
+                                    display: block;
+                                }
 							}
 						}
 
@@ -365,13 +383,7 @@
 								> * {
 									display: inline-block;
 								}
-
-								&__increase,
-								&__decrease {
-									border: 1px solid c.$black;
-									padding: u.rem(5);
-								}
-
+                                
 								&__max {
 									color: c.$light-blue;
 									font-size: u.rem(25);
@@ -394,7 +406,7 @@
 
 
             &__footer {
-                grid-column: 1 / 3;
+                grid-column: 2 / span 1;
                 display: flex;
                 justify-content: flex-end;
                 margin-top: u.rem(20);

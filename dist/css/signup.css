@@ -50,13 +50,13 @@ a, a:active, a:visited {
   border: 2px solid #393E7D;
   border-radius: 0 0 1.5625rem 1.5625rem;
   width: 100%;
+  padding: 0.9375rem;
   background-color: #393E7D;
 }
 .card__footer p {
   font-family: "Mali", sans-serif;
   font-weight: bold;
   font-size: 1.0625rem;
-  padding: 0.9375rem 5.25rem;
   margin: 0;
   text-align: center;
   color: #fff;
@@ -143,7 +143,7 @@ a, a:active, a:visited {
   border: 3px solid #393E7D;
   border-radius: 0 0 1.5625rem 1.5625rem;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1.5fr 4fr;
   grid-template-rows: 1fr;
 }
 .modal__content .left-col__card {
@@ -292,6 +292,7 @@ a, a:active, a:visited {
   display: flex;
   flex-direction: row;
   align-items: center;
+  outline: none;
   border: 3px solid #393E7D;
   border-radius: 0.9375rem;
 }
@@ -347,9 +348,20 @@ a, a:active, a:visited {
 .modal__content .item-container .items-list__item__details__affect {
   font-size: 1.5625rem;
 }
-.modal__content .item-container .items-list__item__details__affect span {
-  color: #2E933C;
+.modal__content .item-container .items-list__item__details__affect span.expected-value {
+  margin: 0 0.3125rem;
   font-weight: bold;
+  color: #3F88C5;
+}
+.modal__content .item-container .items-list__item__details__affect span.additional-value {
+  margin: 0 0.3125rem;
+  font-weight: bold;
+  color: #2E933C;
+  display: none;
+}
+.modal__content .item-container .items-list__item__details__affect span.additional-value.show {
+  margin: 0.625rem 0;
+  display: block;
 }
 .modal__content .item-container .items-list__item__details__amount {
   display: flex;
@@ -370,10 +382,6 @@ a, a:active, a:visited {
 .modal__content .item-container .items-list__item__details__amount__input > * {
   display: inline-block;
 }
-.modal__content .item-container .items-list__item__details__amount__input__increase, .modal__content .item-container .items-list__item__details__amount__input__decrease {
-  border: 1px solid #1B1B1E;
-  padding: 0.3125rem;
-}
 .modal__content .item-container .items-list__item__details__amount__input__max {
   color: #3F88C5;
   font-size: 1.5625rem;
@@ -388,7 +396,7 @@ a, a:active, a:visited {
   text-align: center;
 }
 .modal__content .item-container__footer {
-  grid-column: 1/3;
+  grid-column: 2/span 1;
   display: flex;
   justify-content: flex-end;
   margin-top: 1.25rem;

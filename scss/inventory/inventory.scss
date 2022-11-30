@@ -196,3 +196,39 @@
 		}
 	}
 }
+
+.item-container__amount {
+    margin-right: u.rem(32);
+    display: flex;
+    grid-gap: u.rem(15);
+    margin: u.rem(15) 0;
+    padding: u.rem(15);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid g.$secondary-color;
+    border-top: 2px solid g.$secondary-color;
+
+    label {
+        font-size: u.rem(20);
+        font-weight: bold;
+    }
+
+    &__input {
+        input[type="number"] {
+            width: u.rem(100);
+            border: 3px solid g.$secondary-color;
+            border-radius: u.rem(5);
+            padding: u.rem(5);
+            font-size: u.rem(21);
+            text-align: center;
+        }
+
+        span {
+            margin-left: u.rem(15);
+            color: g.$black;
+            font-size: u.rem(25);
+            font-weight: 700;
+        }
+    }
+}

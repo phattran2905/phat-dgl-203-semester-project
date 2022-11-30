@@ -19,13 +19,13 @@
         border: 2px solid c.$secondary-color;
         border-radius: 0 0 u.rem(25) u.rem(25);
         width: 100%;
+        padding: u.rem(15);
         background-color: c.$secondary-color;
 
         p {
             font-family: u.$heading-font;
             font-weight: bold;
             font-size: u.rem(17);
-            padding: u.rem(15) u.rem(84);
             margin: 0;
             text-align: center;
             color: #fff;
