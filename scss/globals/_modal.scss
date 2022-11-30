@@ -342,7 +342,7 @@
 
                             // Margin horizontally and bold font
                             @mixin marginXAndBold {
-                                margin: 0 u.rem(5);
+                                margin: 0 u.rem(10);
 								font-weight: bold;
                             }
 
@@ -357,8 +357,7 @@
                                 display: none;
 
                                 &.show {
-                                    margin: u.rem(10) 0;
-                                    display: block;
+                                    display: inline-block;
                                 }
 							}
 						}

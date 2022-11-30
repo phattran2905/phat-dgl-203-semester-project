@@ -16,11 +16,14 @@ const mysticItemModal = document.getElementById("mystic-item-modal");
 const consumableItemModal = document.getElementById("consumable-item-modal");
 const useMysticItemModal = document.getElementById("use-mystic-item-modal");
 
-// Open Modal BUttons
+// Open Modal Buttons
 const openUseMysticModalBtn = document.getElementById("open-use-mystic-item-modal-btn");
 
 // Back Buttons
 const backToMysticButton = document.getElementById("back-to-mystic-modal-btn");
+
+// Pokemon buttons
+const selectPokemonBtns = document.querySelectorAll(".items-list__item");
 
 function closeAllTabs() {
 	pokeballTab.classList.remove("show");
@@ -31,6 +34,12 @@ function closeAllTabs() {
 	if (activeTab) {
 		activeTab.classList.remove("active");
 	}
+}
+
+function unselectAllPokemon() {
+	selectPokemonBtns.forEach((button) => {
+		button.classList.remove("selected");
+	});
 }
 
 function main() {
@@ -65,10 +74,19 @@ function main() {
 		});
 	});
 	// Open Use Mystic Item Modal
-    openUseMysticModalBtn.addEventListener("click", (e) => {
+	openUseMysticModalBtn.addEventListener("click", (e) => {
 		closeAllModals();
-        useMysticItemModal.classList.add("show");
-    });
+		useMysticItemModal.classList.add("show");
+	});
+
+	// Select Pokemon to use item
+	selectPokemonBtns.forEach((button) => {
+		button.addEventListener("click", e => {
+            e.preventDefault();
+            unselectAllPokemon();
+			button.classList.add("selected");
+		});
+	});
 
 	// Back buttons
 	// Back to Mystic modal

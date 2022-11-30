@@ -349,19 +349,18 @@ a, a:active, a:visited {
   font-size: 1.5625rem;
 }
 .modal__content .item-container .items-list__item__details__affect span.expected-value, .modal__content .item-container .items-list__item__details__affect .form__container .profile__info__coins i.expected-value, .form__container .profile__info__coins .modal__content .item-container .items-list__item__details__affect i.expected-value {
-  margin: 0 0.3125rem;
+  margin: 0 0.625rem;
   font-weight: bold;
   color: #3F88C5;
 }
 .modal__content .item-container .items-list__item__details__affect span.additional-value, .modal__content .item-container .items-list__item__details__affect .form__container .profile__info__coins i.additional-value, .form__container .profile__info__coins .modal__content .item-container .items-list__item__details__affect i.additional-value {
-  margin: 0 0.3125rem;
+  margin: 0 0.625rem;
   font-weight: bold;
   color: #2E933C;
   display: none;
 }
 .modal__content .item-container .items-list__item__details__affect span.additional-value.show, .modal__content .item-container .items-list__item__details__affect .form__container .profile__info__coins i.additional-value.show, .form__container .profile__info__coins .modal__content .item-container .items-list__item__details__affect i.additional-value.show {
-  margin: 0.625rem 0;
-  display: block;
+  display: inline-block;
 }
 .modal__content .item-container .items-list__item__details__amount {
   display: flex;
