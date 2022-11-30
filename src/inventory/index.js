@@ -14,10 +14,10 @@ const consumableCards = document.querySelectorAll(".hoverable.consumable-item");
 const pokeballModal = document.getElementById("pokeball-modal");
 const mysticItemModal = document.getElementById("mystic-item-modal");
 const consumableItemModal = document.getElementById("consumable-item-modal");
-const useMysticItemModal = document.getElementById("use-mystic-item-modal");
+const choosePokemonModal = document.getElementById("choose-pokemon-modal");
 
-// Open Modal Buttons
-const openUseMysticModalBtn = document.getElementById("open-use-mystic-item-modal-btn");
+// Open Choose Pokemon Modal Buttons
+const openPokemonModalBtns = document.querySelectorAll(".open-pokemon-list-modal-btn");
 
 // Back Buttons
 const backToMysticButton = document.getElementById("back-to-mystic-modal-btn");
@@ -73,11 +73,20 @@ function main() {
 			mysticItemModal.classList.add("show");
 		});
 	});
-	// Open Use Mystic Item Modal
-	openUseMysticModalBtn.addEventListener("click", (e) => {
-		closeAllModals();
-		useMysticItemModal.classList.add("show");
+	// Open Consumable Item Modal
+	consumableCards.forEach((element) => {
+		element.addEventListener("click", (e) => {
+			consumableItemModal.classList.add("show");
+		});
 	});
+
+	// Open Choose Pokemon Modal
+    openPokemonModalBtns.forEach(button => {
+        button.addEventListener('click', () => {
+            closeAllModals();
+            choosePokemonModal.classList.add("show");
+        })
+    })
 
 	// Select Pokemon to use item
 	selectPokemonBtns.forEach((button) => {
