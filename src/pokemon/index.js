@@ -2,6 +2,38 @@ const backToPokemonModalButton = document.getElementById("back-to-pokemon-modal-
 const pokemonCards = document.querySelectorAll(".card.hoverable");
 const pokemonModal = document.getElementById("pokemon-modal");
 
+// Tabs
+const ownedTabLink = document.getElementById("tab-owned-link");
+const wildTabLink = document.getElementById("tab-wild-link");
+const ownedTab = document.getElementById("owned-pokemon")
+const wildTab = document.getElementById("wild-pokemon")
+
+// Remove '.active' from the current active one.
+function deactiveCurrentTabLink() {
+	const activeTab = document.querySelector(".tabs__list__item.active");
+	if (activeTab) {
+		activeTab.classList.remove("active");
+	}
+}
+
+// Open wild tab
+wildTabLink.addEventListener('click', () => {
+    wildTab.classList.add("show")
+    ownedTab.classList.remove("show")
+    deactiveCurrentTabLink()
+    wildTabLink.parentNode.classList.add("active")
+})
+
+// Open owned tab
+ownedTabLink.addEventListener('click', () => {
+    ownedTab.classList.add("show")
+    wildTab.classList.remove("show")
+console.log(ownedTab)
+    deactiveCurrentTabLink()
+    ownedTabLink.parentNode.classList.add("active")
+})
+
+// Handle back buttons
 backToPokemonModalButton.addEventListener('click', e => {
     closeAllModals();
     pokemonModal.classList.add("show");

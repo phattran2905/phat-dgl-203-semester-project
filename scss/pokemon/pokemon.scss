@@ -4,18 +4,6 @@
 @use "../globals" as g;
 @use "../util" as u;
 
-.amount {
-    margin: auto;
-
-    span {
-        border: 3px solid g.$secondary-color;
-        border-radius: u.rem(8);
-        padding: u.rem(10) u.rem(15);
-        font-size: u.rem(23);
-        font-weight: bold;
-    }
-}
-
 .card {
     @include u.breakpoint(xlarge) {
         // width: u.em(265);
