@@ -17,6 +17,8 @@
 	}
 
 	&__content {
+		margin: auto;
+
 		@include u.breakpoint(xlarge) {
 			width: u.em(1400);
 		}
@@ -45,41 +47,41 @@
 		margin: u.rem(50) 0;
 	}
 
-    &__card {
-        position: relative;
+	&__card {
+		position: relative;
 
-        &.defeated {
-            opacity: 0.4;
-        }
-    }
+		&.defeated {
+			opacity: 0.4;
+		}
+	}
 
-    &__stats {
-        position: relative;
-    }
+	&__stats {
+		position: relative;
+	}
 
-    &__defeat-label{
+	&__defeat-label {
 		display: none;
-        opacity: 1;
+		opacity: 1;
 		position: absolute;
 		top: calc(u.rem(20));
-		left: calc( u.rem(100));
-        background-color: g.$black;
-        padding: u.rem(14) u.rem(54);
-        border-radius: u.rem(20);
-        transform: rotate(40deg);
+		left: calc(u.rem(100));
+		background-color: g.$black;
+		padding: u.rem(14) u.rem(54);
+		border-radius: u.rem(20);
+		transform: rotate(40deg);
 
-        &.show {
-            display: block;
-        }
+		&.show {
+			display: block;
+		}
 
-        span {
-            font-size: u.rem(30);
-            text-transform: capitalize;
-            font-weight: bold;
-            font-family: u.$heading-font;
-            color: #fff;
-        }
-    }
+		span {
+			font-size: u.rem(30);
+			text-transform: capitalize;
+			font-weight: bold;
+			font-family: u.$heading-font;
+			color: #fff;
+		}
+	}
 
 	&__divider {
 		display: flex;
@@ -213,6 +215,110 @@
 		margin-top: u.rem(70);
 
 		&__button {
+			margin-left: u.rem(30);
+		}
+	}
+}
+
+.rewards {
+    &__content {
+        padding-top: u.rem(50);
+
+        .pokemon-status.winner {
+            position: absolute;
+            background-color: g.$success-color;
+            padding: u.rem(20) u.rem(80);
+            border-radius: u.rem(20);
+            transform: rotate(-35deg);
+            top: 0;
+            left: calc(-1 * u.rem(50));
+        }
+    }
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: u.rem(25) 0;
+        padding-left: u.rem(80);
+
+		h4 {
+			font-size: u.rem(30);
+			margin: 0;
+		}
+
+		&__exp {
+			display: flex;
+			align-items: center;
+			grid-gap: u.rem(40);
+			margin-bottom: u.rem(30);
+
+			p {
+				font-size: u.rem(25);
+				font-weight: bold;
+				margin: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				i {
+					margin-left: u.rem(10);
+				}
+			}
+
+			&__additional {
+				display: inline-block;
+				font-size: u.rem(23);
+				color: g.$success-color;
+				margin-left: u.rem(16);
+			}
+		}
+
+		&__items {
+			position: relative;
+
+			h4 span {
+				position: absolute;
+				top: 0;
+				margin-left: u.rem(10);
+				color: g.$primary-color;
+				font-size: u.rem(21);
+			}
+
+			&__item {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				padding: u.rem(20) u.rem(30);
+				margin: u.rem(20) u.rem(30) u.rem(20) u.rem(50);
+				width: 60%;
+				border: 3px solid g.$secondary-color;
+				border-radius: u.rem(20);
+
+				.rewards__item__left {
+                    display: flex;
+                    align-items: center;
+                    width: 70%;
+
+					.rewards__item__img {
+						width: u.em(50);
+						height: u.em(50);
+                        margin-right: u.rem(30);
+					}
+
+					.rewards__item__name {
+						font-weight: bold;
+						font-size: u.rem(22);
+					}
+				}
+
+				.rewards__item__amount {
+					font-weight: bold;
+					font-size: u.rem(24);
+					color: g.$success-color;
+				}
+			}
 		}
 	}
 }
