@@ -1871,10 +1871,43 @@ a, a:active, a:visited {
 .result {
   display: none;
   margin: 4rem;
+  position: relative;
 }
 .result.show {
   display: block;
 }
+.result__card.fade {
+  opacity: 0.2;
+}
 .result__content {
   align-items: center;
+}
+.result__content.failed-result {
+  padding-top: 3.25rem;
+  padding-bottom: 3.25rem;
+}
+.result__ran-away {
+  display: block;
+  opacity: 1;
+  position: absolute;
+  top: calc(18.75rem);
+  left: calc(5.625rem);
+  background-color: rgba(27, 27, 30, 0.8);
+  padding: 0.875rem 3.375rem;
+  border-radius: 1.25rem;
+  transform: rotate(10deg);
+}
+.result__ran-away span {
+  font-size: 1.875rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: "Mali", sans-serif;
+  color: #fff;
+}
+.result__info {
+  display: block;
+}
+.result__info__message {
+  grid-column: 1/-1;
+  font-size: 1.875rem;
 }/*# sourceMappingURL=catch.css.map */
