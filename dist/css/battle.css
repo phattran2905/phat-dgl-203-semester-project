@@ -1838,6 +1838,7 @@ a, a:active, a:visited {
 
 .battle {
   display: none;
+  width: 100%;
 }
 .battle.show {
   display: block;
@@ -1849,6 +1850,65 @@ a, a:active, a:visited {
   .battle__content {
     width: 87.5em;
   }
+}
+
+.in-battle__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.in-battle__title {
+  font-size: 2.5rem;
+  color: #E5446D;
+  margin-bottom: 3.75rem;
+}
+.in-battle__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin-top: 2.5rem;
+}
+.in-battle__divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.in-battle__divider__message {
+  padding: 2.5rem;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bold;
+  background-color: #E5446D;
+  margin-bottom: 1.25rem;
+}
+.in-battle__health__title {
+  margin: 1.875rem 0 0.625rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #E5446D;
+}
+.in-battle__health__bar {
+  width: 100%;
+  height: 0.625rem;
+  border-radius: 0.625rem;
+  background-color: rgba(27, 27, 30, 0.5);
+}
+.in-battle__health__bar.losing::before {
+  height: 0.625rem;
+  border-radius: 0.625rem;
+  background-color: rgba(27, 27, 30, 0.5);
+  content: "";
+  display: block;
+  width: 70%;
+  background-color: #E5446D;
+}
+.in-battle__health__bar.full {
+  width: 100%;
+  background-color: #2E933C;
 }
 
 .select__pokemon__power {
