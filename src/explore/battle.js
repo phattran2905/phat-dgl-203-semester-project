@@ -27,10 +27,30 @@ pokemonElements.forEach((pkm) => {
 	});
 });
 
+
 const battleBtn = document.getElementById("battle-btn");
+const resultSuccessElement = document.getElementById('result-success');
+const resultFailElement = document.getElementById('result-fail');
+
 battleBtn.addEventListener("click", () => {
 	const selectedPokemon = document.querySelector(".select__pokemon.selected");
 	if (selectedPokemon) {
 		openBattleContentById(inBattleElement.id);
+
+        // Delays 3 seconds and show the result
+        setTimeout(() => {
+            inBattleElement.classList.remove("show");
+            // Show won result
+            resultSuccessElement.classList.add("show");
+
+            // Show lost result
+            resultFailElement.classList.add("show");
+        }, 3000)
 	}
 });
+
+const showRewardsBtn = document.getElementById("show-rewards-btn");
+const rewardsElement = document.getElementById('rewards');
+showRewardsBtn.addEventListener('click', () => {
+    openBattleContentById(rewardsElement.id);
+})

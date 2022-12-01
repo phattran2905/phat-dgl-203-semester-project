@@ -1883,6 +1883,7 @@ a, a:active, a:visited {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2.5rem;
 }
 .in-battle__title {
   font-size: 2.5rem;

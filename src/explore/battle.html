@@ -49,7 +49,7 @@
     <main>
       <div class="container battle__container">
         <!-- Select Pokemon -->
-        <div id="select-pokemon" class="battle select-pokemon">
+        <div id="select-pokemon" class="battle select-pokemon show">
           <!-- Select Container -->
           <div class="modal__container battle__content">
             <div class="modal__header select__header">
@@ -167,10 +167,10 @@
         </div><!-- End Catch pokemon -->
 
         <!-- In Battle -->
-        <div id="in-battle" class="battle">
+        <div id="in-battle" class="battle ">
           <!-- Container -->
           <div class="in-battle__container">
-            <h2 class="in-battle__title">In Battle</h2>
+            <h2 class="in-battle__title">In Battle...</h2>
 
             <!-- Battle Content -->
             <div class="in-battle__content">
@@ -267,7 +267,7 @@
             <div class="in-battle__content">
               <!-- Wild Pokemon -->
               <div class="pokemon-stats in-battle__stats">
-                <div class="in-battle__defeat-label">
+                <div class="in-battle__defeat-label show">
                   <span>Defeated</span>
                 </div>
                 <!-- Card Stats -->
@@ -354,7 +354,7 @@
 
             <!-- Footer -->
             <div class="result-success__footer">
-              <a href="#!" class="result-success__footer__button primary-btn">Next</a>
+              <a id="show-rewards-btn" href="#!" class="result-success__footer__button primary-btn">Next</a>
             </div><!-- End Footer -->
 
           </div><!-- End Catch Container -->
@@ -465,7 +465,7 @@
         </div><!-- End Failed Result -->
 
         <!-- Rewards  -->
-        <div id="rewards" class="battle show">
+        <div id="rewards" class="battle">
           <!-- Select Container -->
           <div class="modal__container battle__content">
             <div class="modal__header select__header">
