@@ -5,12 +5,12 @@
 @import "../pokemon/pokemon";
 
 .battle {
-    display: none;
-    width: 100%;
+	display: none;
+	width: 100%;
 
-    &.show {
-        display: block;
-    }
+	&.show {
+		display: block;
+	}
 
 	&__container {
 		padding-top: u.rem(46);
@@ -24,76 +24,120 @@
 }
 
 .in-battle {
-    &__container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		font-size: u.rem(40);
+		color: g.$primary-color;
+		margin-bottom: u.rem(60);
+	}
+
+	&__content {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-content: center;
+		margin: u.rem(50) 0;
+	}
+
+    &__card {
+        position: relative;
+
+        &.defeated {
+            opacity: 0.4;
+        }
     }
 
-    &__title {
-        font-size: u.rem(40);
-        color: g.$primary-color;
-        margin-bottom: u.rem(60);
+    &__stats {
+        position: relative;
     }
 
-    &__content {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-content: center;
-        margin-top: u.rem(40);
-    }
+    &__defeat-label{
+		display: none;
+        opacity: 1;
+		position: absolute;
+		top: calc(u.rem(20));
+		left: calc( u.rem(100));
+        background-color: g.$black;
+        padding: u.rem(14) u.rem(54);
+        border-radius: u.rem(20);
+        transform: rotate(40deg);
 
-    &__divider {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        &.show {
+            display: block;
+        }
 
-        &__message {
-            padding: u.rem(40);
-            border-radius: 50%;
-            font-size: u.rem(40);
+        span {
+            font-size: u.rem(30);
+            text-transform: capitalize;
+            font-weight: bold;
+            font-family: u.$heading-font;
             color: #fff;
-            font-weight: bold;
-            background-color: g.$primary-color;
-            margin-bottom: u.rem(20);
         }
     }
 
-    &__health {
-        &__title {
-            margin: u.rem(30) 0 u.rem(10) 0;
-            font-size: u.rem(24);
-            font-weight: bold;
-            color: g.$primary-color;
-        }
+	&__divider {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 
-        @mixin health-bar {
-            height:  u.rem(10);
-            border-radius: u.rem(10);
-            background-color: rgba(g.$black, .5);
-        }
+		&__message {
+			padding: u.rem(50) u.rem(40);
+			border-radius: 60%;
+			font-size: u.rem(36);
+			color: #fff;
+			font-weight: bold;
+			background-color: g.$primary-color;
+			margin-bottom: u.rem(20);
 
-        &__bar {
-            width: 100%;
-            @include health-bar;
+			&.bg-won {
+				background-color: g.$success-color;
+			}
 
-            &.losing::before {
-                @include health-bar;
-                content: "";
-                display: block;
-                width: 70%;
-                background-color: g.$primary-color;
-            }
+			&.bg-lost {
+				background-color: g.$black;
+			}
+		}
+	}
 
-            &.full {
-                width: 100%;
-                background-color: g.$success-color;
-            }
-        }
-    }
+	&__health {
+		&__title {
+			margin: u.rem(30) 0 u.rem(10) 0;
+			font-size: u.rem(24);
+			font-weight: bold;
+			color: g.$primary-color;
+		}
+
+		@mixin health-bar {
+			height: u.rem(10);
+			border-radius: u.rem(10);
+			background-color: rgba(g.$black, 0.5);
+		}
+
+		&__bar {
+			width: 100%;
+			@include health-bar;
+
+			&.losing::before {
+				@include health-bar;
+				content: "";
+				display: block;
+				width: 70%;
+				background-color: g.$primary-color;
+			}
+
+			&.full {
+				width: 100%;
+				background-color: g.$success-color;
+			}
+		}
+	}
 }
 
 .select {
@@ -160,6 +204,15 @@
 
 		.item-container {
 			margin-left: 0;
+		}
+	}
+}
+
+.result-success {
+	&__footer {
+		margin-top: u.rem(70);
+
+		&__button {
 		}
 	}
 }

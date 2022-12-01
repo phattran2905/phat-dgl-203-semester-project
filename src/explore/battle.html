@@ -167,7 +167,7 @@
         </div><!-- End Catch pokemon -->
 
         <!-- In Battle -->
-        <div id="in-battle" class="battle show">
+        <div id="in-battle" class="battle">
           <!-- Container -->
           <div class="in-battle__container">
             <h2 class="in-battle__title">In Battle</h2>
@@ -259,177 +259,208 @@
 
         <!-- Successful Result -->
         <div id="result-success" class="battle ">
-          <div class="modal__container result__container">
-            <div class="modal__header result__header">
-              <h2>Congratulations! You have a new Pokemon</h2>
-              <a href="./index.html" class="modal__header__close-btn">
-                <i class="fa-solid fa-xmark"></i>
-              </a>
-            </div>
+          <!-- Container -->
+          <div class="in-battle__container">
+            <h2 class="in-battle__title">Result</h2>
 
-            <!-- Content -->
-            <div class="modal__content result__content">
-              <!-- Stats -->
-              <div class="pokemon-stats result__stats">
-                <!-- Card -->
-                <div class="pokemon-stats__card card result__card">
-                  <div class="card__content result__card__content">
-                    <div class="pokemon-status">
-                      <img src="../../dist/img/pokemon-status/sniper-green.png" alt="Wild status background">
-                      <span class="pokemon-status__desc">New</span>
-                    </div>
-
-                    <div class="card__level result__card_level">
-                      <span>Lv.16</span>
-                    </div>
-
-                    <div class="card__pokemon_img result__card__img">
-                      <img src="../../dist/img/pikachu.svg" alt="Pikachu">
-                    </div>
-
-                    <div class="card__power result__card__power">
-                      <i class="fa-solid fa-bolt"></i>
-                      <span>Power:</span>
-                      <span>10,000</span>
-                    </div>
-                  </div>
-
-                  <div class="card__footer result__card__footer">
-                    <p>Pikachu</p>
-                  </div>
-                </div><!-- End Stats-->
-              </div><!-- End Pokemon-->
-
-              <!-- Pokemon Info -->
-              <div class="pokemon-info result__info">
-                <div class="pokemon-info__row result__info__row">
-                  <div class="pokemon-info__height">
-                    <h5>Height</h5>
-                    <span>1'04"</span>
-                  </div>
-                  <div class="pokemon-info__weight">
-                    <h5>Weight</h5>
-                    <span>1'04"</span>
-                  </div>
-                  <div class="pokemon-info__gender">
-                    <h5>Gender</h5>
-                    <span><i class="fa-solid fa-mars"></i></span>
-                  </div>
+            <!-- Battle Content -->
+            <div class="in-battle__content">
+              <!-- Wild Pokemon -->
+              <div class="pokemon-stats in-battle__stats">
+                <div class="in-battle__defeat-label">
+                  <span>Defeated</span>
                 </div>
-                <div class="pokemon-info__row result__info__row">
-                  <div class="pokemon-info__type">
-                    <h5>Type</h5>
-                    <div>
-                      <span>Electric</span>
-                    </div>
-                  </div>
-                  <div class="pokemon-info__caught-by">
-                    <h5>Caught by</h5>
-                    <ul>
-                      <li>
-                        <img src="../../dist/img/standard-pokeball.png" alt="Standard Pokeball">
-                      </li>
-                      <li>
-                        <img src="../../dist/img/electric-pokeball.png" alt="Electric Pokeball">
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="pokemon-info__row result__info__row">
-                  <h5>Evolutions</h5>
-                  <div class="pokemon-info__evolutions">
-                    <div class="pokemon-info__evolutions__item">
-                      <div class="pokemon-info__evolutions__item__img">
-                        <img src="../../dist/img/pichu.svg" alt="Pichu">
-                      </div>
-                      <span class="pokemon-info__evolutions__item__name">Pichu</span>
-                      <span class="pokemon-info__evolutions__item__levels">Level 1-16</span>
-                    </div>
-                    <div class="pokemon-info__evolutions__item">
-                      <div class="pokemon-info__evolutions__item__img">
-                        <img src="../../dist/img/pikachu.svg" alt="Pikachu">
-                      </div>
-                      <span class="pokemon-info__evolutions__item__name">Pikachu</span>
-                      <span class="pokemon-info__evolutions__item__levels">Level 16-32</span>
-                    </div>
-                    <div class="pokemon-info__evolutions__item">
-                      <div class="pokemon-info__evolutions__item__img">
-                        <img src="../../dist/img/raichu.svg" alt="Raichu">
-                      </div>
-                      <span class="pokemon-info__evolutions__item__name">Raichu</span>
-                      <span class="pokemon-info__evolutions__item__levels">Level 32+</span>
-                    </div>
-                  </div>
-                </div>
-              </div><!-- End Pokemon Info -->
-            </div><!-- End Modal Content -->
-
-            <div class="modal__footer group-btn">
-              <a class="group-btn__button__outline-btn self-align-left" href="./index.html">Exit</a>
-              <a class="group-btn__button__primary-btn" href="#!">Keep Finding</a>
-            </div>
-          </div><!-- End Successful Result -->
-        </div><!-- End Successful Result -->
-
-        <!-- Failed Result -->
-        <div id="result-fail" class="battle ">
-          <div class="modal__container result__container">
-            <div class="modal__header result__header">
-              <h2>Oh no, it ran away.</h2>
-              <a href="./index.html" class="modal__header__close-btn">
-                <i class="fa-solid fa-xmark"></i>
-              </a>
-            </div>
-
-            <!-- Content -->
-            <div class="modal__content result__content failed-result">
-              <!-- Stats -->
-              <div class="pokemon-stats result__stats">
-                <!-- Card -->
-                <div class="pokemon-stats__card card result__card fade">
-                  <div class="card__content result__card__content">
+                <!-- Card Stats -->
+                <div class="pokemon-stats__card card in-battle__card defeated">
+                  <div class="card__content in-battle__card__content">
                     <div class="pokemon-status">
                       <img src="../../dist/img/pokemon-status/sniper-gray.png" alt="Wild status background">
                       <span class="pokemon-status__desc">Wild</span>
                     </div>
 
-                    <div class="card__level result__card_level">
-                      <span>Lv.16</span>
+                    <div class="card__level in-battle__card_level">
+                      <span>Lv.10</span>
                     </div>
 
-                    <div class="card__pokemon_img result__card__img">
-                      <img src="../../dist/img/pikachu.svg" alt="Pikachu">
+                    <div class="card__pokemon_img in-battle__card__img">
+                      <img src="../../dist/img/charmander.svg" alt="Charmander">
                     </div>
 
-                    <div class="card__power result__card__power">
+                    <div class="card__power in-battle__card__power">
                       <i class="fa-solid fa-bolt"></i>
                       <span>Power:</span>
                       <span>10,000</span>
                     </div>
                   </div>
 
-                  <div class="card__footer result__card__footer">
+                  <div class="card__footer in-battle__card__footer">
+                    <p>Charmander</p>
+                  </div>
+                </div><!-- End Card Stats-->
+
+                <!-- Health -->
+                <div class="in-battle__health">
+                  <p class="in-battle__health__title">Health</p>
+                  <div class="in-battle__health__bar"></div>
+                </div><!-- End Health -->
+              </div><!-- End Wild Pokemon-->
+
+              <!-- Divider -->
+              <div class="in-battle__divider">
+                <span class="in-battle__divider__message bg-won">WON</span>
+
+                <div id="loading" class="loading show">
+                  <img src="../../dist//img/pokeball-gray.png" alt="loading ball 1">
+                  <img src="../../dist//img/pokeball-gray.png" alt="loading ball 2">
+                  <img src="../../dist//img/pokeball-gray.png" alt="loading ball 3">
+                </div>
+              </div><!-- End Divider -->
+
+              <!-- Selected Pokemon -->
+              <div class="pokemon-stats in-battle__stats">
+                <div class="in-battle__defeat-label">
+                  <span>Defeated</span>
+                </div>
+                <!-- Card Stats -->
+                <div class="pokemon-stats__card card in-battle__card">
+                  <div class="card__content in-battle__card__content">
+                    <div class="card__level in-battle__card_level">
+                      <span>Lv.16</span>
+                    </div>
+
+                    <div class="card__pokemon_img in-battle__card__img">
+                      <img src="../../dist/img/pikachu.svg" alt="Pikachu">
+                    </div>
+
+                    <div class="card__power in-battle__card__power">
+                      <i class="fa-solid fa-bolt"></i>
+                      <span>Power:</span>
+                      <span>15,000</span>
+                    </div>
+                  </div>
+
+                  <div class="card__footer in-battle__card__footer">
                     <p>Pikachu</p>
                   </div>
-                </div><!-- End Stats-->
+                </div><!-- End Card Stats-->
 
-              </div><!-- End Pokemon-->
+                <!-- Health -->
+                <div class="in-battle__health">
+                  <p class="in-battle__health__title">Health</p>
+                  <div class="in-battle__health__bar full"></div>
+                </div><!-- End Health -->
+              </div><!-- End Selected Pokemon-->
+            </div> <!-- End Battle Content -->
 
-              <!-- Pokemon Info -->
-              <div class="pokemon-info result__info">
-                <div class="result__ran-away">
-                  <span>Escaped</span>
+            <!-- Footer -->
+            <div class="result-success__footer">
+              <a href="#!" class="result-success__footer__button primary-btn">Next</a>
+            </div><!-- End Footer -->
+
+          </div><!-- End Catch Container -->
+        </div><!-- End Successful Result -->
+
+        <!-- Failed Result -->
+        <div id="result-fail" class="battle show">
+          <!-- Container -->
+          <div class="in-battle__container">
+            <h2 class="in-battle__title">Result</h2>
+
+            <!-- Battle Content -->
+            <div class="in-battle__content">
+              <!-- Wild Pokemon -->
+              <div class="pokemon-stats in-battle__stats">
+                <div class="in-battle__defeat-label">
+                  <span>Defeated</span>
                 </div>
-                <p class="result__info__message">It seems like your Pokeball can't hold the Pokemon. Try a <b>stronger
-                    Pokeball</b> next time.</p>
-              </div><!-- End Pokemon Info -->
-            </div><!-- End Modal Content -->
+                <!-- Card Stats -->
+                <div class="pokemon-stats__card card in-battle__card ">
+                  <div class="card__content in-battle__card__content">
+                    <div class="pokemon-status">
+                      <img src="../../dist/img/pokemon-status/sniper-gray.png" alt="Wild status background">
+                      <span class="pokemon-status__desc">Wild</span>
+                    </div>
 
-            <div class="modal__footer group-btn">
-              <a class="group-btn__button__outline-btn self-align-left" href="./index.html">Exit</a>
-              <a class="group-btn__button__primary-btn" href="#!">Keep Finding</a>
-            </div>
-          </div><!-- End Successful Result -->
+                    <div class="card__level in-battle__card_level">
+                      <span>Lv.10</span>
+                    </div>
+
+                    <div class="card__pokemon_img in-battle__card__img">
+                      <img src="../../dist/img/charmander.svg" alt="Charmander">
+                    </div>
+
+                    <div class="card__power in-battle__card__power">
+                      <i class="fa-solid fa-bolt"></i>
+                      <span>Power:</span>
+                      <span>10,000</span>
+                    </div>
+                  </div>
+
+                  <div class="card__footer in-battle__card__footer">
+                    <p>Charmander</p>
+                  </div>
+                </div><!-- End Card Stats-->
+
+                <!-- Health -->
+                <div class="in-battle__health">
+                  <p class="in-battle__health__title">Health</p>
+                  <div class="in-battle__health__bar losing"></div>
+                </div><!-- End Health -->
+              </div><!-- End Wild Pokemon-->
+
+              <!-- Divider -->
+              <div class="in-battle__divider">
+                <span class="in-battle__divider__message bg-lost">LOST</span>
+
+                <div id="loading" class="loading show">
+                  <img src="../../dist//img/pokeball-gray.png" alt="loading ball 1">
+                  <img src="../../dist//img/pokeball-gray.png" alt="loading ball 2">
+                  <img src="../../dist//img/pokeball-gray.png" alt="loading ball 3">
+                </div>
+              </div><!-- End Divider -->
+
+              <!-- Selected Pokemon -->
+              <div class="pokemon-stats in-battle__stats">
+                <div class="in-battle__defeat-label show">
+                  <span>Defeated</span>
+                </div>
+                <!-- Card Stats -->
+                <div class="pokemon-stats__card card in-battle__card defeated">
+                  <div class="card__content in-battle__card__content">
+                    <div class="card__level in-battle__card_level">
+                      <span>Lv.16</span>
+                    </div>
+
+                    <div class="card__pokemon_img in-battle__card__img">
+                      <img src="../../dist/img/pikachu.svg" alt="Pikachu">
+                    </div>
+
+                    <div class="card__power in-battle__card__power">
+                      <i class="fa-solid fa-bolt"></i>
+                      <span>Power:</span>
+                      <span>15,000</span>
+                    </div>
+                  </div>
+
+                  <div class="card__footer in-battle__card__footer">
+                    <p>Pikachu</p>
+                  </div>
+                </div><!-- End Card Stats-->
+
+                <!-- Health -->
+                <div class="in-battle__health">
+                  <p class="in-battle__health__title">Health</p>
+                  <div class="in-battle__health__bar"></div>
+                </div><!-- End Health -->
+              </div><!-- End Selected Pokemon-->
+            </div> <!-- End Battle Content -->
+
+            <!-- Footer -->
+            <div class="result-success__footer">
+              <a href="#!" class="result-success__footer__button primary-btn">Next</a>
+            </div><!-- End Footer -->
+
+          </div><!-- End Catch Container -->
         </div><!-- End Failed Result -->
 
         <!-- Rewards  -->
