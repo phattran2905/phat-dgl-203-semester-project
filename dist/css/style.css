@@ -44,16 +44,6 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
-main h1 {
-  margin: 0;
-  font-size: 5.25rem;
-  text-align: center;
-  text-transform: capitalize;
-  color: #E5446D;
-}
-main .container {
-  margin-bottom: 6.25rem;
-}
 
 footer {
   position: fixed;

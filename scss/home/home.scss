@@ -1,4 +1,3 @@
-// @use "../globals" as g;
 @use "../util" as u;
 @forward "../globals";
 @import "../variables/";
@@ -6,19 +5,18 @@
 /**
     1. Container
     2. Hero
-        2.1 Image
-        2.2 Button
-        2.3 Decorated Image (Left)
-        2.4 Decorated Image (Right)
+        2.1 Title
+        2.2 Image
+        2.3 Button
+        2.4 Decorated Image (Left)
+        2.5 Decorated Image (Right)
     3. Tutorial
         3.1 Title
         3.2 Description
     4. Guide
-        4.0.1 Title (Mixins)
-        4.0.2 Guide Wrapper (Mixins)
-        4.1 Explore
-        4.2 Items
-        4.3 Shop
+        4.1 Title
+        4.2 Description
+        4.3 Item
 **/
 
 // 1. Container
@@ -36,27 +34,36 @@
 	margin: u.rem(32);
 	height: 90vh;
 
-	// 2.1 Image
+    // 2.1 Title
+    &__title {
+		margin: 0;
+		font-size: 5.25rem;
+		text-align: center;
+		text-transform: capitalize;
+		color: $primary-color;
+    }
+
+	// 2.2 Image
 	&__img {
 		width: u.em(650);
 	}
 
-	// 2.2 Button
+	// 2.3 Button
 	&__btn {
 		padding: u.rem(25) u.rem(70);
 		color: #fff;
 		font-weight: bold;
 		font-size: u.rem(28);
 		background-color: $primary-color;
-		border-radius: u.rem(37);
+		border-radius: u.rem(45);
 
 		&:hover {
-			background-color: $light-blue;
+			background-color: $secondary-color;
 			transition: 0.5s ease-in-out;
 		}
 	}
 
-	// 2.3 Decorated Image (Left)
+	// 2.4 Decorated Image (Left)
 	&__deco-img--left {
 		position: absolute;
 		left: 0;
@@ -68,11 +75,15 @@
 		}
 	}
 
-	// 2.4 Decorated Image (Right)
+	// 2.5 Decorated Image (Right)
 	&__deco-img--right {
-		@extend .hero__deco-img--left;
-		right: 0;
-		left: auto;
+		position: absolute;
+		bottom: 0;
+		right: u.rem(30);
+		img {
+			width: u.rem(345);
+			height: u.rem(325);
+		}
 	}
 }
 
@@ -85,7 +96,7 @@
 	background-color: $secondary-color;
 
 	// 3.1 Title
-	h2 {
+	&__title {
 		padding: u.rem(25);
 		margin-bottom: u.rem(10);
 		font-size: u.rem(46);
@@ -112,56 +123,35 @@
 	margin: u.rem(32);
 	background-color: $secondary-color;
 
-	p {
-		color: #fff;
-		font-size: u.rem(24);
-	}
-
-	// 4.0.1 Title (Mixins)
-	@mixin title {
+	// 4.1 Title
+	&__title {
 		position: absolute;
-		top: calc(-1 * u.rem(60));
-		left: calc(-1 * u.rem(40));
+		top: calc(-1 * u.rem(10));
+		left: calc(1 * u.rem(30));
+        margin-bottom: 0;
 		background-color: $primary-color;
 		color: #fff;
 		padding: u.rem(14) u.rem(39);
 		font-size: u.rem(30);
-		border-left: 10px solid $secondary-color;
+		border-left: 10px solid $black;
 		border-top-right-radius: u.rem(33);
 		border-bottom-right-radius: u.rem(33);
 	}
 
-	// 4.0.2 Guide Wrapper (Mixins)
-	@mixin guide-wrapper {
+	// 4.2 Description
+	&__description {
+        margin: 0;
+		font-size: u.rem(24);
+        padding: u.rem(60);
+        line-height: u.rem(38);
+        background-color: #fff;
+        border-radius: u.rem(5);
+	}
+
+	// 4.3 Item
+	&__item {
 		position: relative;
 		padding: u.rem(40) u.rem(60);
 		margin: u.rem(30) u.rem(30) u.rem(60) u.rem(30);
-	}
-
-	// 4.1 Explore
-	&__explore {
-		@include guide-wrapper();
-
-		.title {
-			@include title;
-		}
-	}
-
-	// 4.2 Items
-	&__items {
-		@include guide-wrapper();
-
-		.title {
-			@include title;
-		}
-	}
-
-	// 4.3 Shop
-	&__shop {
-		@include guide-wrapper();
-
-		.title {
-			@include title;
-		}
 	}
 }
