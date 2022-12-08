@@ -631,6 +631,18 @@ a, a:active, a:visited {
   transition: 0.3s ease-out;
 }
 
+/**
+    1. Loading
+    2. Pokemon Status
+        2.1 Description
+    3. Group button
+        3.1 Button
+            3.1.1 Outline Button
+            3.1.2 Primary Button
+    4. Outline Button
+    5. Primary Button
+
+**/
 .loading {
   display: none;
   justify-content: center;
@@ -2011,6 +2023,33 @@ a, a:active, a:visited {
   font-size: 1.5625rem;
 }
 
+/**
+    1. Battle
+        1.1 Container
+        1.2 Content
+    2. In battle
+        2.1 Container
+        2.2 Title
+        2.3 Content
+        2.4 Card
+        2.5 Stats
+        2.6 Defeat Label
+        2.7 Divider
+        2.8 Health
+    3. Select
+        3.1 Pokemon Power
+        3.2 Content
+        3.3 Stats
+        3.4 Divider
+        3.5 Pokemon List
+    4. Success
+        4.1 Footer
+    5. Rewards
+        5.1 Content
+        5.2 List
+
+
+**/
 .battle {
   display: none;
   width: 100%;

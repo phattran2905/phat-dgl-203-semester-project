@@ -631,6 +631,18 @@ a, a:active, a:visited {
   transition: 0.3s ease-out;
 }
 
+/**
+    1. Loading
+    2. Pokemon Status
+        2.1 Description
+    3. Group button
+        3.1 Button
+            3.1.1 Outline Button
+            3.1.2 Primary Button
+    4. Outline Button
+    5. Primary Button
+
+**/
 .loading {
   display: none;
   justify-content: center;
@@ -2011,6 +2023,20 @@ a, a:active, a:visited {
   font-size: 1.5625rem;
 }
 
+/**
+    1. Find
+        1.1 Show
+        1.2 Content
+        1.3 Unknown Pokemon
+            1.3.1 Search image
+        1.4 Footer
+            1.4.1 Button
+    2. Found
+        2.1 Show
+        2.2 Content
+        2.3 Info
+        2.4 Card
+**/
 .find {
   padding: 2rem;
   flex-direction: column;
