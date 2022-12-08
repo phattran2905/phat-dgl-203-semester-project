@@ -1,4 +1,4 @@
-// 700px ,900px ,1440px, 1900px
+// 700px, 900px, 1440px, 1900px
 $breakpoints-up: (
     "small": 43.75em,
     "medium": 56.25em,
@@ -15,13 +15,14 @@ $breakpoints-down: (
 );
 
 
-
+// Responsive with (min-width).
 @mixin breakpoint ($size) {
     @media (min-width: map-get($breakpoints-up, $size)) {
         @content
     }
 };
 
+// Responsive with (max-width).
 @mixin breakpoint-down ($size) {
     @media (max-width: map-get($breakpoints-down, $size)) {
         @content

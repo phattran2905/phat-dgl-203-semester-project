@@ -631,6 +631,11 @@ a, a:active, a:visited {
   transition: 0.3s ease-out;
 }
 
+/**
+*   1. Shop
+        1.1 Title
+        1.2 Img
+**/
 .shop {
   display: flex;
   justify-content: center;

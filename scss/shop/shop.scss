@@ -2,18 +2,27 @@
 @use "../globals" as g;
 @use "../util" as u;
 
+/**
+*   1. Shop
+        1.1 Title
+        1.2 Img
+**/
+
+// 1. Shop
 .shop {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: u.rem(100);
 
+    // 1.1 Title
     &__title {
         margin: u.rem(50);
         font-size: u.rem(100);
         color: g.$primary-color;
     }
 
+    // 1.2 Img
     &__img {
         width: u.em(300);
     }
