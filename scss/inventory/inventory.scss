@@ -3,7 +3,28 @@
 @use "../util" as u;
 @forward "./layout";
 
+/*
+    1. Card
+        1.1 Amount
+        1.2 Image
+    2. Modal
+        2.1 Left column
+            2.1.1 Footer
+            2.1.2 Amount
+        2.2 Right column
+            2.2.1 Title
+            2.2.2 Description
+            2.2.3 Content
+    3. Item amount
+        3.1 Label
+        3.2 Max
+        3.3 Input
+        3.4 Image
+**/
+
+// 1. Card
 .card {
+    // 1.1 Amount
 	&__item-amount {
 		display: flex;
 		flex-direction: column;
@@ -23,6 +44,7 @@
 		}
 	}
 
+    // 1.1 Image
 	&__item-img {
 		display: flex;
 		align-items: center;
@@ -39,12 +61,15 @@
 	}
 }
 
+// 2. Modal
 .modal {
+	// 2.1 Left column
 	.left-col {
+		// 2.1.1 Footer
 		&__footer p {
 			padding: 0;
 		}
-
+		// 2.1.2 Amount
 		&__amount {
 			margin: u.rem(10);
 			padding: u.rem(15);
@@ -68,18 +93,22 @@
 		}
 	}
 
+	// 2.2 Right column
 	.right-col {
+        // 2.2.1 Title
 		h3 {
 			font-size: u.rem(30);
 			margin-bottom: u.rem(18);
 		}
 
+        // 2.2.2 Description
 		p {
 			line-height: u.rem(28);
 			font-size: u.rem(18);
 			text-align: justify;
 		}
 
+		// 2.2.3 Content
 		&__content {
 			grid-column: span 3;
 
@@ -110,6 +139,7 @@
 	}
 }
 
+// 3. Item Amount
 .item-container__amount {
 	margin-right: u.rem(32);
 	display: flex;
@@ -122,11 +152,13 @@
 	border-bottom: 2px solid g.$secondary-color;
 	border-top: 2px solid g.$secondary-color;
 
+	// 3.1 Label
 	label {
 		font-size: u.rem(20);
 		font-weight: bold;
 	}
 
+	// 3.2 Max
 	&__max {
 		margin-left: u.rem(15);
 		color: g.$black;
@@ -134,6 +166,7 @@
 		font-weight: 700;
 	}
 
+	// 3.3 Input
 	&__input {
 		display: flex;
 		justify-content: center;
@@ -145,11 +178,12 @@
 			padding: u.rem(5);
 			font-size: u.rem(21);
 			text-align: center;
-            font-weight: bold;
-            color: g.$secondary-color;
+			font-weight: bold;
+			color: g.$secondary-color;
 		}
 	}
 
+	// 3.4 Item image
 	&__item-img {
 		display: inline-block;
 		width: u.rem(30);

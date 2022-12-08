@@ -639,6 +639,24 @@ a, a:active, a:visited {
   padding: 3.375rem;
 }
 
+/*
+    1. Card
+        1.1 Amount
+        1.2 Image
+    2. Modal
+        2.1 Left column
+            2.1.1 Footer
+            2.1.2 Amount
+        2.2 Right column
+            2.2.1 Title
+            2.2.2 Description
+            2.2.3 Content
+    3. Item amount
+        3.1 Label
+        3.2 Max
+        3.3 Input
+        3.4 Image
+**/
 .card__item-amount {
   display: flex;
   flex-direction: column;
