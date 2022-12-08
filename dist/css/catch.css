@@ -35,6 +35,12 @@ a, a:active, a:visited {
   text-decoration: none;
 }
 
+/** Card
+    1. Content
+    2. Level
+    3. Footer
+    4. Hoverable
+**/
 .card__content {
   width: 100%;
   border: 4px solid #393E7D;
@@ -829,6 +835,12 @@ a, a:active, a:visited {
   text-decoration: none;
 }
 
+/** Card
+    1. Content
+    2. Level
+    3. Footer
+    4. Hoverable
+**/
 .card__content {
   width: 100%;
   border: 4px solid #393E7D;
