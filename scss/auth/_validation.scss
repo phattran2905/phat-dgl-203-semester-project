@@ -1,38 +1,37 @@
 @use "../util/" as u;
 @import "../variables/";
 
-/**
-    1. Validation
-        1.1 Image
-        1.2 Error
-            1.2.1 Error messages
+/** Validation
+    1. Image
+    2. Error
+        2.1 Error message
 **/
 
-// 1. Validation
 .validation {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
-	margin-right: u.rem(20);
+	margin-right: u.rem(50);
 
-    // 1.1 Image
+	// 1. Image
 	&__img {
 		width: u.em(250);
 
-        @include u.breakpoint-down(xlarge) {
-            width: u.em(210);
-        };
-        @include u.breakpoint-down(large) {
-            width: u.em(180);
-        };
+		@include u.breakpoint-down(xlarge) {
+			width: u.em(210);
+		}
+		@include u.breakpoint-down(large) {
+			width: u.em(150);
+            margin-right: u.rem(150);
+		}
 	}
 
-    // 1.2 Error
+	// 2. Error
 	&__error {
 		display: none;
-        width: min(100%, u.em(430));
-        height: auto;
+		width: min(100%, u.em(430));
+		height: auto;
 		padding: u.rem(20) u.rem(30);
 		border: 2px solid $primary-color;
 		border-radius: 1rem;
@@ -40,11 +39,11 @@
 		align-self: center;
 		position: relative;
 
-        @include u.breakpoint-down(xlarge) {
-            padding: u.rem(10) u.rem(20);
-        };
+		@include u.breakpoint-down(xlarge) {
+			padding: u.rem(10) u.rem(20);
+		}
 
-        // Arrow face down to the image
+		// Arrow face down to the image
 		&::after {
 			content: "";
 			width: 0;
@@ -57,20 +56,19 @@
 			border-top: 20px solid $primary-color;
 		}
 
-        // 1.2.1 Error message
+		// 2.1 Error message
 		&__message {
 			font-size: u.rem(23);
 			font-weight: bold;
 			color: $primary-color;
 
-            @include u.breakpoint-down(xlarge) {
-                font-size: u.rem(20);
-            };
-
+			@include u.breakpoint-down(xlarge) {
+				font-size: u.rem(20);
+			}
 		}
 
-        &.show {
-            display: block;
-        }
+		&.show {
+			display: block;
+		}
 	}
 }

@@ -22,12 +22,10 @@
     .validation {
         grid-column: 3 / span 1;
         grid-row: 2 / span 1;
-
+        
         @include u.breakpoint-down(large) {
-
-        grid-column: 2 / span 1;
-        grid-row: 3 / span 1;
+            grid-column: 2 / span 1;
+            grid-row: 3 / span 1;
         }
     }
-
 }

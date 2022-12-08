@@ -63,12 +63,11 @@ footer {
   text-align: center;
 }
 
-/**
-    1. Navbar
-        1.1 Responsive on (xlarge)
-        1.2 Logo
-        1.3 Nav (Auth)
-        1.4 Nav
+/** Navbar
+    1. Link
+    2. Logo
+    3. Nav (Auth)
+    4. Nav
 **/
 .navbar {
   display: flex;
@@ -77,6 +76,14 @@ footer {
   align-items: center;
   padding: 2rem 3.375rem;
 }
+.navbar__link {
+  font-size: 1.25rem;
+  color: #E5446D;
+  text-decoration: underline;
+}
+.navbar__link:hover {
+  color: #393E7D;
+}
 .navbar__logo {
   width: 4.5rem;
   height: 4.5rem;
@@ -84,6 +91,18 @@ footer {
 }
 .navbar__logo img {
   width: 100%;
+}
+@media (max-width: 89.99875em) {
+  .navbar__logo {
+    width: 3.875rem;
+    height: 3.875rem;
+  }
+}
+@media (max-width: 56.24875em) {
+  .navbar__logo {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
 }
 .navbar.auth .navbar__nav {
   width: auto;
@@ -722,8 +741,7 @@ footer {
         1.6 Submit Button
 */
 .form {
-  width: 46rem;
-  margin: 1rem auto;
+  width: 43.75rem;
   display: flex;
   flex-direction: column;
 }
@@ -790,18 +808,17 @@ footer {
   transition: 0.3s ease-in-out;
 }
 
-/**
-    1. Validation
-        1.1 Image
-        1.2 Error
-            1.2.1 Error messages
+/** Validation
+    1. Image
+    2. Error
+        2.1 Error message
 **/
 .validation {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  margin-right: 1.25rem;
+  margin-right: 3.125rem;
 }
 .validation__img {
   width: 15.625em;
@@ -813,7 +830,8 @@ footer {
 }
 @media (max-width: 89.99875em) {
   .validation__img {
-    width: 11.25em;
+    width: 9.375em;
+    margin-right: 9.375rem;
   }
 }
 .validation__error {
