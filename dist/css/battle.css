@@ -112,6 +112,9 @@ footer {
 .navbar__logo.active {
   align-self: flex-end;
 }
+.navbar__logo.active:hover {
+  background-color: #fff;
+}
 .navbar__logo.active img {
   width: 0;
 }
@@ -986,6 +989,10 @@ footer {
 
 .navbar__logo.active {
   align-self: flex-end;
+}
+
+.navbar__logo.active:hover {
+  background-color: #fff;
 }
 
 .navbar__logo.active img {

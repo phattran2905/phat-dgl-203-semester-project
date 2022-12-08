@@ -54,6 +54,10 @@
         &.active {
             align-self: flex-end;
 
+            &:hover {
+                background-color: #fff;
+            }
+
             img {
                 width: 0;
             }
