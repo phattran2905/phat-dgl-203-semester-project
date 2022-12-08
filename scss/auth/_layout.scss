@@ -1,9 +1,15 @@
 @use '../util' as u;
 
+/**
+*   1. Container
+        1.1 Responsive (xlarge)
+**/ 
+
 .container {
 	display: grid;
     height: 100%;
 
+    // 1.1 Responsive (xlarge)
     @include u.breakpoint(xlarge) {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 6fr;

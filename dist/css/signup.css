@@ -631,6 +631,10 @@ a, a:active, a:visited {
   transition: 0.3s ease-out;
 }
 
+/**
+*   1. Container
+        1.1 Responsive (xlarge)
+**/
 .container {
   display: grid;
   height: 100%;
@@ -654,6 +658,15 @@ a, a:active, a:visited {
   }
 }
 
+/**
+*   1. Form
+        1.1 Container
+        1.2 Input Group
+        1.3 Label
+        1.4 Input
+        1.5 Reference Link
+        1.6 Submit Button
+*/
 .form {
   width: 46rem;
   margin: 1rem auto;
@@ -723,6 +736,12 @@ a, a:active, a:visited {
   transition: 0.3s ease-in-out;
 }
 
+/**
+    1. Validation
+        1.1 Image
+        1.2 Error
+            1.2.1 Error messages
+**/
 .validation {
   display: flex;
   flex-direction: column;
@@ -737,7 +756,7 @@ a, a:active, a:visited {
   display: none;
   width: min(100%, 430px);
   padding: 1rem 2rem;
-  border: 2px solid #1B1B1E;
+  border: 2px solid #E5446D;
   border-radius: 1rem;
   margin: 0 auto 2rem auto;
   align-self: center;
@@ -763,6 +782,11 @@ a, a:active, a:visited {
   display: block;
 }
 
+/**
+*   1. Instruction
+        1.1 Text
+        1.2 List
+*/
 .instruction {
   border: 2px solid #393E7D;
   border-radius: 0.5rem;

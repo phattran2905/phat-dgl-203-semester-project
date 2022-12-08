@@ -2,15 +2,36 @@
 @use "../util" as u;
 @use "../globals" as g;
 
+/*
+    1. Form
+        1.1 Responsive on (xlarge)
+        1.2 Header
+            1.2.1 Form title
+            1.2.2 Close Button
+        1.3 Container
+            1.3.1 Profile info
+                1.3.1.1 Card
+                1.3.1.2 Experience
+                1.3.1.3 Coins
+            1.3.2 Fields
+                1.3.2.1 Input group
+        1.4 Footer
+            1.4.1 Logout button
+            1.4.2 Submit button
+**/ 
+
+// 1. Form
 .form {
 	width: 80vw;
 	margin: u.rem(55) auto;
 
+    // 1.1 Responsive on (xlarge)
 	@include u.breakpoint(xlarge) {
 		max-width: u.em(1070);
 		max-height: u.em(640);
 	}
 
+    // 1.2 Header
 	&__header {
 		height: u.rem(50);
 		padding: 1rem 1.5rem;
@@ -20,12 +41,14 @@
 		align-items: center;
 		background-color: g.$secondary-color;
 
+        // 1.2.1 Form title
 		h3 {
 			margin-bottom: 0;
 			color: #fff;
 			font-size: u.rem(24);
 		}
 
+        // 1.2.2 Close button
 		&__close-btn {
 			font-size: u.rem(28);
 			color: #fff;
@@ -36,6 +59,7 @@
 		}
 	}
 
+    // 1.3 Container
 	&__container {
 		border: 3px solid g.$secondary-color;
 		border-bottom-left-radius: u.rem(25);
@@ -46,12 +70,14 @@
 		grid-template-columns: 1fr 3fr;
 		grid-template-rows: auto;
 
+        // 1.3.1 Profile Info
 		.profile__info {
 			grid-column: 1/2;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 
+            // 1.3.1.1 Card
 			&__card {
 				display: flex;
 				flex-direction: column;
@@ -98,6 +124,7 @@
 				}
 			}
 
+            // 1.3.1.2 Experience
 			&__experience {
 				margin: u.rem(12) auto;
 
@@ -130,6 +157,7 @@
 				}
 			}
 
+            // 1.3.1.3 Coins
             &__coins {
                 padding: 1rem;
                 $font-size: u.rem(26);
@@ -153,10 +181,12 @@
             }
 		}
 
+        // 1.3.2 Fields
 		&__fields {
 			grid-column: 2/3;
             padding: 0 u.rem(94);
 
+            // 1.3.2.1 Input group
             .form__input-group {
                 @include g.input-group;
 
@@ -177,12 +207,14 @@
 		}
 	}
 
+    // 1.4 Footer
     &__footer {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
 
+        // 1.4.1 Logout button
         .form__logout-btn {
             padding: u.rem(12) u.rem(72);
             font-size: u.rem(24); 
@@ -199,6 +231,7 @@
             }
         }
 
+        // 1.4.2 Submit button
         .form__submit-btn {
             @extend .form__logout-btn;
             background-color: g.$secondary-color;

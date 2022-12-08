@@ -5,6 +5,13 @@
 @use "../globals" as g;
 @use "../util" as u;
 
+/**
+*   1. Instruction
+        1.1 Text
+        1.2 List
+*/ 
+
+// 1. Instruction
 .instruction {
     @include u.breakpoint(xlarge) {
         grid-column: 1 / 2;
@@ -18,6 +25,7 @@
     border: 2px solid g.$secondary-color;
     border-radius: .5rem;
 
+    // 1.1 Text
     &__text {
         font-size: 1.4rem;
 
@@ -27,6 +35,7 @@
         }
     }
 
+    // 1.2 List
     &__list {
         padding: 0 2em;
         list-style-type: square;

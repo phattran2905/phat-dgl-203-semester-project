@@ -1,23 +1,37 @@
 @use "../globals" as g;
 @use "../util" as u;
 
+/**
+*   1. Form
+        1.1 Container
+        1.2 Input Group
+        1.3 Label
+        1.4 Input
+        1.5 Reference Link
+        1.6 Submit Button
+*/ 
+
+// 1. Form
 .form {
 	width: 46rem;
 	margin: 1rem auto;
 	display: flex;
 	flex-direction: column;
 
+    // 1.1 Container
 	&__container {
 		padding: 3rem 4.5rem;
 		background: g.$secondary-color;
 		border-radius: 2rem;
 	}
 
+    // 1.2 Input Group
 	&__input-group {
         @include g.input-group;
         
 	}
 
+    // 1.3 Label
 	&__label {
 		color: #fff;
 		font-size: 1.5rem;
@@ -27,6 +41,7 @@
 		}
 	}
 
+    // 1.4 Input
 	&__input[type="text"],
 	&__input[type="password"] {
         @include g.text-input;
@@ -37,6 +52,7 @@
         @include g.checkbox-input;
 	}
 
+    // 1.5 Reference Link
 	&__ref-link {
 		padding-inline: 0.5rem;
 		text-align: right;
@@ -50,6 +66,7 @@
 		}
 	}
 
+    // 1.6 Submit Button
 	&__submit-btn {
 		border: none;
 		outline: none;
