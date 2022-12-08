@@ -34,26 +34,62 @@
 	margin: u.rem(32);
 	height: 90vh;
 
-    // 2.1 Title
-    &__title {
+	// Responsive styles
+	@include u.breakpoint-down(large) {
+		height: 70vh;
+		margin: u.rem(25);
+	}
+	@include u.breakpoint-down(medium) {
+		height: 60vh;
+		margin: u.rem(10);
+	}
+	@include u.breakpoint-down(small) {
+		height: 50vh;
+		margin: u.rem(5);
+	}
+
+	// 2.1 Title
+	&__title {
 		margin: 0;
-		font-size: 5.25rem;
 		text-align: center;
 		text-transform: capitalize;
 		color: $primary-color;
-    }
+		font-size: u.rem(72);
+
+		// Responsive styles
+		@include u.breakpoint-down(large) {
+			font-size: u.rem(52);
+		}
+		@include u.breakpoint-down(medium) {
+			font-size: u.rem(42);
+		}
+		@include u.breakpoint-down(small) {
+			font-size: u.rem(32);
+		}
+	}
 
 	// 2.2 Image
 	&__img {
 		width: u.em(650);
+
+		// Responsive styles
+		@include u.breakpoint-down(large) {
+			width: u.em(600);
+		}
+		@include u.breakpoint-down(medium) {
+			width: u.em(400);
+		}
+		@include u.breakpoint-down(small) {
+			width: u.em(300);
+		}
 	}
 
 	// 2.3 Button
 	&__btn {
 		padding: u.rem(25) u.rem(70);
+		font-size: u.rem(28);
 		color: #fff;
 		font-weight: bold;
-		font-size: u.rem(28);
 		background-color: $primary-color;
 		border-radius: u.rem(45);
 
@@ -69,9 +105,36 @@
 		left: 0;
 		bottom: 0;
 
+		// Responsive styles
+		@include u.breakpoint-down(large) {
+			left: calc(-1 * u.em(80));
+			bottom: u.em(20);
+		}
+		@include u.breakpoint-down(medium) {
+			left: calc(-1 * u.em(30));
+			bottom: u.em(310);
+		}
+		@include u.breakpoint-down(small) {
+			bottom: u.em(250);
+		}
+
 		img {
-			width: u.rem(375);
-			height: u.rem(325);
+			width: u.em(375);
+			height: u.em(325);
+
+			// Responsive styles
+			@include u.breakpoint-down(large) {
+				width: u.em(325);
+				height: u.em(250);
+			}
+			@include u.breakpoint-down(medium) {
+				width: u.em(225);
+				height: u.em(150);
+			}
+			@include u.breakpoint-down(small) {
+				width: u.em(185);
+				height: u.em(130);
+			}
 		}
 	}
 
@@ -79,10 +142,39 @@
 	&__deco-img--right {
 		position: absolute;
 		bottom: 0;
-		right: u.rem(30);
+		right: u.rem(50);
+
+		// Responsive styles
+		@include u.breakpoint-down(large) {
+			right: calc(-1 * u.em(20));
+			bottom: u.em(20);
+		}
+		@include u.breakpoint-down(medium) {
+			right: u.em(0);
+			bottom: u.em(280);
+		}
+		@include u.breakpoint-down(small) {
+			right: 0;
+			bottom: u.em(250);
+		}
+
 		img {
-			width: u.rem(345);
-			height: u.rem(325);
+			width: u.em(345);
+			height: u.em(325);
+
+			// Responsive styles
+			@include u.breakpoint-down(large) {
+				width: u.em(280);
+				height: u.em(260);
+			}
+			@include u.breakpoint-down(medium) {
+				width: u.em(160);
+				height: u.em(190);
+			}
+			@include u.breakpoint-down(small) {
+				width: u.em(140);
+				height: u.em(120);
+			}
 		}
 	}
 }
@@ -92,8 +184,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-top: u.rem(80);
 	background-color: $secondary-color;
+	margin-top: u.rem(30);
+
+	@include u.breakpoint(xlarge) {
+		margin-top: u.rem(80);
+	}
 
 	// 3.1 Title
 	&__title {
@@ -114,21 +210,34 @@
 		color: #fff;
 		font-size: u.rem(25);
 		margin: u.rem(40);
+		line-height: u.rem(40);
 		padding: u.rem(20) u.rem(40);
+
+		// Responsive styles
+		@include u.breakpoint-down(large) {
+			margin: u.rem(10);
+			padding: 0;
+		}
 	}
 }
 
 // 4. Guide
 .guide {
-	margin: u.rem(32);
 	background-color: $secondary-color;
+	margin: u.rem(32);
+
+	// Responsive styles
+	@include u.breakpoint-down(large) {
+		margin-left: 0;
+		margin-right: 0;
+	}
 
 	// 4.1 Title
 	&__title {
 		position: absolute;
-		top: calc(-1 * u.rem(10));
+		top: 0;
 		left: calc(1 * u.rem(30));
-        margin-bottom: 0;
+		margin-bottom: 0;
 		background-color: $primary-color;
 		color: #fff;
 		padding: u.rem(14) u.rem(39);
@@ -136,16 +245,26 @@
 		border-left: 10px solid $black;
 		border-top-right-radius: u.rem(33);
 		border-bottom-right-radius: u.rem(33);
+
+		// Responsive styles
+		@include u.breakpoint-down(large) {
+			top: calc(-1 * u.rem(18));
+			left: 0;
+		}
+		@include u.breakpoint-down(small) {
+			top: calc(-1 * u.rem(15));
+			left: 0;
+		}
 	}
 
 	// 4.2 Description
 	&__description {
-        margin: 0;
+		margin: 0;
 		font-size: u.rem(24);
-        padding: u.rem(60);
-        line-height: u.rem(38);
-        background-color: #fff;
-        border-radius: u.rem(5);
+		padding: u.rem(60);
+		line-height: u.rem(38);
+		background-color: #fff;
+		border-radius: u.rem(5);
 	}
 
 	// 4.3 Item
@@ -153,5 +272,16 @@
 		position: relative;
 		padding: u.rem(40) u.rem(60);
 		margin: u.rem(30) u.rem(30) u.rem(60) u.rem(30);
+
+		// Responsive styles
+		@include u.breakpoint-down(large) {
+			margin-left: u.rem(25);
+			margin-right: u.rem(25);
+			padding: u.rem(20);
+		}
+		@include u.breakpoint-down(small) {
+			margin-left: 0;
+			margin-right: 0;
+		}
 	}
 }
