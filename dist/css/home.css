@@ -631,6 +631,23 @@ a, a:active, a:visited {
   transition: 0.3s ease-out;
 }
 
+/**
+    1. Container
+    2. Hero
+        2.1 Image
+        2.2 Button
+        2.3 Decorated Image (Left)
+        2.4 Decorated Image (Right)
+    3. Tutorial
+        3.1 Title
+        3.2 Description
+    4. Guide
+        4.0.1 Title (Mixins)
+        4.0.2 Guide Wrapper (Mixins)
+        4.1 Explore
+        4.2 Items
+        4.3 Shop
+**/
 .flex-container main .container {
   margin-bottom: 0;
 }
