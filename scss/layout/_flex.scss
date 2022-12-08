@@ -1,33 +1,46 @@
 @use "../globals" as g;
 @use "../util" as u;
 
+/*
+    1. Flex Container
+        1.1 Main
+            1.1.1 Title
+            1.1.2 Content Wrapper
+        1.2 Footer
+**/
+
+// 1. Flex Container
 .flex-container {
 	display: flex;
 	flex-direction: column;
-    position: relative;
+	position: relative;
 
+	// 1.1 Main
 	main {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 
-        h1 {
-            margin: 0;
-            font-size: 5.25rem;
-            text-align: center;
-            text-transform: capitalize;
-            color: g.$primary-color;
-        }
+		// 1.1.1 Title
+		h1 {
+			margin: 0;
+			font-size: 5.25rem;
+			text-align: center;
+			text-transform: capitalize;
+			color: g.$primary-color;
+		}
 
-        .container {
-            margin-bottom: u.rem(100);
-        }
+		// 1.1.2 Content Wrapper
+		.container {
+			margin-bottom: u.rem(100);
+		}
 	}
 
+	// 1.2 Footer
 	footer {
-        position: fixed;
-        width: 100%;
-        bottom: 0;
+		position: fixed;
+		width: 100%;
+		bottom: 0;
 		padding: 1rem;
 		font-size: 0.9rem;
 		background: g.$black;
