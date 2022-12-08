@@ -1,5 +1,6 @@
 @use "../globals" as g;
 @use "../util" as u;
+@import "../variables";
 
 /**
 *   1. Form
@@ -21,7 +22,7 @@
     // 1.1 Container
 	&__container {
 		padding: 3rem 4.5rem;
-		background: g.$secondary-color;
+		background: $secondary-color;
 		border-radius: 2rem;
 	}
 
@@ -59,7 +60,7 @@
 		font-size: 1.25rem;
 
 		a {
-			color: g.$black;
+			color: $black;
 			font-weight: bold;
 			font-style: italic;
 			text-decoration: underline;
@@ -71,17 +72,17 @@
 		border: none;
 		outline: none;
 		font-size: 1.75rem;
-		font-family: u.$heading-font;
+		font-family: $heading-font;
 		font-weight: bold;
 		color: #fff;
 		padding: 1.1rem 3.5rem;
 		margin: 1rem auto;
-		background-color: g.$primary-color;
+		background-color: $primary-color;
 		border-radius: 3rem;
         cursor: pointer;
 
         &:hover {
-            background-color: g.$light-blue;
+            background-color: $light-blue;
             transition: 0.3s ease-in-out;
         }
 	}

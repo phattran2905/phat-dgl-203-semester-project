@@ -1,2 +1,18 @@
 @forward 'globals';
 @forward 'layout';
+
+/**
+    Structure:
+        Global scope:
+            variables/
+            util/
+            globals/
+            layout/
+        Local scope:            
+            auth/
+            explore/
+            inventory/
+            pokemon/
+            shop/
+            home/
+**/ 

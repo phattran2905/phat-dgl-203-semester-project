@@ -1,8 +1,8 @@
 @forward "../style";
 @forward "./layout";
 @forward "./modal";
-@use "../globals" as g;
 @use "../util" as u;
+@import "../variables/";
 
 /**
     1. Card
@@ -22,7 +22,7 @@
 		position: absolute;
 		top: calc(-1 * u.rem(13));
 		right: calc(-1 * u.rem(25));
-		background-color: g.$light-blue;
+		background-color: $light-blue;
 		border-radius: u.rem(22);
 
 		@include u.breakpoint(xlarge) {
@@ -51,7 +51,7 @@
 	&__power {
 		font-size: u.rem(19);
 		font-weight: bold;
-		color: g.$secondary-color;
+		color: $secondary-color;
 		margin-top: u.rem(20);
 		display: flex;
 		flex-direction: row;
@@ -67,12 +67,12 @@
 		}
 
 		i {
-			color: g.$primary-color;
+			color: $primary-color;
 			line-height: u.rem(19);
 		}
 
 		& > span:last-child {
-			color: g.$primary-color;
+			color: $primary-color;
 			font-size: u.rem(25);
 		}
 	}

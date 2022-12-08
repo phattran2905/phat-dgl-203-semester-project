@@ -1,5 +1,6 @@
 @use "../globals" as g;
 @use "../util" as u;
+@import "../variables";
 
 /**
     1. Loading
@@ -59,15 +60,15 @@
 	margin-top: u.rem(32);
 
 	@mixin footer-button {
-		background-color: g.$secondary-color;
-		font-family: u.$heading-font;
+		background-color: $secondary-color;
+		font-family: $heading-font;
 		color: #fff;
 		text-align: center;
 		font-weight: bold;
 		font-size: 1.4rem;
 		padding: u.rem(16) u.rem(54);
 		border-radius: u.rem(34);
-		border: 4px solid g.$secondary-color;
+		border: 4px solid $secondary-color;
 
 		&:not(:last-child) {
 			margin-right: u.rem(16);
@@ -75,8 +76,8 @@
 
 		&:hover {
 			background-color: #fff;
-			color: g.$secondary-color;
-			border: 4px solid g.$primary-color;
+			color: $secondary-color;
+			border: 4px solid $primary-color;
 			transition: 0.3s ease-in-out;
 		}
 	}
@@ -87,7 +88,7 @@
 		&__outline-btn {
 			@include footer-button();
 			background-color: #fff;
-			color: g.$secondary-color;
+			color: $secondary-color;
 
 			&.self-align-left {
 				margin-right: auto;
@@ -103,20 +104,20 @@
 
 // 4. Primary Button
 .primary-btn {
-	background-color: g.$secondary-color;
-	font-family: u.$heading-font;
+	background-color: $secondary-color;
+	font-family: $heading-font;
 	color: #fff;
 	text-align: center;
 	font-weight: bold;
 	font-size: 1.4rem;
 	padding: u.rem(16) u.rem(54);
 	border-radius: u.rem(34);
-	border: 4px solid g.$secondary-color;
+	border: 4px solid $secondary-color;
 
 	&:hover {
 		background-color: #fff;
-		color: g.$secondary-color;
-		border: 4px solid g.$primary-color;
+		color: $secondary-color;
+		border: 4px solid $primary-color;
 		transition: 0.3s ease-in-out;
 	}
 }
@@ -125,5 +126,5 @@
 .outline-btn {
 	@extend .primary-btn;
 	background-color: #fff;
-	color: g.$secondary-color;
+	color: $secondary-color;
 }

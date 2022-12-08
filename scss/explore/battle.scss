@@ -1,3 +1,4 @@
+@import "../variables";
 @use "../globals" as g;
 @use "../util" as u;
 @forward "../style";
@@ -70,7 +71,7 @@
 	// 2.2 Title
 	&__title {
 		font-size: u.rem(40);
-		color: g.$primary-color;
+		color: $primary-color;
 		margin-bottom: u.rem(60);
 	}
 
@@ -104,7 +105,7 @@
 		position: absolute;
 		top: calc(u.rem(20));
 		left: calc(u.rem(100));
-		background-color: g.$black;
+		background-color: $black;
 		padding: u.rem(14) u.rem(54);
 		border-radius: u.rem(20);
 		transform: rotate(40deg);
@@ -117,7 +118,7 @@
 			font-size: u.rem(30);
 			text-transform: capitalize;
 			font-weight: bold;
-			font-family: u.$heading-font;
+			font-family: $heading-font;
 			color: #fff;
 		}
 	}
@@ -135,15 +136,15 @@
 			font-size: u.rem(36);
 			color: #fff;
 			font-weight: bold;
-			background-color: g.$primary-color;
+			background-color: $primary-color;
 			margin-bottom: u.rem(20);
 
 			&.bg-won {
-				background-color: g.$success-color;
+				background-color: $success-color;
 			}
 
 			&.bg-lost {
-				background-color: g.$black;
+				background-color: $black;
 			}
 		}
 	}
@@ -154,13 +155,13 @@
 			margin: u.rem(30) 0 u.rem(10) 0;
 			font-size: u.rem(24);
 			font-weight: bold;
-			color: g.$primary-color;
+			color: $primary-color;
 		}
 
 		@mixin health-bar {
 			height: u.rem(10);
 			border-radius: u.rem(10);
-			background-color: rgba(g.$black, 0.5);
+			background-color: rgba($black, 0.5);
 		}
 
 		&__bar {
@@ -172,12 +173,12 @@
 				content: "";
 				display: block;
 				width: 70%;
-				background-color: g.$primary-color;
+				background-color: $primary-color;
 			}
 
 			&.full {
 				width: 100%;
-				background-color: g.$success-color;
+				background-color: $success-color;
 			}
 		}
 	}
@@ -191,10 +192,10 @@
 		margin-top: u.rem(0);
 
 		span {
-			color: g.$black;
+			color: $black;
 
 			&:last-child {
-				color: g.$light-blue;
+				color: $light-blue;
 			}
 		}
 	}
@@ -229,14 +230,14 @@
 			position: absolute;
 			top: u.rem(-99);
 			left: 53%;
-			background-color: g.$secondary-color;
+			background-color: $secondary-color;
 			transform: rotate(15deg);
 		}
 
 		&__message {
-			background-color: g.$primary-color;
+			background-color: $primary-color;
 			padding: u.rem(20);
-			font-family: u.$heading-font;
+			font-family: $heading-font;
 			color: #fff;
 			font-weight: bold;
 			font-size: u.rem(24);
@@ -277,7 +278,7 @@
 
 		.pokemon-status.winner {
 			position: absolute;
-			background-color: g.$success-color;
+			background-color: $success-color;
 			padding: u.rem(20) u.rem(80);
 			border-radius: u.rem(20);
 			transform: rotate(-35deg);
@@ -321,7 +322,7 @@
 			&__additional {
 				display: inline-block;
 				font-size: u.rem(23);
-				color: g.$success-color;
+				color: $success-color;
 				margin-left: u.rem(16);
 			}
 		}
@@ -333,7 +334,7 @@
 				position: absolute;
 				top: 0;
 				margin-left: u.rem(10);
-				color: g.$primary-color;
+				color: $primary-color;
 				font-size: u.rem(21);
 			}
 
@@ -345,7 +346,7 @@
 				padding: u.rem(20) u.rem(30);
 				margin: u.rem(20) u.rem(30) u.rem(20) u.rem(50);
 				width: 60%;
-				border: 3px solid g.$secondary-color;
+				border: 3px solid $secondary-color;
 				border-radius: u.rem(20);
 
 				.rewards__item__left {
@@ -368,7 +369,7 @@
 				.rewards__item__amount {
 					font-weight: bold;
 					font-size: u.rem(24);
-					color: g.$success-color;
+					color: $success-color;
 				}
 			}
 		}

@@ -1,5 +1,5 @@
-@use "../globals" as g;
 @use "../util" as u;
+@import "../variables/";
 
 /**
     1. Navbar
@@ -42,10 +42,10 @@
 	}
 
 	&.auth &__nav__list__item {
-		border: 3px solid g.$secondary-color;
+		border: 3px solid $secondary-color;
 
 		&.active {
-			background: g.$secondary-color;
+			background: $secondary-color;
 
 			& > .navbar__nav__list__item__link {
 				color: #fff;
@@ -54,7 +54,7 @@
 	}
 
 	&:not(&.auth) {
-		background-color: g.$secondary-color;
+		background-color: $secondary-color;
 	}
 
     // 1.3 Nav
@@ -74,11 +74,11 @@
 				border: 3px solid transparent;
 
 				&:hover {
-					border-color: g.$primary-color;
+					border-color: $primary-color;
 				}
 
 				&:hover &__link {
-					color: g.$primary-color;
+					color: $primary-color;
 				}
 
 				&:not(:last-child) {
@@ -90,7 +90,7 @@
 				}
 
 				&.active {
-					background-color: g.$primary-color;
+					background-color: $primary-color;
 
 					& .navbar__nav__list__item__link {
 						color: #fff;
@@ -112,16 +112,16 @@
 				}
 
 				&__link {
-					font-family: u.$heading-font;
+					font-family: $heading-font;
 					text-align: center;
 					font-size: 1.4rem;
 					padding: 0.9rem 2rem;
 					font-weight: bold;
 					display: block;
-					color: g.$secondary-color;
+					color: $secondary-color;
                     
 					&:hover {
-						color: g.$secondary-color;
+						color: $secondary-color;
 						transition: 0.3s ease-out;
 					}
 				}

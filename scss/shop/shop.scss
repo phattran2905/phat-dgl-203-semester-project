@@ -1,6 +1,6 @@
 @forward "../style";
-@use "../globals" as g;
 @use "../util" as u;
+@import "../variables/";
 
 /**
 *   1. Shop
@@ -19,7 +19,7 @@
     &__title {
         margin: u.rem(50);
         font-size: u.rem(100);
-        color: g.$primary-color;
+        color: $primary-color;
     }
 
     // 1.2 Img

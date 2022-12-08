@@ -1,7 +1,7 @@
 @forward "../style";
-@use "../globals" as g;
 @use "../util" as u;
 @forward "./layout";
+@import "../variables/";
 
 /*
     1. Card
@@ -39,7 +39,7 @@
 		span {
 			display: block;
 			font-weight: bold;
-			color: g.$success-color;
+			color: $success-color;
 			font-size: u.rem(21);
 		}
 	}
@@ -73,7 +73,7 @@
 		&__amount {
 			margin: u.rem(10);
 			padding: u.rem(15);
-			border: 1px solid g.$secondary-color;
+			border: 1px solid $secondary-color;
 			border-radius: u.rem(10);
 			display: flex;
 			flex-direction: column;
@@ -87,7 +87,7 @@
 				margin: 0;
 
 				span {
-					color: g.$primary-color;
+					color: $primary-color;
 				}
 			}
 		}
@@ -123,13 +123,13 @@
 						color: #fff;
 						padding: u.rem(8);
 						border-radius: 50%;
-						background-color: g.$success-color;
+						background-color: $success-color;
 						font-weight: bold;
 						margin-right: u.rem(3);
 					}
 
 					span {
-						color: g.$primary-color;
+						color: $primary-color;
 						font-size: u.rem(24);
 						margin-left: u.rem(10);
 					}
@@ -149,8 +149,8 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 2px solid g.$secondary-color;
-	border-top: 2px solid g.$secondary-color;
+	border-bottom: 2px solid $secondary-color;
+	border-top: 2px solid $secondary-color;
 
 	// 3.1 Label
 	label {
@@ -161,7 +161,7 @@
 	// 3.2 Max
 	&__max {
 		margin-left: u.rem(15);
-		color: g.$black;
+		color: $black;
 		font-size: u.rem(25);
 		font-weight: 700;
 	}
@@ -173,13 +173,13 @@
 		align-items: center;
 		input[type="number"] {
 			width: u.rem(100);
-			border: 3px solid g.$secondary-color;
+			border: 3px solid $secondary-color;
 			border-radius: u.rem(5);
 			padding: u.rem(5);
 			font-size: u.rem(21);
 			text-align: center;
 			font-weight: bold;
-			color: g.$secondary-color;
+			color: $secondary-color;
 		}
 	}
 

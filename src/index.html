@@ -17,93 +17,91 @@
 </head>
 
 <body>
-  <!-- Flex Container -->
-  <div class="flex-container">
+  <main>
+    <!-- Container -->
+    <div class="container">
+      <!-- Hero -->
+      <div class="hero">
+        <h1 class="hero__title">Pokémon Land</h1>
+        <img class="hero__img" src="../dist/img/pokeball-big.png" alt="Pokeball Big Logo">
 
-    <main>
-      <!-- Container -->
-      <div class="container">
-        <div class="hero">
-          <h1>Pokémon Land</h1>
-          <img class="hero__img" src="../dist/img/pokeball-big.png" alt="Pokeball Big Logo">
-
-          <div class="hero__deco-img--left">
-            <img src="../dist/img/pokemon/raichu.svg" alt="Raichu">
-          </div>
-
-          <div class="hero__deco-img--right">
-            <img src="../dist/img/pokemon/pikachu.svg" alt="Pikachu">
-          </div>
-
-          <a class="hero__btn" href="./auth/profile.html">Play</a>
+        <div class="hero__deco-img--left">
+          <img src="../dist/img/pokemon/raichu.svg" alt="Raichu">
         </div>
 
-        <div class="tutorial">
-          <h2>How To Play</h2>
-          <p class="tutorial__description">
-            This game explores the pokemon world, where players can nurture and compete with each other. Each player has
-            a collection of pokemon, and they will need different items to nurture them. By exploring the pokemon world,
-            the players can acquire many rewards such as experience points, boosting items, or new pokemon.
-          </p>
+        <div class="hero__deco-img--right">
+          <img src="../dist/img/pokemon/pikachu.svg" alt="Pikachu">
+        </div>
 
-          <div class="guide">
-            <!-- Pokemon -->
-            <div class="guide__shop">
-              <h3 class="title">Pokemon</h3>
-              <p>They are the main objects in this game and play an important role in the trainer's exploration. Each
-                pokemon has many traits, such as strength, agility, magic, and defense. Every time they level up, these
-                traits increase and can be boosted by items. Besides the traits above, pokemon also have skills and earn
-                a new skill if they reach a specific level or evolve.</p>
-            </div>
-            <!-- End Pokemon -->
+        <a class="hero__btn" href="./auth/profile.html">Play</a>
+      </div><!-- End Hero -->
 
-            <!-- Items -->
-            <div class="guide__items">
-              <h3 class="title">Items</h3>
-              <p>
-                Pokeball is used to catch wild pokemon, and if it succeeds, the pokemon will belong to the thrower.
-                Otherwise, it will be gone, and the trainer will have to use another one. Mystic items boost pokemon's
-                traits in a certain amount of time. However, some rare items affect permanently. Consumable items
-                recharge the trainer and pokemon's stamina and have limited usage.
-              </p>
-            </div>
-            <!-- End Items -->
+      <!-- Tutorial -->
+      <div class="tutorial">
+        <h2 class="tutorial__title">How To Play</h2>
+        <p class="tutorial__description">
+          This game explores the pokemon world, where players can nurture and compete with each other. Each player has
+          a collection of pokemon, and they will need different items to nurture them. By exploring the pokemon world,
+          the players can acquire many rewards such as experience points, boosting items, or new pokemon.
+        </p>
 
-            <!-- Explore -->
-            <div class="guide__explore">
-              <h3 class="title">Explore</h3>
-              <p>
-                A trainer might find nearby wild pokemon while using this feature. Whenever a trainer finds a wild
-                pokemon, they can either beat them for rewards or choose to use Pokeball to catch them. If they lose,
-                they will not lose anything, including game resources such as health and mana points.
-              </p>
-            </div>
-            <!--End Explore -->
+        <!-- Guide -->
+        <div class="guide">
+          <!-- Pokemon -->
+          <div class="guide__shop">
+            <h3 class="title">Pokemon</h3>
+            <p>They are the main objects in this game and play an important role in the trainer's exploration. Each
+              pokemon has many traits, such as strength, agility, magic, and defense. Every time they level up, these
+              traits increase and can be boosted by items. Besides the traits above, pokemon also have skills and earn
+              a new skill if they reach a specific level or evolve.</p>
+          </div>
+          <!-- End Pokemon -->
 
-            <!-- Battle -->
-            <div class="guide__explore">
-              <h3 class="title">Battle</h3>
-              <p>
-                In a battle, pokemon take turns to cast their skills. The one who has a lower level will become the
-                first one to case their skills; however, it will cost mana points. In addition, the health bar will
-                decrease after the pokemon is hit. Whoever runs out of the health bar will lose the battle.
-              </p>
-              <p>
-                When the trainer beats a wild pokemon, they will gain experience points for the pokemon and themselves.
-                In addition, they also receive gold and a random item.
-              </p>
-            </div>
-            <!--End Explore -->
+          <!-- Items -->
+          <div class="guide__items">
+            <h3 class="title">Items</h3>
+            <p>
+              Pokeball is used to catch wild pokemon, and if it succeeds, the pokemon will belong to the thrower.
+              Otherwise, it will be gone, and the trainer will have to use another one. Mystic items boost pokemon's
+              traits in a certain amount of time. However, some rare items affect permanently. Consumable items
+              recharge the trainer and pokemon's stamina and have limited usage.
+            </p>
+          </div>
+          <!-- End Items -->
 
+          <!-- Explore -->
+          <div class="guide__explore">
+            <h3 class="title">Explore</h3>
+            <p>
+              A trainer might find nearby wild pokemon while using this feature. Whenever a trainer finds a wild
+              pokemon, they can either beat them for rewards or choose to use Pokeball to catch them. If they lose,
+              they will not lose anything, including game resources such as health and mana points.
+            </p>
+          </div>
+          <!--End Explore -->
 
-          </div><!-- End Guide -->
-        </div><!-- End Tutorial -->
-      </div><!-- End Container -->
+          <!-- Battle -->
+          <div class="guide__explore">
+            <h3 class="title">Battle</h3>
+            <p>
+              In a battle, pokemon take turns to cast their skills. The one who has a lower level will become the
+              first one to case their skills; however, it will cost mana points. In addition, the health bar will
+              decrease after the pokemon is hit. Whoever runs out of the health bar will lose the battle.
+            </p>
+            <p>
+              When the trainer beats a wild pokemon, they will gain experience points for the pokemon and themselves.
+              In addition, they also receive gold and a random item.
+            </p>
+          </div>
+          <!--End Explore -->
+        </div><!-- End Guide -->
+      </div><!-- End Tutorial -->
+    </div><!-- End Container -->
 
-      <footer>&copy;2022 Pokémon Land. &copy;1995 - 2022 Nintendo/Creatures Inc./GAME FREAK inc. TM, &copy;Nintendo.
-      </footer>
-    </main>
-  </div><!-- End Flex Container -->
+    <!-- Footer -->
+    <footer>&copy;2022 Pokémon Land. &copy;1995 - 2022 Nintendo/Creatures Inc./GAME FREAK inc. TM, &copy;Nintendo.
+    </footer><!-- End Footer -->
+  </main>
 </body>
 
 </html>

@@ -35,6 +35,37 @@ a, a:active, a:visited {
   text-decoration: none;
 }
 
+/**
+    1. Main
+    2. Footer
+**/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main h1 {
+  margin: 0;
+  font-size: 5.25rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: #E5446D;
+}
+main .container {
+  margin-bottom: 6.25rem;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: #1B1B1E;
+  color: #fff;
+  text-align: center;
+}
+
 /** Card
     1. Content
     2. Level
@@ -545,36 +576,12 @@ a, a:active, a:visited {
             1.1.1 Title
             1.1.2 Content Wrapper
         1.2 Footer
+    2. Footer
 **/
 .flex-container {
   display: flex;
   flex-direction: column;
   position: relative;
-}
-.flex-container main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.flex-container main h1 {
-  margin: 0;
-  font-size: 5.25rem;
-  text-align: center;
-  text-transform: capitalize;
-  color: #E5446D;
-}
-.flex-container main .container {
-  margin-bottom: 6.25rem;
-}
-.flex-container footer {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  padding: 1rem;
-  font-size: 0.9rem;
-  background: #1B1B1E;
-  color: #fff;
-  text-align: center;
 }
 
 /**
@@ -680,6 +687,21 @@ a, a:active, a:visited {
   transition: 0.3s ease-out;
 }
 
+/**
+    Structure:
+        Global scope:
+            variables/
+            util/
+            globals/
+            layout/
+        Local scope:            
+            auth/
+            explore/
+            inventory/
+            pokemon/
+            shop/
+            home/
+**/
 /**
 *   1. Shop
         1.1 Title
