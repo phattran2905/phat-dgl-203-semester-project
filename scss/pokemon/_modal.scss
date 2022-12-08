@@ -1,6 +1,28 @@
 @use "../globals" as g;
 @use "../util" as u;
 
+/**
+    1. Modal
+        1.1 Container
+        1.2 Header
+            1.2.1 Title
+            1.2.2 Close Button
+            1.2.3 Back Button
+            1.2.4 Titles
+        1.3 Content
+            1.3.1 Card
+            1.3.2 Pokemon Stats
+		        1.3.2.1 Experience
+		        1.3.2.2 Group button
+            1.3.3 Pokemon Information
+                1.3.3.1 Title
+                1.3.3.2 Rows
+                1.3.3.3 Caught By
+                1.3.3.4 Evolutions
+            1.3.4 Item Container
+**/
+
+// 1. Modal
 .modal {
 	width: 100%;
 	height: 100%;
@@ -16,6 +38,7 @@
 		visibility: visible;
 	}
 
+	// 1.1 Container
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -26,6 +49,7 @@
 		}
 	}
 
+	// 1.2 Header
 	&__header {
 		background-color: g.$secondary-color;
 		display: flex;
@@ -34,12 +58,14 @@
 		align-items: center;
 		padding: u.rem(20) u.rem(30);
 
+		// 1.2.1 Title
 		h2 {
 			color: #fff;
 			margin-bottom: 0;
 			font-size: u.rem(24);
 		}
 
+		// 1.2.2 Close button
 		&__close-btn {
 			color: #fff;
 			font-size: u.rem(26);
@@ -49,57 +75,61 @@
 			}
 		}
 
+		// 1.2.3 Back button
 		&__back-btn {
 			@extend .modal__header__close-btn;
 		}
 
-        &__titles {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+		// 1.2.4 Titles
+		&__titles {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
 
-            @mixin active-title {
-                background-color: g.$primary-color;
-                border-left: 3px solid #fff;
-                border-right: 3px solid #fff;
-            }
+			@mixin active-title {
+				background-color: g.$primary-color;
+				border-left: 3px solid #fff;
+				border-right: 3px solid #fff;
+			}
 
-            &__link {
-                color: #fff;
-                font-size: u.rem(24);
-                font-family: u.$heading-font;
-                padding: u.rem(14) u.rem(54);
+			&__link {
+				color: #fff;
+				font-size: u.rem(24);
+				font-family: u.$heading-font;
+				padding: u.rem(14) u.rem(54);
 
-                &:hover {
-                    background-color: g.$primary-color;
-                    transition: 0.4s ease-in-out;
-                }
-            }
+				&:hover {
+					background-color: g.$primary-color;
+					transition: 0.4s ease-in-out;
+				}
+			}
 
-            &__item.active &__link {
-                @include active-title;
-            }
-
-        }
+			&__item.active &__link {
+				@include active-title;
+			}
+		}
 	}
 
+	// 1.3 Content
 	&__content {
 		padding: u.rem(20) u.rem(73);
 		background-color: #fff;
 		border: 3px solid g.$secondary-color;
 		border-radius: 0 0 u.rem(25) u.rem(25);
 
+		// 1.3.1 Card
 		&__card {
 			display: grid;
 			grid-template-columns: 1fr 4fr;
 			grid-template-rows: 1fr;
 		}
 
-		// Pokemon card
+		// 1.3.2 Pokemon Stats
 		.pokemon-stats {
-            padding-top: u.rem(20);
+			padding-top: u.rem(20);
 
+			// 1.3.2.1 Experience
 			&__experience {
 				margin-top: u.rem(10);
 				padding: u.rem(15);
@@ -153,6 +183,7 @@
 				}
 			}
 
+			// 1.3.2.2 Group button
 			&__group-button {
 				display: flex;
 				flex-direction: column;
@@ -193,13 +224,14 @@
 			}
 		}
 
-		// Information
+		// 1.3.3 Pokemon Information
 		.pokemon-info {
 			padding: u.rem(50) u.rem(85);
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
 			grid-gap: u.rem(25) 0;
 
+			// 1.3.3.1 Title
 			h5 {
 				font-family: u.$heading-font;
 				font-size: u.rem(30);
@@ -207,6 +239,7 @@
 				margin-bottom: u.rem(20);
 			}
 
+			// 1.3.3.2 Rows
 			&__row {
 				display: flex;
 				flex-direction: row;
@@ -240,14 +273,15 @@
 				}
 			}
 
+			// 1.3.3.3 Caught By
 			&__caught-by {
 				margin-left: 0;
 
 				ul {
 					display: flex;
 					flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
+					justify-content: center;
+					align-items: center;
 
 					li:not(:last-child) {
 						margin-right: u.rem(15);
@@ -261,6 +295,7 @@
 				flex-direction: column;
 			}
 
+			// 1.3.3.4 Evolutions
 			&__evolutions {
 				display: flex;
 				flex-direction: row;
@@ -296,33 +331,31 @@
 					&__levels {
 						font-size: u.rem(20);
 						margin-top: u.rem(5);
-                        font-weight: bold;
+						font-weight: bold;
 					}
 				}
 			}
 		}
 
-		// Items
+		// 1.3.4 Item Container
 		.item-container {
 			display: none;
 			flex-direction: column;
 			justify-content: space-between;
 			margin-left: u.rem(55);
 
-            &.show {
-                display: flex;
-            }
-            
+			&.show {
+				display: flex;
+			}
 
 			.items-list {
 				display: flex;
 				flex-direction: column;
 				grid-gap: u.rem(30) 0;
-                padding: u.rem(20);
-                overflow-x: hidden;
-                overflow-y: auto;
-                max-height: 50vh;
-                
+				padding: u.rem(20);
+				overflow-x: hidden;
+				overflow-y: auto;
+				max-height: 50vh;
 
 				&__item {
 					position: relative;
@@ -332,7 +365,8 @@
 					border: 3px solid g.$secondary-color;
 					border-radius: u.rem(15);
 
-					&:hover, &.selected {
+					&:hover,
+					&.selected {
 						border-color: g.$primary-color;
 					}
 
@@ -355,14 +389,14 @@
 						}
 					}
 
-                    &.selected .items-list__item__select-box{
-                        background-color: g.$success-color;
-                        border-color: g.$success-color;
+					&.selected .items-list__item__select-box {
+						background-color: g.$success-color;
+						border-color: g.$success-color;
 
-                        i {
-                            display: block;
-                        }
-                    }
+						i {
+							display: block;
+						}
+					}
 
 					&__img-holder {
 						padding: u.rem(30);
@@ -429,7 +463,7 @@
 								&__max {
 									color: g.$light-blue;
 									font-size: u.rem(25);
-                                    font-weight: 700;
+									font-weight: 700;
 								}
 
 								input[type="number"] {
@@ -438,7 +472,7 @@
 									border-radius: u.rem(5);
 									padding: u.rem(5);
 									font-size: u.rem(25);
-                                    text-align: center;
+									text-align: center;
 								}
 							}
 						}
@@ -446,30 +480,29 @@
 				}
 			}
 
+			&__footer {
+				grid-column: 1 / 3;
+				display: flex;
+				justify-content: flex-end;
+				margin-top: u.rem(20);
 
-            &__footer {
-                grid-column: 1 / 3;
-                display: flex;
-                justify-content: flex-end;
-                margin-top: u.rem(20);
+				&__button--submit {
+					outline: none;
+					border: none;
+					background-color: g.$primary-color;
+					padding: u.rem(15) u.rem(80);
+					font-size: u.rem(24);
+					border-radius: u.rem(42);
+					color: #fff;
+					font-weight: bold;
+					font-family: u.$heading-font;
 
-                &__button--submit {
-                    outline: none;
-                    border: none;
-                    background-color: g.$primary-color;
-                    padding: u.rem(15) u.rem(80);
-                    font-size: u.rem(24);
-                    border-radius: u.rem(42);
-                    color: #fff;
-                    font-weight: bold;
-                    font-family: u.$heading-font;
-
-                    &:hover {
-                        background-color: g.$light-blue;
-                        transition: 0.4s ease-in-out;
-                    }
-                }
-            }
+					&:hover {
+						background-color: g.$light-blue;
+						transition: 0.4s ease-in-out;
+					}
+				}
+			}
 		}
 	}
 }

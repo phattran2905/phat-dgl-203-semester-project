@@ -1539,6 +1539,26 @@ a, a:active, a:visited {
     grid-gap: 6.25rem 9.375rem;
   }
 }
+/**
+    1. Modal
+        1.1 Container
+        1.2 Header
+            1.2.1 Title
+            1.2.2 Close Button
+            1.2.3 Back Button
+            1.2.4 Titles
+        1.3 Content
+            1.3.1 Card
+            1.3.2 Pokemon Stats
+		        1.3.2.1 Experience
+		        1.3.2.2 Group button
+            1.3.3 Pokemon Information
+                1.3.3.1 Title
+                1.3.3.2 Rows
+                1.3.3.3 Caught By
+                1.3.3.4 Evolutions
+            1.3.4 Item Container
+**/
 .modal {
   width: 100%;
   height: 100%;
