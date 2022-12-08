@@ -1,0 +1,21 @@
+@use "../util/" as u;
+@import "../variables/";
+
+@mixin game-title {
+	margin: 0;
+	text-align: center;
+	text-transform: capitalize;
+	color: $primary-color;
+	font-size: u.rem(72);
+
+	// Responsive styles
+	@include u.breakpoint-down(large) {
+		font-size: u.rem(62);
+	}
+	@include u.breakpoint-down(medium) {
+		font-size: u.rem(52);
+	}
+	@include u.breakpoint-down(small) {
+		font-size: u.rem(42);
+	}
+}

@@ -1,32 +1,33 @@
 @use '../util' as u;
-
-/**
-*   1. Container
-        1.1 Responsive (xlarge)
-**/ 
+@import "../mixins/typography";
 
 .container {
 	display: grid;
     height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: u.rem(25);
 
-    // 1.1 Responsive (xlarge)
-    @include u.breakpoint(xlarge) {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 6fr;
+    h1 {
+        @include game-title;
+        grid-column: 1 / -1;
+        grid-row: 1 / span 1;
+    }
     
-        h1 {
-            grid-column: 1 / 4;
-            grid-row: 1 / 2;
-        }
-    
-        form {
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
-        }
-    
-        .validation {
-            grid-column: 3 / 4;
-            grid-row: 2 / 3;
+    form {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .validation {
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 1;
+
+        @include u.breakpoint-down(large) {
+
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
         }
     }
+
 }

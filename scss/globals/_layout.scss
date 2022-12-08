@@ -2,11 +2,20 @@
 @import "../variables";
 
 /**
-    1. Main
-    2. Footer
+    1. Flex Container
+    2. Main
+    3. Footer
 **/ 
 
-// 1. Main
+// 1. Flex Container
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+}
+
+// 2. Main
 main {
 	display: flex;
 	flex-direction: column;

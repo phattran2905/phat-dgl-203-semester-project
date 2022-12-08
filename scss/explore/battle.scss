@@ -1,8 +1,7 @@
-@import "../variables";
-@use "../globals" as g;
 @use "../util" as u;
 @forward "../style";
 @forward "./";
+@import "../variables";
 @import "../pokemon/pokemon";
 
 /**

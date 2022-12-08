@@ -1,6 +1,7 @@
 @use "../util" as u;
 @forward "../globals";
 @import "../variables/";
+@import "../mixins/typography";
 
 /**
     1. Container
@@ -50,22 +51,7 @@
 
 	// 2.1 Title
 	&__title {
-		margin: 0;
-		text-align: center;
-		text-transform: capitalize;
-		color: $primary-color;
-		font-size: u.rem(72);
-
-		// Responsive styles
-		@include u.breakpoint-down(large) {
-			font-size: u.rem(52);
-		}
-		@include u.breakpoint-down(medium) {
-			font-size: u.rem(42);
-		}
-		@include u.breakpoint-down(small) {
-			font-size: u.rem(32);
-		}
+        @include game-title;
 	}
 
 	// 2.2 Image

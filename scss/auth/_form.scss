@@ -1,6 +1,6 @@
-@use "../globals" as g;
 @use "../util" as u;
 @import "../variables";
+@import "../mixins/form";
 
 /**
 *   1. Form
@@ -28,7 +28,7 @@
 
     // 1.2 Input Group
 	&__input-group {
-        @include g.input-group;
+        @include input-group;
         
 	}
 
@@ -45,12 +45,12 @@
     // 1.4 Input
 	&__input[type="text"],
 	&__input[type="password"] {
-        @include g.text-input;
+        @include text-input;
         border-radius: 2rem;
 	}
 
 	&__input[type="checkbox"] {
-        @include g.checkbox-input;
+        @include checkbox-input;
 	}
 
     // 1.5 Reference Link

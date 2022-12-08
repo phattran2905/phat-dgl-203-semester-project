@@ -1,10 +1,10 @@
-@forward "../style";
+@use "../util" as u;
+@forward '../globals/';
 @forward "./layout";
 @forward "./form";
 @forward "./validation";
-@use "../globals" as g;
-@use "../util" as u;
+@import "../mixins/form";
 
 .form__input-group:last-child {
-	@include g.checkbox-label;
+	@include checkbox-label;
 }
