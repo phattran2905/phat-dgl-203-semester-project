@@ -15,6 +15,10 @@
 	align-items: center;
     padding: 2rem 3.375rem;
 
+    &.show {
+        flex-direction: column;
+    }
+
     // 1. Link
     &__link {
         font-size: u.rem(20);
@@ -30,19 +34,51 @@
 	&__logo {
 		width: u.rem(72);
 		height: u.rem(72);
-		display: none;
+        position: relative;
+        display: none;
+
+        @include u.breakpoint-down(large) {
+            width: u.rem(62);
+            height: u.rem(62);
+            display: block;
+        }
+        @include u.breakpoint-down(medium) {
+            width: u.rem(52);
+            height: u.rem(52);
+        }
 
 		img {
 			width: 100%;
 		}
 
-        @include u.breakpoint-down(large) {
-            width: u.rem(62);
-            height: u.rem(62);
-        }
-        @include u.breakpoint-down(medium) {
-            width: u.rem(52);
-            height: u.rem(52);
+        &.active {
+            align-self: flex-end;
+
+            img {
+                width: 0;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 45%;
+                left: 0;
+                background-color: $primary-color;
+                width: 100%;
+                height: u.rem(10);
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 45%;
+                left: 0;
+                background-color: $primary-color;
+                width: 100%;
+                height: u.rem(10);
+                transform: rotate(-45deg);
+            }
         }
 	}
 
@@ -74,6 +110,26 @@
     // 4. Nav
 	&__nav {
 		width: 100%;
+
+        @include u.breakpoint-down(large) {
+            display: none;
+
+            &.show {
+                display: block;
+            }
+
+            &.show > &__list {
+                width: 100%;
+                padding: 0 u.rem(20);
+                flex-direction: column;
+            }
+            
+            .navbar__nav__list__item {
+                margin: u.rem(5);
+                width: 100%;
+                border-radius: u.rem(20);
+            }
+        }
         
 		&__list {
 			display: flex;

@@ -1,37 +1,31 @@
-@forward "../style";
 @use "../util" as u;
+@forward "../globals/";
 @import "../variables/";
+@import "../mixins/form";
 
-/*
-    1. Form
-        1.1 Responsive on (xlarge)
-        1.2 Header
-            1.2.1 Form title
-            1.2.2 Close Button
-        1.3 Container
-            1.3.1 Profile info
-                1.3.1.1 Card
-                1.3.1.2 Experience
-                1.3.1.3 Coins
-            1.3.2 Fields
-                1.3.2.1 Input group
-        1.4 Footer
-            1.4.1 Logout button
-            1.4.2 Submit button
+/* Form
+    1. Responsive on (xlarge)
+    2. Header
+        2.1 Form title
+        2.2 Close Button
+    3. Container
+        3.1 Profile info
+            3.1.1 Card
+            3.1.2 Experience
+            3.1.3 Coins
+        3.2 Fields
+            3.2.1 Input group
+    4. Footer
+        4.1 Logout button
+        4.2 Submit button
 **/ 
 
 // 1. Form
 .form {
-	width: 80vw;
+	width: 90vw;
 	margin: u.rem(55) auto;
 
-    // 1.1 Responsive on (xlarge)
-	@include u.breakpoint(xlarge) {
-		max-width: u.em(1070);
-		max-height: u.em(640);
-	}
-
-    // 1.2 Header
+    // 2. Header
 	&__header {
 		height: u.rem(50);
 		padding: 1rem 1.5rem;
@@ -41,14 +35,14 @@
 		align-items: center;
 		background-color: $secondary-color;
 
-        // 1.2.1 Form title
+        // 2.1 Form title
 		h3 {
 			margin-bottom: 0;
 			color: #fff;
 			font-size: u.rem(24);
 		}
 
-        // 1.2.2 Close button
+        // 2.2 Close Button
 		&__close-btn {
 			font-size: u.rem(28);
 			color: #fff;
@@ -59,7 +53,7 @@
 		}
 	}
 
-    // 1.3 Container
+    // 3. Container
 	&__container {
 		border: 3px solid $secondary-color;
 		border-bottom-left-radius: u.rem(25);
@@ -70,21 +64,24 @@
 		grid-template-columns: 1fr 3fr;
 		grid-template-rows: auto;
 
-        // 1.3.1 Profile Info
+        // 3.1 Profile info
 		.profile__info {
 			grid-column: 1/2;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 
-            // 1.3.1.1 Card
+            @include u.breakpoint-down(medium) {
+                grid-column: 1 / -1;
+            }
+
+            // 3.1.1 Card
 			&__card {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				border: 1px solid $black;
-				@include g.card-border-bottom-radius;
-				@include g.card-border-top-radius;
+                border-radius: u.rem(5) u.rem(5) u.rem(25) u.rem(25);
 				background-color: $primary-color;
 
 				&__img {
@@ -111,7 +108,7 @@
 				&__name {
 					margin-top: u.rem(21);
 					background-color: $secondary-color;
-					@include g.card-border-bottom-radius;
+                    border-radius: 0 0 u.rem(25) u.rem(25);
 					width: 100%;
 
 					p {
@@ -124,7 +121,7 @@
 				}
 			}
 
-            // 1.3.1.2 Experience
+            // 3.1.2 Experience
 			&__experience {
 				margin: u.rem(12) auto;
 
@@ -157,7 +154,7 @@
 				}
 			}
 
-            // 1.3.1.3 Coins
+            // 3.1.3 Coins
             &__coins {
                 padding: 1rem;
                 $font-size: u.rem(26);
@@ -181,40 +178,51 @@
             }
 		}
 
-        // 1.3.2 Fields
+        // 3.2 Fields
 		&__fields {
 			grid-column: 2/3;
             padding: 0 u.rem(94);
 
-            // 1.3.2.1 Input group
+            @include u.breakpoint-down(large) {
+                padding: 0 u.rem(30);
+            }
+
+            @include u.breakpoint-down(medium) {
+                grid-column: 1 / -1;
+            }
+            @include u.breakpoint-down(small) {
+                padding: 0 u.rem(20);
+            }
+
+            // 3.2.1 Input group
             .form__input-group {
-                @include g.input-group;
+                @include input-group;
 
                 .form__label {
-                    @include g.form-label;
+                    @include form-label;
                 }
 
                 .form__input[type=text],
                 .form__input[type=email] {
-                    @include g.text-input($secondary-color);
+                    @include text-input($secondary-color);
                     border-radius: u.rem(10);
                 }
 
                 .form__error {
-                    @include g.form-error;
+                    @include form-error;
                 }
             }
 		}
 	}
 
-    // 1.4 Footer
+    // 4. Footer
     &__footer {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
 
-        // 1.4.1 Logout button
+        // 4.1 Logout button
         .form__logout-btn {
             padding: u.rem(12) u.rem(72);
             font-size: u.rem(24); 
@@ -231,7 +239,7 @@
             }
         }
 
-        // 1.4.2 Submit button
+        // 4.2 Submit button
         .form__submit-btn {
             @extend .form__logout-btn;
             background-color: $secondary-color;

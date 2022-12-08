@@ -23,13 +23,3 @@ ul {
     margin: 0;
     padding: 0;
 }
-
-@mixin card-border-bottom-radius {
-    border-bottom-left-radius: u.rem(25);
-    border-bottom-right-radius: u.rem(25);
-}
-
-@mixin card-border-top-radius {
-    border-top-left-radius: u.rem(5);
-    border-top-right-radius: u.rem(5);
-}

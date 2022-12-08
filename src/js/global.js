@@ -1,7 +1,11 @@
 // Navigation
 const menuButton = document.getElementById("menu")
 menuButton.addEventListener("click", e => {
-    
+    const navList = document.querySelector(".navbar__nav");
+    const navbar = document.querySelector(".navbar");
+    navList.classList.toggle("show");
+    navbar.classList.toggle("show");
+    menuButton.classList.toggle("active")
 })
 
 
