@@ -24,3 +24,7 @@ The capture rate will be stacked so. Eventually, you can catch wild Pokemon as l
 
 ### Battle
 For the battle, you only win the Pokemon if you have the higher power score. You will receive additional experience points for both trainer and Pokemon. Moreover, three random items will hand to you after the fight.
+
+## Credit
+- https://github.com/jnovack/pokemon-svg
+- https://pixabay.com/vi/users/dcemr_e-8920463/
